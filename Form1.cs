@@ -16,7 +16,7 @@ namespace QMS_Utility
         public Form1()
         {
             InitializeComponent();
-            form2 = new Form2();
+            form2 = new Form2(this);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -34,10 +34,10 @@ namespace QMS_Utility
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void portButton_Click(object sender, EventArgs e)
         {
-          
-            
+
+             
             form2.getSerialPort();
 
             // form2.comboBox1.DataValueField = "ID";
@@ -50,13 +50,19 @@ namespace QMS_Utility
             form2.ShowDialog(); // Shows Form2
             
 
-            //form2.comboBox1.DataSource = form2.getSerialPort();
+            // form2.comboBox1.DataSource = form2.getSerialPort();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public Form getForm1Object()
+        {
+
+            return this;
         }
     }
 }

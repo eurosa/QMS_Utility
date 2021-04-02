@@ -14,10 +14,13 @@ namespace QMS_Utility
     public partial class Form2 : Form
     {
         string select = "---Select---";
-
-        public Form2()
+        public string portName = "";
+        Form1 f1;
+        public Form2(Form1 form1)
         {
+            f1 = form1;
             InitializeComponent();
+            
 
             if (!comboBox1.Items.Contains(select))
             {
@@ -42,7 +45,6 @@ namespace QMS_Utility
                 
                 if (!comboBox1.Items.Contains(port))
                 {
-                    
                     comboBox1.Items.Add(port);
                     Console.WriteLine(port);
                 }
@@ -50,6 +52,24 @@ namespace QMS_Utility
             
             Console.ReadLine();
             return ports;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // MessageBox.Show(comboBox1.Text);
+            portName = comboBox1.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {   
+            portName = comboBox1.Text;
+            f1.portButton.Text = portName;
+            this.Close();
         }
     }
 }
