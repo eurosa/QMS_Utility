@@ -13,7 +13,7 @@ namespace QMS_Utility
 {
     public partial class Form2 : Form
     {
-        string select = "---Select---";
+        string select = "----------Select----------------";
         public string portName = "";
         Form1 f1;
         public Form2(Form1 form1)

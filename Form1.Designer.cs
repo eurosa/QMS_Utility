@@ -32,47 +32,47 @@
             this.button3 = new System.Windows.Forms.Button();
             this.portButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button25 = new System.Windows.Forms.Button();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.sendCntLabel16 = new System.Windows.Forms.Button();
+            this.cntLabel16TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel15TextBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
+            this.sendCntLabel15 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.sendCntLabel14 = new System.Windows.Forms.Button();
+            this.sendCntLabel13 = new System.Windows.Forms.Button();
+            this.sendCntLabel12 = new System.Windows.Forms.Button();
+            this.sendCntLabel11 = new System.Windows.Forms.Button();
+            this.sendCntLabel10 = new System.Windows.Forms.Button();
+            this.sendCntLabel9 = new System.Windows.Forms.Button();
+            this.cntLabel14TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel13TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel12TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel11TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel10TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel9TextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button24 = new System.Windows.Forms.Button();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.sendCntLabel8 = new System.Windows.Forms.Button();
+            this.cntLabel8TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel7TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel6TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel5TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel4TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel3TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel2TextBox = new System.Windows.Forms.TextBox();
+            this.cntLabel1TextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.sendCntLabel7 = new System.Windows.Forms.Button();
+            this.sendCntLabel6 = new System.Windows.Forms.Button();
+            this.sendCntLabel5 = new System.Windows.Forms.Button();
+            this.sendCntLabel4 = new System.Windows.Forms.Button();
+            this.sendCntLabel3 = new System.Windows.Forms.Button();
+            this.sendCntLabel2 = new System.Windows.Forms.Button();
+            this.sendCntLabel1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -81,20 +81,29 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sendToken3 = new System.Windows.Forms.Button();
+            this.tokenSlipTextBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.sendToken2 = new System.Windows.Forms.Button();
+            this.tokenSlip2TextBox = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.sendToken1 = new System.Windows.Forms.Button();
+            this.tokenSlip1TextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.closingTimeSend = new System.Windows.Forms.Button();
+            this.copiesSend = new System.Windows.Forms.Button();
+            this.sendCounterNo = new System.Windows.Forms.Button();
+            this.sendCounter = new System.Windows.Forms.Button();
+            this.sendTime = new System.Windows.Forms.Button();
+            this.sendBankID = new System.Windows.Forms.Button();
+            this.sendName = new System.Windows.Forms.Button();
+            this.closingTimeTextBox = new System.Windows.Forms.TextBox();
+            this.copiePrintingTextBox = new System.Windows.Forms.TextBox();
+            this.totalCounterTextBox = new System.Windows.Forms.TextBox();
+            this.counteTextBox = new System.Windows.Forms.TextBox();
+            this.timeTextBox = new System.Windows.Forms.TextBox();
+            this.bankIdTextBox = new System.Windows.Forms.TextBox();
+            this.institutionTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -103,14 +112,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cmbPortName = new System.Windows.Forms.ComboBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(866, 43);
+            this.button4.Location = new System.Drawing.Point(866, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 34);
             this.button4.TabIndex = 42;
@@ -119,7 +134,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(866, 124);
+            this.button3.Location = new System.Drawing.Point(866, 341);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 34);
             this.button3.TabIndex = 41;
@@ -129,7 +144,7 @@
             // 
             // portButton
             // 
-            this.portButton.Location = new System.Drawing.Point(866, 83);
+            this.portButton.Location = new System.Drawing.Point(866, 294);
             this.portButton.Name = "portButton";
             this.portButton.Size = new System.Drawing.Size(128, 34);
             this.portButton.TabIndex = 40;
@@ -139,47 +154,47 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button25);
-            this.tabPage2.Controls.Add(this.textBox22);
-            this.tabPage2.Controls.Add(this.textBox23);
+            this.tabPage2.Controls.Add(this.sendCntLabel16);
+            this.tabPage2.Controls.Add(this.cntLabel16TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel15TextBox);
             this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.button26);
+            this.tabPage2.Controls.Add(this.sendCntLabel15);
             this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.button18);
-            this.tabPage2.Controls.Add(this.button19);
-            this.tabPage2.Controls.Add(this.button20);
-            this.tabPage2.Controls.Add(this.button21);
-            this.tabPage2.Controls.Add(this.button22);
-            this.tabPage2.Controls.Add(this.button23);
-            this.tabPage2.Controls.Add(this.textBox15);
-            this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.textBox17);
-            this.tabPage2.Controls.Add(this.textBox18);
-            this.tabPage2.Controls.Add(this.textBox19);
-            this.tabPage2.Controls.Add(this.textBox20);
+            this.tabPage2.Controls.Add(this.sendCntLabel14);
+            this.tabPage2.Controls.Add(this.sendCntLabel13);
+            this.tabPage2.Controls.Add(this.sendCntLabel12);
+            this.tabPage2.Controls.Add(this.sendCntLabel11);
+            this.tabPage2.Controls.Add(this.sendCntLabel10);
+            this.tabPage2.Controls.Add(this.sendCntLabel9);
+            this.tabPage2.Controls.Add(this.cntLabel14TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel13TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel12TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel11TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel10TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel9TextBox);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.button24);
-            this.tabPage2.Controls.Add(this.textBox21);
-            this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.textBox13);
-            this.tabPage2.Controls.Add(this.textBox14);
+            this.tabPage2.Controls.Add(this.sendCntLabel8);
+            this.tabPage2.Controls.Add(this.cntLabel8TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel7TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel6TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel5TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel4TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel3TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel2TextBox);
+            this.tabPage2.Controls.Add(this.cntLabel1TextBox);
             this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.button12);
-            this.tabPage2.Controls.Add(this.button13);
-            this.tabPage2.Controls.Add(this.button14);
-            this.tabPage2.Controls.Add(this.button15);
-            this.tabPage2.Controls.Add(this.button16);
-            this.tabPage2.Controls.Add(this.button17);
+            this.tabPage2.Controls.Add(this.sendCntLabel7);
+            this.tabPage2.Controls.Add(this.sendCntLabel6);
+            this.tabPage2.Controls.Add(this.sendCntLabel5);
+            this.tabPage2.Controls.Add(this.sendCntLabel4);
+            this.tabPage2.Controls.Add(this.sendCntLabel3);
+            this.tabPage2.Controls.Add(this.sendCntLabel2);
+            this.tabPage2.Controls.Add(this.sendCntLabel1);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label10);
@@ -195,28 +210,28 @@
             this.tabPage2.Text = "Counter Label";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // sendCntLabel16
             // 
-            this.button25.Location = new System.Drawing.Point(687, 298);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(75, 23);
-            this.button25.TabIndex = 154;
-            this.button25.Text = "Save";
-            this.button25.UseVisualStyleBackColor = true;
+            this.sendCntLabel16.Location = new System.Drawing.Point(687, 298);
+            this.sendCntLabel16.Name = "sendCntLabel16";
+            this.sendCntLabel16.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel16.TabIndex = 154;
+            this.sendCntLabel16.Text = "Save";
+            this.sendCntLabel16.UseVisualStyleBackColor = true;
             // 
-            // textBox22
+            // cntLabel16TextBox
             // 
-            this.textBox22.Location = new System.Drawing.Point(508, 299);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(166, 20);
-            this.textBox22.TabIndex = 153;
+            this.cntLabel16TextBox.Location = new System.Drawing.Point(508, 299);
+            this.cntLabel16TextBox.Name = "cntLabel16TextBox";
+            this.cntLabel16TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel16TextBox.TabIndex = 153;
             // 
-            // textBox23
+            // cntLabel15TextBox
             // 
-            this.textBox23.Location = new System.Drawing.Point(508, 270);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(166, 20);
-            this.textBox23.TabIndex = 150;
+            this.cntLabel15TextBox.Location = new System.Drawing.Point(508, 270);
+            this.cntLabel15TextBox.Name = "cntLabel15TextBox";
+            this.cntLabel15TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel15TextBox.TabIndex = 150;
             // 
             // label22
             // 
@@ -227,14 +242,14 @@
             this.label22.TabIndex = 152;
             this.label22.Text = "Counter Label 16:";
             // 
-            // button26
+            // sendCntLabel15
             // 
-            this.button26.Location = new System.Drawing.Point(687, 270);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(75, 23);
-            this.button26.TabIndex = 151;
-            this.button26.Text = "Save";
-            this.button26.UseVisualStyleBackColor = true;
+            this.sendCntLabel15.Location = new System.Drawing.Point(687, 270);
+            this.sendCntLabel15.Name = "sendCntLabel15";
+            this.sendCntLabel15.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel15.TabIndex = 151;
+            this.sendCntLabel15.Text = "Save";
+            this.sendCntLabel15.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -245,102 +260,103 @@
             this.label23.TabIndex = 149;
             this.label23.Text = "Counter Label 15:";
             // 
-            // button18
+            // sendCntLabel14
             // 
-            this.button18.Location = new System.Drawing.Point(687, 240);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 23);
-            this.button18.TabIndex = 148;
-            this.button18.Text = "Save";
-            this.button18.UseVisualStyleBackColor = true;
+            this.sendCntLabel14.Location = new System.Drawing.Point(687, 240);
+            this.sendCntLabel14.Name = "sendCntLabel14";
+            this.sendCntLabel14.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel14.TabIndex = 148;
+            this.sendCntLabel14.Text = "Save";
+            this.sendCntLabel14.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // sendCntLabel13
             // 
-            this.button19.Location = new System.Drawing.Point(687, 213);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 23);
-            this.button19.TabIndex = 147;
-            this.button19.Text = "Save";
-            this.button19.UseVisualStyleBackColor = true;
+            this.sendCntLabel13.Location = new System.Drawing.Point(687, 213);
+            this.sendCntLabel13.Name = "sendCntLabel13";
+            this.sendCntLabel13.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel13.TabIndex = 147;
+            this.sendCntLabel13.Tag = "13";
+            this.sendCntLabel13.Text = "Save";
+            this.sendCntLabel13.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // sendCntLabel12
             // 
-            this.button20.Location = new System.Drawing.Point(687, 187);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 23);
-            this.button20.TabIndex = 146;
-            this.button20.Text = "Save";
-            this.button20.UseVisualStyleBackColor = true;
+            this.sendCntLabel12.Location = new System.Drawing.Point(687, 187);
+            this.sendCntLabel12.Name = "sendCntLabel12";
+            this.sendCntLabel12.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel12.TabIndex = 146;
+            this.sendCntLabel12.Text = "Save";
+            this.sendCntLabel12.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // sendCntLabel11
             // 
-            this.button21.Location = new System.Drawing.Point(687, 161);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 23);
-            this.button21.TabIndex = 145;
-            this.button21.Text = "Save";
-            this.button21.UseVisualStyleBackColor = true;
+            this.sendCntLabel11.Location = new System.Drawing.Point(687, 161);
+            this.sendCntLabel11.Name = "sendCntLabel11";
+            this.sendCntLabel11.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel11.TabIndex = 145;
+            this.sendCntLabel11.Text = "Save";
+            this.sendCntLabel11.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // sendCntLabel10
             // 
-            this.button22.Location = new System.Drawing.Point(687, 133);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(75, 23);
-            this.button22.TabIndex = 144;
-            this.button22.Text = "Save";
-            this.button22.UseVisualStyleBackColor = true;
+            this.sendCntLabel10.Location = new System.Drawing.Point(687, 133);
+            this.sendCntLabel10.Name = "sendCntLabel10";
+            this.sendCntLabel10.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel10.TabIndex = 144;
+            this.sendCntLabel10.Text = "Save";
+            this.sendCntLabel10.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // sendCntLabel9
             // 
-            this.button23.Location = new System.Drawing.Point(687, 104);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 23);
-            this.button23.TabIndex = 143;
-            this.button23.Text = "Save";
-            this.button23.UseVisualStyleBackColor = true;
+            this.sendCntLabel9.Location = new System.Drawing.Point(687, 104);
+            this.sendCntLabel9.Name = "sendCntLabel9";
+            this.sendCntLabel9.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel9.TabIndex = 143;
+            this.sendCntLabel9.Text = "Save";
+            this.sendCntLabel9.UseVisualStyleBackColor = true;
             // 
-            // textBox15
+            // cntLabel14TextBox
             // 
-            this.textBox15.Location = new System.Drawing.Point(508, 240);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(166, 20);
-            this.textBox15.TabIndex = 142;
+            this.cntLabel14TextBox.Location = new System.Drawing.Point(508, 240);
+            this.cntLabel14TextBox.Name = "cntLabel14TextBox";
+            this.cntLabel14TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel14TextBox.TabIndex = 142;
             // 
-            // textBox16
+            // cntLabel13TextBox
             // 
-            this.textBox16.Location = new System.Drawing.Point(508, 213);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(166, 20);
-            this.textBox16.TabIndex = 140;
+            this.cntLabel13TextBox.Location = new System.Drawing.Point(508, 213);
+            this.cntLabel13TextBox.Name = "cntLabel13TextBox";
+            this.cntLabel13TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel13TextBox.TabIndex = 140;
             // 
-            // textBox17
+            // cntLabel12TextBox
             // 
-            this.textBox17.Location = new System.Drawing.Point(508, 187);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(166, 20);
-            this.textBox17.TabIndex = 138;
+            this.cntLabel12TextBox.Location = new System.Drawing.Point(508, 187);
+            this.cntLabel12TextBox.Name = "cntLabel12TextBox";
+            this.cntLabel12TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel12TextBox.TabIndex = 138;
             // 
-            // textBox18
+            // cntLabel11TextBox
             // 
-            this.textBox18.Location = new System.Drawing.Point(508, 161);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(166, 20);
-            this.textBox18.TabIndex = 136;
+            this.cntLabel11TextBox.Location = new System.Drawing.Point(508, 161);
+            this.cntLabel11TextBox.Multiline = true;
+            this.cntLabel11TextBox.Name = "cntLabel11TextBox";
+            this.cntLabel11TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel11TextBox.TabIndex = 136;
             // 
-            // textBox19
+            // cntLabel10TextBox
             // 
-            this.textBox19.Location = new System.Drawing.Point(508, 132);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(166, 20);
-            this.textBox19.TabIndex = 134;
+            this.cntLabel10TextBox.Location = new System.Drawing.Point(508, 132);
+            this.cntLabel10TextBox.Name = "cntLabel10TextBox";
+            this.cntLabel10TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel10TextBox.TabIndex = 134;
             // 
-            // textBox20
+            // cntLabel9TextBox
             // 
-            this.textBox20.Location = new System.Drawing.Point(508, 104);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(166, 20);
-            this.textBox20.TabIndex = 132;
+            this.cntLabel9TextBox.Location = new System.Drawing.Point(508, 104);
+            this.cntLabel9TextBox.Name = "cntLabel9TextBox";
+            this.cntLabel9TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel9TextBox.TabIndex = 132;
             // 
             // label15
             // 
@@ -396,71 +412,71 @@
             this.label20.TabIndex = 131;
             this.label20.Text = "Counter Label 9:";
             // 
-            // button24
+            // sendCntLabel8
             // 
-            this.button24.Location = new System.Drawing.Point(302, 298);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 23);
-            this.button24.TabIndex = 124;
-            this.button24.Text = "Save";
-            this.button24.UseVisualStyleBackColor = true;
+            this.sendCntLabel8.Location = new System.Drawing.Point(302, 298);
+            this.sendCntLabel8.Name = "sendCntLabel8";
+            this.sendCntLabel8.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel8.TabIndex = 124;
+            this.sendCntLabel8.Text = "Save";
+            this.sendCntLabel8.UseVisualStyleBackColor = true;
             // 
-            // textBox21
+            // cntLabel8TextBox
             // 
-            this.textBox21.Location = new System.Drawing.Point(123, 299);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(166, 20);
-            this.textBox21.TabIndex = 111;
+            this.cntLabel8TextBox.Location = new System.Drawing.Point(123, 299);
+            this.cntLabel8TextBox.Name = "cntLabel8TextBox";
+            this.cntLabel8TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel8TextBox.TabIndex = 111;
             // 
-            // textBox8
+            // cntLabel7TextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(123, 270);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(166, 20);
-            this.textBox8.TabIndex = 102;
+            this.cntLabel7TextBox.Location = new System.Drawing.Point(123, 270);
+            this.cntLabel7TextBox.Name = "cntLabel7TextBox";
+            this.cntLabel7TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel7TextBox.TabIndex = 102;
             // 
-            // textBox9
+            // cntLabel6TextBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(123, 243);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(166, 20);
-            this.textBox9.TabIndex = 100;
+            this.cntLabel6TextBox.Location = new System.Drawing.Point(123, 243);
+            this.cntLabel6TextBox.Name = "cntLabel6TextBox";
+            this.cntLabel6TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel6TextBox.TabIndex = 100;
             // 
-            // textBox10
+            // cntLabel5TextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(123, 217);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(166, 20);
-            this.textBox10.TabIndex = 98;
+            this.cntLabel5TextBox.Location = new System.Drawing.Point(123, 217);
+            this.cntLabel5TextBox.Name = "cntLabel5TextBox";
+            this.cntLabel5TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel5TextBox.TabIndex = 98;
             // 
-            // textBox11
+            // cntLabel4TextBox
             // 
-            this.textBox11.Location = new System.Drawing.Point(123, 191);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(166, 20);
-            this.textBox11.TabIndex = 96;
+            this.cntLabel4TextBox.Location = new System.Drawing.Point(123, 191);
+            this.cntLabel4TextBox.Multiline = true;
+            this.cntLabel4TextBox.Name = "cntLabel4TextBox";
+            this.cntLabel4TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel4TextBox.TabIndex = 96;
             // 
-            // textBox12
+            // cntLabel3TextBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(123, 162);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(166, 20);
-            this.textBox12.TabIndex = 94;
+            this.cntLabel3TextBox.Location = new System.Drawing.Point(123, 162);
+            this.cntLabel3TextBox.Name = "cntLabel3TextBox";
+            this.cntLabel3TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel3TextBox.TabIndex = 94;
             // 
-            // textBox13
+            // cntLabel2TextBox
             // 
-            this.textBox13.Location = new System.Drawing.Point(123, 134);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(166, 20);
-            this.textBox13.TabIndex = 92;
+            this.cntLabel2TextBox.Location = new System.Drawing.Point(123, 134);
+            this.cntLabel2TextBox.Name = "cntLabel2TextBox";
+            this.cntLabel2TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel2TextBox.TabIndex = 92;
             // 
-            // textBox14
+            // cntLabel1TextBox
             // 
-            this.textBox14.Location = new System.Drawing.Point(123, 106);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(166, 20);
-            this.textBox14.TabIndex = 90;
+            this.cntLabel1TextBox.Location = new System.Drawing.Point(123, 106);
+            this.cntLabel1TextBox.Name = "cntLabel1TextBox";
+            this.cntLabel1TextBox.Size = new System.Drawing.Size(166, 20);
+            this.cntLabel1TextBox.TabIndex = 90;
             // 
             // label21
             // 
@@ -471,68 +487,68 @@
             this.label21.TabIndex = 110;
             this.label21.Text = "Counter Label 8:";
             // 
-            // button1
+            // sendCntLabel7
             // 
-            this.button1.Location = new System.Drawing.Point(302, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 109;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sendCntLabel7.Location = new System.Drawing.Point(302, 270);
+            this.sendCntLabel7.Name = "sendCntLabel7";
+            this.sendCntLabel7.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel7.TabIndex = 109;
+            this.sendCntLabel7.Text = "Save";
+            this.sendCntLabel7.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // sendCntLabel6
             // 
-            this.button12.Location = new System.Drawing.Point(302, 243);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 108;
-            this.button12.Text = "Save";
-            this.button12.UseVisualStyleBackColor = true;
+            this.sendCntLabel6.Location = new System.Drawing.Point(302, 243);
+            this.sendCntLabel6.Name = "sendCntLabel6";
+            this.sendCntLabel6.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel6.TabIndex = 108;
+            this.sendCntLabel6.Text = "Save";
+            this.sendCntLabel6.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // sendCntLabel5
             // 
-            this.button13.Location = new System.Drawing.Point(302, 217);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 107;
-            this.button13.Text = "Save";
-            this.button13.UseVisualStyleBackColor = true;
+            this.sendCntLabel5.Location = new System.Drawing.Point(302, 217);
+            this.sendCntLabel5.Name = "sendCntLabel5";
+            this.sendCntLabel5.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel5.TabIndex = 107;
+            this.sendCntLabel5.Text = "Save";
+            this.sendCntLabel5.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // sendCntLabel4
             // 
-            this.button14.Location = new System.Drawing.Point(302, 191);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 106;
-            this.button14.Text = "Save";
-            this.button14.UseVisualStyleBackColor = true;
+            this.sendCntLabel4.Location = new System.Drawing.Point(302, 191);
+            this.sendCntLabel4.Name = "sendCntLabel4";
+            this.sendCntLabel4.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel4.TabIndex = 106;
+            this.sendCntLabel4.Text = "Save";
+            this.sendCntLabel4.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // sendCntLabel3
             // 
-            this.button15.Location = new System.Drawing.Point(302, 163);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 105;
-            this.button15.Text = "Save";
-            this.button15.UseVisualStyleBackColor = true;
+            this.sendCntLabel3.Location = new System.Drawing.Point(302, 163);
+            this.sendCntLabel3.Name = "sendCntLabel3";
+            this.sendCntLabel3.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel3.TabIndex = 105;
+            this.sendCntLabel3.Text = "Save";
+            this.sendCntLabel3.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // sendCntLabel2
             // 
-            this.button16.Location = new System.Drawing.Point(302, 134);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 104;
-            this.button16.Text = "Save";
-            this.button16.UseVisualStyleBackColor = true;
+            this.sendCntLabel2.Location = new System.Drawing.Point(302, 134);
+            this.sendCntLabel2.Name = "sendCntLabel2";
+            this.sendCntLabel2.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel2.TabIndex = 104;
+            this.sendCntLabel2.Text = "Save";
+            this.sendCntLabel2.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // sendCntLabel1
             // 
-            this.button17.Location = new System.Drawing.Point(302, 105);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 103;
-            this.button17.Text = "Save";
-            this.button17.UseVisualStyleBackColor = true;
+            this.sendCntLabel1.Location = new System.Drawing.Point(302, 105);
+            this.sendCntLabel1.Name = "sendCntLabel1";
+            this.sendCntLabel1.Size = new System.Drawing.Size(75, 23);
+            this.sendCntLabel1.TabIndex = 103;
+            this.sendCntLabel1.Text = "Save";
+            this.sendCntLabel1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -599,20 +615,29 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button11);
-            this.tabPage1.Controls.Add(this.button10);
-            this.tabPage1.Controls.Add(this.button9);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.sendToken3);
+            this.tabPage1.Controls.Add(this.tokenSlipTextBox);
+            this.tabPage1.Controls.Add(this.label26);
+            this.tabPage1.Controls.Add(this.sendToken2);
+            this.tabPage1.Controls.Add(this.tokenSlip2TextBox);
+            this.tabPage1.Controls.Add(this.label25);
+            this.tabPage1.Controls.Add(this.sendToken1);
+            this.tabPage1.Controls.Add(this.tokenSlip1TextBox);
+            this.tabPage1.Controls.Add(this.label24);
+            this.tabPage1.Controls.Add(this.closingTimeSend);
+            this.tabPage1.Controls.Add(this.copiesSend);
+            this.tabPage1.Controls.Add(this.sendCounterNo);
+            this.tabPage1.Controls.Add(this.sendCounter);
+            this.tabPage1.Controls.Add(this.sendTime);
+            this.tabPage1.Controls.Add(this.sendBankID);
+            this.tabPage1.Controls.Add(this.sendName);
+            this.tabPage1.Controls.Add(this.closingTimeTextBox);
+            this.tabPage1.Controls.Add(this.copiePrintingTextBox);
+            this.tabPage1.Controls.Add(this.totalCounterTextBox);
+            this.tabPage1.Controls.Add(this.counteTextBox);
+            this.tabPage1.Controls.Add(this.timeTextBox);
+            this.tabPage1.Controls.Add(this.bankIdTextBox);
+            this.tabPage1.Controls.Add(this.institutionTextBox);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -628,123 +653,200 @@
             this.tabPage1.Text = "General";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // sendToken3
             // 
-            this.button11.Location = new System.Drawing.Point(368, 293);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 67;
-            this.button11.Text = "Save";
-            this.button11.UseVisualStyleBackColor = true;
+            this.sendToken3.Location = new System.Drawing.Point(368, 334);
+            this.sendToken3.Name = "sendToken3";
+            this.sendToken3.Size = new System.Drawing.Size(75, 23);
+            this.sendToken3.TabIndex = 76;
+            this.sendToken3.Text = "Save";
+            this.sendToken3.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // tokenSlipTextBox
             // 
-            this.button10.Location = new System.Drawing.Point(368, 266);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 66;
-            this.button10.Text = "Save";
-            this.button10.UseVisualStyleBackColor = true;
+            this.tokenSlipTextBox.Location = new System.Drawing.Point(152, 334);
+            this.tokenSlipTextBox.Name = "tokenSlipTextBox";
+            this.tokenSlipTextBox.Size = new System.Drawing.Size(201, 20);
+            this.tokenSlipTextBox.TabIndex = 75;
             // 
-            // button9
+            // label26
             // 
-            this.button9.Location = new System.Drawing.Point(368, 240);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 65;
-            this.button9.Text = "Save";
-            this.button9.UseVisualStyleBackColor = true;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(32, 339);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 13);
+            this.label26.TabIndex = 74;
+            this.label26.Text = "Token Slip Line B:";
             // 
-            // button8
+            // sendToken2
             // 
-            this.button8.Location = new System.Drawing.Point(368, 214);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 64;
-            this.button8.Text = "Save";
-            this.button8.UseVisualStyleBackColor = true;
+            this.sendToken2.Location = new System.Drawing.Point(368, 303);
+            this.sendToken2.Name = "sendToken2";
+            this.sendToken2.Size = new System.Drawing.Size(75, 23);
+            this.sendToken2.TabIndex = 73;
+            this.sendToken2.Text = "Save";
+            this.sendToken2.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // tokenSlip2TextBox
             // 
-            this.button7.Location = new System.Drawing.Point(368, 186);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 63;
-            this.button7.Text = "Save";
-            this.button7.UseVisualStyleBackColor = true;
+            this.tokenSlip2TextBox.Location = new System.Drawing.Point(152, 303);
+            this.tokenSlip2TextBox.Name = "tokenSlip2TextBox";
+            this.tokenSlip2TextBox.Size = new System.Drawing.Size(201, 20);
+            this.tokenSlip2TextBox.TabIndex = 72;
             // 
-            // button6
+            // label25
             // 
-            this.button6.Location = new System.Drawing.Point(368, 157);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 62;
-            this.button6.Text = "Save";
-            this.button6.UseVisualStyleBackColor = true;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(32, 308);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(94, 13);
+            this.label25.TabIndex = 71;
+            this.label25.Text = "Token Slip Line A:";
             // 
-            // button5
+            // sendToken1
             // 
-            this.button5.Location = new System.Drawing.Point(368, 128);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 61;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = true;
+            this.sendToken1.Location = new System.Drawing.Point(368, 275);
+            this.sendToken1.Name = "sendToken1";
+            this.sendToken1.Size = new System.Drawing.Size(75, 23);
+            this.sendToken1.TabIndex = 70;
+            this.sendToken1.Text = "Save";
+            this.sendToken1.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // tokenSlip1TextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(152, 293);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 20);
-            this.textBox7.TabIndex = 60;
+            this.tokenSlip1TextBox.Location = new System.Drawing.Point(152, 275);
+            this.tokenSlip1TextBox.Name = "tokenSlip1TextBox";
+            this.tokenSlip1TextBox.Size = new System.Drawing.Size(201, 20);
+            this.tokenSlip1TextBox.TabIndex = 69;
             // 
-            // textBox6
+            // label24
             // 
-            this.textBox6.Location = new System.Drawing.Point(152, 266);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(201, 20);
-            this.textBox6.TabIndex = 58;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(32, 280);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(96, 13);
+            this.label24.TabIndex = 68;
+            this.label24.Text = "Token Slip Line 9 :";
             // 
-            // textBox5
+            // closingTimeSend
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 240);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(201, 20);
-            this.textBox5.TabIndex = 56;
+            this.closingTimeSend.Location = new System.Drawing.Point(368, 245);
+            this.closingTimeSend.Name = "closingTimeSend";
+            this.closingTimeSend.Size = new System.Drawing.Size(75, 23);
+            this.closingTimeSend.TabIndex = 67;
+            this.closingTimeSend.Text = "Save";
+            this.closingTimeSend.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // copiesSend
             // 
-            this.textBox4.Location = new System.Drawing.Point(152, 214);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 20);
-            this.textBox4.TabIndex = 54;
+            this.copiesSend.Location = new System.Drawing.Point(368, 218);
+            this.copiesSend.Name = "copiesSend";
+            this.copiesSend.Size = new System.Drawing.Size(75, 23);
+            this.copiesSend.TabIndex = 66;
+            this.copiesSend.Text = "Save";
+            this.copiesSend.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // sendCounterNo
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 185);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 20);
-            this.textBox3.TabIndex = 52;
+            this.sendCounterNo.Location = new System.Drawing.Point(368, 192);
+            this.sendCounterNo.Name = "sendCounterNo";
+            this.sendCounterNo.Size = new System.Drawing.Size(75, 23);
+            this.sendCounterNo.TabIndex = 65;
+            this.sendCounterNo.Text = "Save";
+            this.sendCounterNo.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // sendCounter
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 157);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 20);
-            this.textBox2.TabIndex = 50;
+            this.sendCounter.Location = new System.Drawing.Point(368, 166);
+            this.sendCounter.Name = "sendCounter";
+            this.sendCounter.Size = new System.Drawing.Size(75, 23);
+            this.sendCounter.TabIndex = 64;
+            this.sendCounter.Text = "Save";
+            this.sendCounter.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // sendTime
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 48;
+            this.sendTime.Location = new System.Drawing.Point(368, 138);
+            this.sendTime.Name = "sendTime";
+            this.sendTime.Size = new System.Drawing.Size(75, 23);
+            this.sendTime.TabIndex = 63;
+            this.sendTime.Text = "Save";
+            this.sendTime.UseVisualStyleBackColor = true;
+            // 
+            // sendBankID
+            // 
+            this.sendBankID.Location = new System.Drawing.Point(368, 109);
+            this.sendBankID.Name = "sendBankID";
+            this.sendBankID.Size = new System.Drawing.Size(75, 23);
+            this.sendBankID.TabIndex = 62;
+            this.sendBankID.Text = "Save";
+            this.sendBankID.UseVisualStyleBackColor = true;
+            // 
+            // sendName
+            // 
+            this.sendName.Location = new System.Drawing.Point(368, 80);
+            this.sendName.Name = "sendName";
+            this.sendName.Size = new System.Drawing.Size(75, 23);
+            this.sendName.TabIndex = 61;
+            this.sendName.Text = "Save";
+            this.sendName.UseVisualStyleBackColor = true;
+            this.sendName.Click += new System.EventHandler(this.sendName_Click);
+            // 
+            // closingTimeTextBox
+            // 
+            this.closingTimeTextBox.Location = new System.Drawing.Point(152, 245);
+            this.closingTimeTextBox.Name = "closingTimeTextBox";
+            this.closingTimeTextBox.Size = new System.Drawing.Size(201, 20);
+            this.closingTimeTextBox.TabIndex = 60;
+            // 
+            // copiePrintingTextBox
+            // 
+            this.copiePrintingTextBox.Location = new System.Drawing.Point(152, 218);
+            this.copiePrintingTextBox.Name = "copiePrintingTextBox";
+            this.copiePrintingTextBox.Size = new System.Drawing.Size(201, 20);
+            this.copiePrintingTextBox.TabIndex = 58;
+            // 
+            // totalCounterTextBox
+            // 
+            this.totalCounterTextBox.Location = new System.Drawing.Point(152, 192);
+            this.totalCounterTextBox.Name = "totalCounterTextBox";
+            this.totalCounterTextBox.Size = new System.Drawing.Size(201, 20);
+            this.totalCounterTextBox.TabIndex = 56;
+            // 
+            // counteTextBox
+            // 
+            this.counteTextBox.Location = new System.Drawing.Point(152, 166);
+            this.counteTextBox.Multiline = true;
+            this.counteTextBox.Name = "counteTextBox";
+            this.counteTextBox.Size = new System.Drawing.Size(201, 20);
+            this.counteTextBox.TabIndex = 54;
+            // 
+            // timeTextBox
+            // 
+            this.timeTextBox.Location = new System.Drawing.Point(152, 137);
+            this.timeTextBox.Name = "timeTextBox";
+            this.timeTextBox.Size = new System.Drawing.Size(201, 20);
+            this.timeTextBox.TabIndex = 52;
+            // 
+            // bankIdTextBox
+            // 
+            this.bankIdTextBox.Location = new System.Drawing.Point(152, 109);
+            this.bankIdTextBox.Name = "bankIdTextBox";
+            this.bankIdTextBox.Size = new System.Drawing.Size(201, 20);
+            this.bankIdTextBox.TabIndex = 50;
+            // 
+            // institutionTextBox
+            // 
+            this.institutionTextBox.Location = new System.Drawing.Point(154, 81);
+            this.institutionTextBox.Name = "institutionTextBox";
+            this.institutionTextBox.Size = new System.Drawing.Size(201, 20);
+            this.institutionTextBox.TabIndex = 48;
+            this.institutionTextBox.TextChanged += new System.EventHandler(this.institutionTextBox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 298);
+            this.label7.Location = new System.Drawing.Point(32, 250);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 13);
             this.label7.TabIndex = 59;
@@ -753,7 +855,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 271);
+            this.label6.Location = new System.Drawing.Point(32, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 13);
             this.label6.TabIndex = 57;
@@ -762,7 +864,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 245);
+            this.label5.Location = new System.Drawing.Point(32, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 13);
             this.label5.TabIndex = 55;
@@ -771,7 +873,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 219);
+            this.label4.Location = new System.Drawing.Point(32, 171);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 53;
@@ -780,7 +882,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 190);
+            this.label3.Location = new System.Drawing.Point(32, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 51;
@@ -789,7 +891,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 162);
+            this.label2.Location = new System.Drawing.Point(32, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 49;
@@ -798,7 +900,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 134);
+            this.label1.Location = new System.Drawing.Point(32, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 47;
@@ -814,25 +916,79 @@
             this.tabControl1.Size = new System.Drawing.Size(804, 444);
             this.tabControl1.TabIndex = 19;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label33);
+            this.groupBox1.Controls.Add(this.cmbPortName);
+            this.groupBox1.Location = new System.Drawing.Point(866, 60);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(205, 76);
+            this.groupBox1.TabIndex = 44;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "COM Serial Port Settings";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(1, 28);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(56, 13);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "COM Port:";
+            // 
+            // cmbPortName
+            // 
+            this.cmbPortName.FormattingEnabled = true;
+            this.cmbPortName.Location = new System.Drawing.Point(75, 25);
+            this.cmbPortName.Name = "cmbPortName";
+            this.cmbPortName.Size = new System.Drawing.Size(121, 21);
+            this.cmbPortName.TabIndex = 0;
+            this.cmbPortName.Text = "Select Port Name";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(888, 173);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 46;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.Location = new System.Drawing.Point(866, 206);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(128, 33);
+            this.btnConnect.TabIndex = 45;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1012, 496);
+            this.ClientSize = new System.Drawing.Size(1097, 496);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.portButton);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Digiline System QMS Utility";
+            this.Text = "Digiline QMS Utility V1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -841,23 +997,23 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Button sendCntLabel8;
+        private System.Windows.Forms.TextBox cntLabel8TextBox;
+        private System.Windows.Forms.TextBox cntLabel7TextBox;
+        private System.Windows.Forms.TextBox cntLabel6TextBox;
+        private System.Windows.Forms.TextBox cntLabel5TextBox;
+        private System.Windows.Forms.TextBox cntLabel4TextBox;
+        private System.Windows.Forms.TextBox cntLabel3TextBox;
+        private System.Windows.Forms.TextBox cntLabel2TextBox;
+        private System.Windows.Forms.TextBox cntLabel1TextBox;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button sendCntLabel7;
+        private System.Windows.Forms.Button sendCntLabel6;
+        private System.Windows.Forms.Button sendCntLabel5;
+        private System.Windows.Forms.Button sendCntLabel4;
+        private System.Windows.Forms.Button sendCntLabel3;
+        private System.Windows.Forms.Button sendCntLabel2;
+        private System.Windows.Forms.Button sendCntLabel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -866,20 +1022,20 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button closingTimeSend;
+        private System.Windows.Forms.Button copiesSend;
+        private System.Windows.Forms.Button sendCounterNo;
+        private System.Windows.Forms.Button sendCounter;
+        private System.Windows.Forms.Button sendTime;
+        private System.Windows.Forms.Button sendBankID;
+        private System.Windows.Forms.Button sendName;
+        private System.Windows.Forms.TextBox closingTimeTextBox;
+        private System.Windows.Forms.TextBox copiePrintingTextBox;
+        private System.Windows.Forms.TextBox totalCounterTextBox;
+        private System.Windows.Forms.TextBox counteTextBox;
+        private System.Windows.Forms.TextBox timeTextBox;
+        private System.Windows.Forms.TextBox bankIdTextBox;
+        private System.Windows.Forms.TextBox institutionTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -888,24 +1044,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Button sendCntLabel16;
+        private System.Windows.Forms.TextBox cntLabel16TextBox;
+        private System.Windows.Forms.TextBox cntLabel15TextBox;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button sendCntLabel15;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Button sendCntLabel14;
+        private System.Windows.Forms.Button sendCntLabel13;
+        private System.Windows.Forms.Button sendCntLabel12;
+        private System.Windows.Forms.Button sendCntLabel11;
+        private System.Windows.Forms.Button sendCntLabel10;
+        private System.Windows.Forms.Button sendCntLabel9;
+        private System.Windows.Forms.TextBox cntLabel14TextBox;
+        private System.Windows.Forms.TextBox cntLabel13TextBox;
+        private System.Windows.Forms.TextBox cntLabel12TextBox;
+        private System.Windows.Forms.TextBox cntLabel11TextBox;
+        private System.Windows.Forms.TextBox cntLabel10TextBox;
+        private System.Windows.Forms.TextBox cntLabel9TextBox;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
@@ -913,6 +1069,20 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         public System.Windows.Forms.Button portButton;
+        private System.Windows.Forms.Button sendToken3;
+        private System.Windows.Forms.TextBox tokenSlipTextBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button sendToken2;
+        private System.Windows.Forms.TextBox tokenSlip2TextBox;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button sendToken1;
+        private System.Windows.Forms.TextBox tokenSlip1TextBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox cmbPortName;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 
