@@ -30,7 +30,6 @@
         {
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.portButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.sendCntLabel16 = new System.Windows.Forms.Button();
             this.cntLabel16TextBox = new System.Windows.Forms.TextBox();
@@ -82,7 +81,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.sendToken3 = new System.Windows.Forms.Button();
-            this.tokenSlipTextBox = new System.Windows.Forms.TextBox();
+            this.tokenSlipBTextBox = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.sendToken2 = new System.Windows.Forms.Button();
             this.tokenSlip2TextBox = new System.Windows.Forms.TextBox();
@@ -131,26 +130,17 @@
             this.button4.TabIndex = 42;
             this.button4.Text = "Reset All Counter";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(866, 341);
+            this.button3.Location = new System.Drawing.Point(866, 289);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 34);
             this.button3.TabIndex = 41;
             this.button3.Text = "CLOSE";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // portButton
-            // 
-            this.portButton.Location = new System.Drawing.Point(866, 294);
-            this.portButton.Name = "portButton";
-            this.portButton.Size = new System.Drawing.Size(128, 34);
-            this.portButton.TabIndex = 40;
-            this.portButton.Text = "PORT";
-            this.portButton.UseVisualStyleBackColor = true;
-            this.portButton.Click += new System.EventHandler(this.portButton_Click);
             // 
             // tabPage2
             // 
@@ -216,8 +206,9 @@
             this.sendCntLabel16.Name = "sendCntLabel16";
             this.sendCntLabel16.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel16.TabIndex = 154;
-            this.sendCntLabel16.Text = "Save";
+            this.sendCntLabel16.Text = "Send";
             this.sendCntLabel16.UseVisualStyleBackColor = true;
+            this.sendCntLabel16.Click += new System.EventHandler(this.sendCntLabel16_Click);
             // 
             // cntLabel16TextBox
             // 
@@ -248,8 +239,9 @@
             this.sendCntLabel15.Name = "sendCntLabel15";
             this.sendCntLabel15.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel15.TabIndex = 151;
-            this.sendCntLabel15.Text = "Save";
+            this.sendCntLabel15.Text = "Send";
             this.sendCntLabel15.UseVisualStyleBackColor = true;
+            this.sendCntLabel15.Click += new System.EventHandler(this.sendCntLabel15_Click);
             // 
             // label23
             // 
@@ -266,8 +258,9 @@
             this.sendCntLabel14.Name = "sendCntLabel14";
             this.sendCntLabel14.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel14.TabIndex = 148;
-            this.sendCntLabel14.Text = "Save";
+            this.sendCntLabel14.Text = "Send";
             this.sendCntLabel14.UseVisualStyleBackColor = true;
+            this.sendCntLabel14.Click += new System.EventHandler(this.sendCntLabel14_Click);
             // 
             // sendCntLabel13
             // 
@@ -276,8 +269,9 @@
             this.sendCntLabel13.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel13.TabIndex = 147;
             this.sendCntLabel13.Tag = "13";
-            this.sendCntLabel13.Text = "Save";
+            this.sendCntLabel13.Text = "Send";
             this.sendCntLabel13.UseVisualStyleBackColor = true;
+            this.sendCntLabel13.Click += new System.EventHandler(this.sendCntLabel13_Click);
             // 
             // sendCntLabel12
             // 
@@ -285,8 +279,9 @@
             this.sendCntLabel12.Name = "sendCntLabel12";
             this.sendCntLabel12.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel12.TabIndex = 146;
-            this.sendCntLabel12.Text = "Save";
+            this.sendCntLabel12.Text = "Send";
             this.sendCntLabel12.UseVisualStyleBackColor = true;
+            this.sendCntLabel12.Click += new System.EventHandler(this.sendCntLabel12_Click);
             // 
             // sendCntLabel11
             // 
@@ -294,8 +289,9 @@
             this.sendCntLabel11.Name = "sendCntLabel11";
             this.sendCntLabel11.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel11.TabIndex = 145;
-            this.sendCntLabel11.Text = "Save";
+            this.sendCntLabel11.Text = "Send";
             this.sendCntLabel11.UseVisualStyleBackColor = true;
+            this.sendCntLabel11.Click += new System.EventHandler(this.sendCntLabel11_Click);
             // 
             // sendCntLabel10
             // 
@@ -303,8 +299,9 @@
             this.sendCntLabel10.Name = "sendCntLabel10";
             this.sendCntLabel10.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel10.TabIndex = 144;
-            this.sendCntLabel10.Text = "Save";
+            this.sendCntLabel10.Text = "Send";
             this.sendCntLabel10.UseVisualStyleBackColor = true;
+            this.sendCntLabel10.Click += new System.EventHandler(this.sendCntLabel10_Click);
             // 
             // sendCntLabel9
             // 
@@ -312,8 +309,9 @@
             this.sendCntLabel9.Name = "sendCntLabel9";
             this.sendCntLabel9.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel9.TabIndex = 143;
-            this.sendCntLabel9.Text = "Save";
+            this.sendCntLabel9.Text = "Send";
             this.sendCntLabel9.UseVisualStyleBackColor = true;
+            this.sendCntLabel9.Click += new System.EventHandler(this.sendCntLabel9_Click);
             // 
             // cntLabel14TextBox
             // 
@@ -418,8 +416,9 @@
             this.sendCntLabel8.Name = "sendCntLabel8";
             this.sendCntLabel8.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel8.TabIndex = 124;
-            this.sendCntLabel8.Text = "Save";
+            this.sendCntLabel8.Text = "Send";
             this.sendCntLabel8.UseVisualStyleBackColor = true;
+            this.sendCntLabel8.Click += new System.EventHandler(this.sendCntLabel8_Click);
             // 
             // cntLabel8TextBox
             // 
@@ -493,8 +492,9 @@
             this.sendCntLabel7.Name = "sendCntLabel7";
             this.sendCntLabel7.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel7.TabIndex = 109;
-            this.sendCntLabel7.Text = "Save";
+            this.sendCntLabel7.Text = "Send";
             this.sendCntLabel7.UseVisualStyleBackColor = true;
+            this.sendCntLabel7.Click += new System.EventHandler(this.sendCntLabel7_Click);
             // 
             // sendCntLabel6
             // 
@@ -502,8 +502,9 @@
             this.sendCntLabel6.Name = "sendCntLabel6";
             this.sendCntLabel6.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel6.TabIndex = 108;
-            this.sendCntLabel6.Text = "Save";
+            this.sendCntLabel6.Text = "Send";
             this.sendCntLabel6.UseVisualStyleBackColor = true;
+            this.sendCntLabel6.Click += new System.EventHandler(this.sendCntLabel6_Click);
             // 
             // sendCntLabel5
             // 
@@ -511,8 +512,9 @@
             this.sendCntLabel5.Name = "sendCntLabel5";
             this.sendCntLabel5.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel5.TabIndex = 107;
-            this.sendCntLabel5.Text = "Save";
+            this.sendCntLabel5.Text = "Send";
             this.sendCntLabel5.UseVisualStyleBackColor = true;
+            this.sendCntLabel5.Click += new System.EventHandler(this.sendCntLabel5_Click);
             // 
             // sendCntLabel4
             // 
@@ -520,8 +522,9 @@
             this.sendCntLabel4.Name = "sendCntLabel4";
             this.sendCntLabel4.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel4.TabIndex = 106;
-            this.sendCntLabel4.Text = "Save";
+            this.sendCntLabel4.Text = "Send";
             this.sendCntLabel4.UseVisualStyleBackColor = true;
+            this.sendCntLabel4.Click += new System.EventHandler(this.sendCntLabel4_Click);
             // 
             // sendCntLabel3
             // 
@@ -529,8 +532,9 @@
             this.sendCntLabel3.Name = "sendCntLabel3";
             this.sendCntLabel3.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel3.TabIndex = 105;
-            this.sendCntLabel3.Text = "Save";
+            this.sendCntLabel3.Text = "Send";
             this.sendCntLabel3.UseVisualStyleBackColor = true;
+            this.sendCntLabel3.Click += new System.EventHandler(this.sendCntLabel3_Click);
             // 
             // sendCntLabel2
             // 
@@ -538,8 +542,9 @@
             this.sendCntLabel2.Name = "sendCntLabel2";
             this.sendCntLabel2.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel2.TabIndex = 104;
-            this.sendCntLabel2.Text = "Save";
+            this.sendCntLabel2.Text = "Send";
             this.sendCntLabel2.UseVisualStyleBackColor = true;
+            this.sendCntLabel2.Click += new System.EventHandler(this.sendCntLabel2_Click);
             // 
             // sendCntLabel1
             // 
@@ -547,8 +552,9 @@
             this.sendCntLabel1.Name = "sendCntLabel1";
             this.sendCntLabel1.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel1.TabIndex = 103;
-            this.sendCntLabel1.Text = "Save";
+            this.sendCntLabel1.Text = "Send";
             this.sendCntLabel1.UseVisualStyleBackColor = true;
+            this.sendCntLabel1.Click += new System.EventHandler(this.sendCntLabel1_Click);
             // 
             // label8
             // 
@@ -616,7 +622,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.sendToken3);
-            this.tabPage1.Controls.Add(this.tokenSlipTextBox);
+            this.tabPage1.Controls.Add(this.tokenSlipBTextBox);
             this.tabPage1.Controls.Add(this.label26);
             this.tabPage1.Controls.Add(this.sendToken2);
             this.tabPage1.Controls.Add(this.tokenSlip2TextBox);
@@ -659,15 +665,16 @@
             this.sendToken3.Name = "sendToken3";
             this.sendToken3.Size = new System.Drawing.Size(75, 23);
             this.sendToken3.TabIndex = 76;
-            this.sendToken3.Text = "Save";
+            this.sendToken3.Text = "Send";
             this.sendToken3.UseVisualStyleBackColor = true;
+            this.sendToken3.Click += new System.EventHandler(this.sendToken3_Click);
             // 
-            // tokenSlipTextBox
+            // tokenSlipBTextBox
             // 
-            this.tokenSlipTextBox.Location = new System.Drawing.Point(152, 334);
-            this.tokenSlipTextBox.Name = "tokenSlipTextBox";
-            this.tokenSlipTextBox.Size = new System.Drawing.Size(201, 20);
-            this.tokenSlipTextBox.TabIndex = 75;
+            this.tokenSlipBTextBox.Location = new System.Drawing.Point(152, 334);
+            this.tokenSlipBTextBox.Name = "tokenSlipBTextBox";
+            this.tokenSlipBTextBox.Size = new System.Drawing.Size(201, 20);
+            this.tokenSlipBTextBox.TabIndex = 75;
             // 
             // label26
             // 
@@ -684,8 +691,9 @@
             this.sendToken2.Name = "sendToken2";
             this.sendToken2.Size = new System.Drawing.Size(75, 23);
             this.sendToken2.TabIndex = 73;
-            this.sendToken2.Text = "Save";
+            this.sendToken2.Text = "Send";
             this.sendToken2.UseVisualStyleBackColor = true;
+            this.sendToken2.Click += new System.EventHandler(this.sendToken2_Click);
             // 
             // tokenSlip2TextBox
             // 
@@ -709,8 +717,9 @@
             this.sendToken1.Name = "sendToken1";
             this.sendToken1.Size = new System.Drawing.Size(75, 23);
             this.sendToken1.TabIndex = 70;
-            this.sendToken1.Text = "Save";
+            this.sendToken1.Text = "Send";
             this.sendToken1.UseVisualStyleBackColor = true;
+            this.sendToken1.Click += new System.EventHandler(this.sendToken1_Click);
             // 
             // tokenSlip1TextBox
             // 
@@ -718,6 +727,7 @@
             this.tokenSlip1TextBox.Name = "tokenSlip1TextBox";
             this.tokenSlip1TextBox.Size = new System.Drawing.Size(201, 20);
             this.tokenSlip1TextBox.TabIndex = 69;
+            this.tokenSlip1TextBox.TextChanged += new System.EventHandler(this.tokenSlip1TextBox_TextChanged);
             // 
             // label24
             // 
@@ -734,8 +744,9 @@
             this.closingTimeSend.Name = "closingTimeSend";
             this.closingTimeSend.Size = new System.Drawing.Size(75, 23);
             this.closingTimeSend.TabIndex = 67;
-            this.closingTimeSend.Text = "Save";
+            this.closingTimeSend.Text = "Send";
             this.closingTimeSend.UseVisualStyleBackColor = true;
+            this.closingTimeSend.Click += new System.EventHandler(this.closingTimeSend_Click);
             // 
             // copiesSend
             // 
@@ -743,8 +754,9 @@
             this.copiesSend.Name = "copiesSend";
             this.copiesSend.Size = new System.Drawing.Size(75, 23);
             this.copiesSend.TabIndex = 66;
-            this.copiesSend.Text = "Save";
+            this.copiesSend.Text = "Send";
             this.copiesSend.UseVisualStyleBackColor = true;
+            this.copiesSend.Click += new System.EventHandler(this.copiesSend_Click);
             // 
             // sendCounterNo
             // 
@@ -752,8 +764,9 @@
             this.sendCounterNo.Name = "sendCounterNo";
             this.sendCounterNo.Size = new System.Drawing.Size(75, 23);
             this.sendCounterNo.TabIndex = 65;
-            this.sendCounterNo.Text = "Save";
+            this.sendCounterNo.Text = "Send";
             this.sendCounterNo.UseVisualStyleBackColor = true;
+            this.sendCounterNo.Click += new System.EventHandler(this.sendCounterNo_Click);
             // 
             // sendCounter
             // 
@@ -761,8 +774,9 @@
             this.sendCounter.Name = "sendCounter";
             this.sendCounter.Size = new System.Drawing.Size(75, 23);
             this.sendCounter.TabIndex = 64;
-            this.sendCounter.Text = "Save";
+            this.sendCounter.Text = "Send";
             this.sendCounter.UseVisualStyleBackColor = true;
+            this.sendCounter.Click += new System.EventHandler(this.sendCounter_Click);
             // 
             // sendTime
             // 
@@ -770,8 +784,9 @@
             this.sendTime.Name = "sendTime";
             this.sendTime.Size = new System.Drawing.Size(75, 23);
             this.sendTime.TabIndex = 63;
-            this.sendTime.Text = "Save";
+            this.sendTime.Text = "Send";
             this.sendTime.UseVisualStyleBackColor = true;
+            this.sendTime.Click += new System.EventHandler(this.sendTime_Click);
             // 
             // sendBankID
             // 
@@ -779,8 +794,9 @@
             this.sendBankID.Name = "sendBankID";
             this.sendBankID.Size = new System.Drawing.Size(75, 23);
             this.sendBankID.TabIndex = 62;
-            this.sendBankID.Text = "Save";
+            this.sendBankID.Text = "Send";
             this.sendBankID.UseVisualStyleBackColor = true;
+            this.sendBankID.Click += new System.EventHandler(this.sendBankID_Click);
             // 
             // sendName
             // 
@@ -788,7 +804,7 @@
             this.sendName.Name = "sendName";
             this.sendName.Size = new System.Drawing.Size(75, 23);
             this.sendName.TabIndex = 61;
-            this.sendName.Text = "Save";
+            this.sendName.Text = "Send";
             this.sendName.UseVisualStyleBackColor = true;
             this.sendName.Click += new System.EventHandler(this.sendName_Click);
             // 
@@ -953,6 +969,7 @@
             this.btnRefresh.TabIndex = 46;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnConnect
             // 
@@ -977,10 +994,10 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.portButton);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Digiline QMS Utility V1.0";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1045,7 +1062,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button sendCntLabel16;
-        private System.Windows.Forms.TextBox cntLabel16TextBox;
         private System.Windows.Forms.TextBox cntLabel15TextBox;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button sendCntLabel15;
@@ -1068,9 +1084,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        public System.Windows.Forms.Button portButton;
         private System.Windows.Forms.Button sendToken3;
-        private System.Windows.Forms.TextBox tokenSlipTextBox;
+        private System.Windows.Forms.TextBox tokenSlipBTextBox;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Button sendToken2;
         private System.Windows.Forms.TextBox tokenSlip2TextBox;
@@ -1083,6 +1098,7 @@
         private System.Windows.Forms.ComboBox cmbPortName;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.TextBox cntLabel16TextBox;
     }
 }
 

@@ -13,7 +13,7 @@ namespace QMS_Utility
 {
     public partial class Form1 : Form
     {
-        Form2 form2;
+       
         public Form1()
         {
             InitializeComponent();
@@ -32,29 +32,13 @@ namespace QMS_Utility
 
        
 
-        private void portButton_Click(object sender, EventArgs e)
-        {
-
-             
-            form2.getSerialPort();
-
-            // form2.comboBox1.DataValueField = "ID";
-            // form2.comboBox1.DataTextField = "Description";
-            // form2.comboBox1.DataBind();
-
-            // Then add your first item
-            
-
-            form2.ShowDialog(); // Shows Form2
-            
-
-            // form2.comboBox1.DataSource = form2.getSerialPort();
-
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
+            ComPort.Close();
             this.Close();
+            
         }
 
         public Form getForm1Object()
@@ -76,8 +60,11 @@ namespace QMS_Utility
             string[] ports = SerialPort.GetPortNames();
             foreach (string port in ports)
                 {
-                cmbPortName.Items.Add(port);
+                if (!cmbPortName.Items.Contains(port))
+                { 
+                    cmbPortName.Items.Add(port);
                 }
+            }
             }
         private SerialPort ComPort = new SerialPort();  //Initialise ComPort Variable as SerialPort
         private void connect()
@@ -198,9 +185,55 @@ namespace QMS_Utility
                                                       
                 }*/
             }
-               //Convert a string of hex digits (example: E1 FF 1B) to a byte array. 
-               //The string containing the hex digits (with or without spaces)
-              //Returns an array of bytes. </returns>
+        //Convert a string of hex digits (example: E1 FF 1B) to a byte array. 
+        //The string containing the hex digits (with or without spaces)
+        //Returns an array of bytes. </returns>
+
+        private void sendDataToPort(string textData)
+        {
+            
+            Console.WriteLine(textData);
+            bool error = false;
+             
+                 try
+                     {
+                /*******************************************************************************************************************************
+                 *To add fixed string in of 28 alphabet 
+                 *******************************************************************************************************************************/
+
+                // string textBoxData = textData.PadRight(28, ' ').Substring(0, 28);
+                if (ComPort.IsOpen)
+                {
+                    ComPort.Write(textData);
+                }
+                else
+                {
+                    MessageBox.Show(this, "Could not open the COM port. Most likely it is already in use, has been removed, or is unavailable.", "COM Port unavailable", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                }
+                //Convert the user's string of hex digits (example: E1 FF 1B) to a byte array
+                //byte[] data = HexStringToByteArray(textData);
+                //ComPort.Write(textData);
+                //Send the binary data out the port
+                //ComPort.Write(data, 0, data.Length);
+
+                //Show the hex digits on in the terminal window
+                //rtxtDataArea.ForeColor = Color.Blue;   //write Hex data in Blue
+                //rtxtDataArea.AppendText(txtSend.Text.ToUpper() + "\n");
+                //txtSend.Clear();                       
+                //clear screen after sending data
+            }
+                 catch (FormatException) { error = true; }
+
+                     // Inform the user if the hex string was not properly formatted
+                     catch (ArgumentException) { error = true; }
+
+                 if (error) MessageBox.Show(this, "Not properly formatted hex string: " + textData + "\n" + "example: E1 FF 1B", "Format Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                 
+        }
+
+
         private byte[] HexStringToByteArray(string s)
             {
             s = s.Replace(" ", "");
@@ -256,12 +289,181 @@ namespace QMS_Utility
 
         private void institutionTextBox_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void sendName_Click(object sender, EventArgs e)
         {
+            string institutionText = fixedLengthString(institutionTextBox.Text, 28);
+            sendDataToPort("$BnkL"+ institutionText + ";");
+        }
+
+        private void sendBankID_Click(object sender, EventArgs e)
+        {
+            string bankIdText = fixedLengthString(bankIdTextBox.Text, 28);
+            sendDataToPort("$BnkL" + "" + bankIdText + ";");
+        }
+
+        private void sendTime_Click(object sender, EventArgs e)
+        {
+            string timeTex = fixedLengthString(timeTextBox.Text, 28);
+            sendDataToPort("$TIME" + "" + timeTex + ";");
+        }
+
+        private void sendCounter_Click(object sender, EventArgs e)
+        {
+            string counteText = fixedLengthString(counteTextBox.Text, 28);
+            sendDataToPort("$CTID" + "" + counteText + ";");
+        }
+
+        private void sendCounterNo_Click(object sender, EventArgs e)
+        {
+            string totalCounterText = fixedLengthString(totalCounterTextBox.Text, 28);
+            sendDataToPort("$CNTR" + "" + totalCounterText + ";");
+        }
+
+        private void copiesSend_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void closingTimeSend_Click(object sender, EventArgs e)
+        {
+            string closingTimeText = fixedLengthString(closingTimeTextBox.Text, 28);
+            sendDataToPort("$CLTM" + "" + closingTimeText + ";");
+        }
+
+        private void sendToken1_Click(object sender, EventArgs e)
+        {
+            string tokenSlip1Text = fixedLengthString(tokenSlip1TextBox.Text, 28);
+            sendDataToPort("$TSL9" + "" + tokenSlip1Text + ";");
+        }
+
+        private void sendToken2_Click(object sender, EventArgs e)
+        {
+            string tokenSlip2Text = fixedLengthString(tokenSlip2TextBox.Text, 28);
+            sendDataToPort("$TSLA" + "" + tokenSlip2Text + ";");
+        }
+
+        private void sendToken3_Click(object sender, EventArgs e)
+        {
+            string tokenSlipBText = fixedLengthString(tokenSlipBTextBox.Text, 28);
+            sendDataToPort("$TSLB" + "" + tokenSlipBText + ";");
+        }
+
+        private void tokenSlip1TextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sendCntLabel1_Click(object sender, EventArgs e)
+        {
+            string cntLabel1Text = fixedLengthString(cntLabel1TextBox.Text, 28);
+            sendDataToPort("$LaC1" + "" + cntLabel1Text + ";");
+        }
+
+        private void sendCntLabel2_Click(object sender, EventArgs e)
+        {
+            string cntLabel2Text = fixedLengthString(cntLabel2TextBox.Text, 28);
+            sendDataToPort("$LaC2" + "" + cntLabel2Text + ";");
+        }
+
+        private void sendCntLabel3_Click(object sender, EventArgs e)
+        {
+            string cntLabel3Text = fixedLengthString(cntLabel3TextBox.Text, 28);
+            sendDataToPort("$LaC3" + "" + cntLabel3Text + ";");
+        }
+
+        private void sendCntLabel4_Click(object sender, EventArgs e)
+        {
+            string cntLabel4Text = fixedLengthString(cntLabel4TextBox.Text, 28);
+            sendDataToPort("$LaC4" + "" + cntLabel4Text + ";");
+        }
+
+        private void sendCntLabel5_Click(object sender, EventArgs e)
+        {
+            string cntLabel5Text = fixedLengthString(cntLabel5TextBox.Text, 28);
+            sendDataToPort("$LaC5" + "" + cntLabel5Text + ";");
+        }
+
+        private void sendCntLabel6_Click(object sender, EventArgs e)
+        {
+            string cntLabel6Text = fixedLengthString(cntLabel6TextBox.Text, 28);
+            sendDataToPort("$LaC6" + "" + cntLabel6Text + ";");
+
+        }
+
+        private void sendCntLabel7_Click(object sender, EventArgs e)
+        {
+            string cntLabel7Text = fixedLengthString(cntLabel7TextBox.Text, 28);
+            sendDataToPort("$LaC7" + "" + cntLabel7Text + ";");
+        }
+
+        private void sendCntLabel8_Click(object sender, EventArgs e)
+        {
+            string cntLabel8Text = fixedLengthString(cntLabel8TextBox.Text, 28);
+            sendDataToPort("$LaC8" + "" + cntLabel8Text + ";");
+        }
+
+        private void sendCntLabel9_Click(object sender, EventArgs e)
+        {
+            string cntLabel9Text = fixedLengthString(cntLabel9TextBox.Text, 28);
+            sendDataToPort("$LaC9" + "" + cntLabel9Text + ";");
+        }
+
+        private void sendCntLabel10_Click(object sender, EventArgs e)
+        {
+            string cntLabel10Text = fixedLengthString(cntLabel10TextBox.Text, 28);
+            sendDataToPort("$LaCA" + "" + cntLabel10Text + ";");
+        }
+
+        private void sendCntLabel11_Click(object sender, EventArgs e)
+        {
+            string cntLabel11Text = fixedLengthString(cntLabel11TextBox.Text, 28);
+            sendDataToPort("$LaCB" + "" + cntLabel11Text + ";");
+        }
+
+        private void sendCntLabel12_Click(object sender, EventArgs e)
+        {
+            string cntLabel12Text = fixedLengthString(cntLabel12TextBox.Text, 28);
+            sendDataToPort("$LaCC" + "" + cntLabel12Text + ";");
+        }
+
+        private void sendCntLabel13_Click(object sender, EventArgs e)
+        {
+            string cntLabel13Text = fixedLengthString(cntLabel13TextBox.Text, 28);
+            sendDataToPort("$LaCD" + "" + cntLabel13Text + ";");
+        }
+
+        private void sendCntLabel14_Click(object sender, EventArgs e)
+        {
+            string cntLabel14Text = fixedLengthString(cntLabel14TextBox.Text, 28);
+            sendDataToPort("$LaCE" + "" + cntLabel14Text + ";");
+        }
+
+        private void sendCntLabel15_Click(object sender, EventArgs e)
+        {
+            string cntLabel15Text = fixedLengthString(cntLabel15TextBox.Text, 28);
+            sendDataToPort("$LaCF" + "" + cntLabel15Text + ";");
+        }
+
+        private void sendCntLabel16_Click(object sender, EventArgs e)
+        {
+            string cntLabel16Text = fixedLengthString(cntLabel16TextBox.Text, 28);
+            sendDataToPort("$LaCG" + "" + cntLabel16Text + ";");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sendDataToPort("$RESET" +""+ ";");
+        }
+
+        private string fixedLengthString(string textData , int lenght)
+        {
+            string stringData = textData.PadRight(lenght, ' ').Substring(0, lenght);
+            return stringData;
+        }
+
+       
     }
 }

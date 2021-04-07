@@ -1,0 +1,74 @@
+Name= Time & Date
+Command- $TIME;
+
+Name=Name of Institution 28 Char
+Command- $BnkL;
+
+Name= Closing Time for Print
+Command- $CLTM;
+
+Name= Name Counter 
+Command-$CTID;
+
+Name= Reset all 
+Command - $RESET;
+
+Name= No. of Counter
+Command- $CNTR;
+
+Name= Token Slip Line-1/9
+Command-$TSL9;
+
+Name= Token Slip Line-2/A
+Command-$TSLA;
+
+Name= Token Slip Line-3/B
+Command-$TSLB;
+
+Name= Lable 1
+Command-$LaC1;
+
+Name= Lable 2
+Command-$LaC2;
+
+Name= Lable 3
+Command-$LaC3;
+
+Name= Lable 4
+Command-$LaC4;
+
+Name= Lable 5
+Command-$LaC5;
+
+Name= Lable 6
+Command-$LaC6;
+
+Name= Lable 7
+Command-$LaC7;
+
+Name= Lable 8
+Command-$LaC8;
+
+Name= Lable 9
+Command-$LaC9;
+
+Name= Lable 10 A
+Command-$LaCA
+
+Name= Lable 11 B
+Command-$LaCB
+
+Name= Lable 12 C
+Command-$LaCC
+
+Name= Lable 13 D
+Command-$LaCD
+
+Name= Lable 14 E
+Command-$LaCE
+
+Name= Lable 15 F
+Command-$LaCF
+
+Name= Lable 16 G
+Command-$LaCG

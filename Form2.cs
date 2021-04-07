@@ -68,7 +68,7 @@ namespace QMS_Utility
         private void button1_Click(object sender, EventArgs e)
         {   
             portName = comboBox1.Text;
-            f1.portButton.Text = portName;
+        
             this.Close();
         }
     }
