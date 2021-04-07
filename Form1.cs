@@ -464,6 +464,9 @@ namespace QMS_Utility
             return stringData;
         }
 
-       
+        private void bankIdTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

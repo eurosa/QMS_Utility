@@ -213,6 +213,7 @@
             // cntLabel16TextBox
             // 
             this.cntLabel16TextBox.Location = new System.Drawing.Point(508, 299);
+            this.cntLabel16TextBox.MaxLength = 28;
             this.cntLabel16TextBox.Name = "cntLabel16TextBox";
             this.cntLabel16TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel16TextBox.TabIndex = 153;
@@ -220,6 +221,7 @@
             // cntLabel15TextBox
             // 
             this.cntLabel15TextBox.Location = new System.Drawing.Point(508, 270);
+            this.cntLabel15TextBox.MaxLength = 28;
             this.cntLabel15TextBox.Name = "cntLabel15TextBox";
             this.cntLabel15TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel15TextBox.TabIndex = 150;
@@ -316,6 +318,7 @@
             // cntLabel14TextBox
             // 
             this.cntLabel14TextBox.Location = new System.Drawing.Point(508, 240);
+            this.cntLabel14TextBox.MaxLength = 28;
             this.cntLabel14TextBox.Name = "cntLabel14TextBox";
             this.cntLabel14TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel14TextBox.TabIndex = 142;
@@ -323,6 +326,7 @@
             // cntLabel13TextBox
             // 
             this.cntLabel13TextBox.Location = new System.Drawing.Point(508, 213);
+            this.cntLabel13TextBox.MaxLength = 28;
             this.cntLabel13TextBox.Name = "cntLabel13TextBox";
             this.cntLabel13TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel13TextBox.TabIndex = 140;
@@ -330,6 +334,7 @@
             // cntLabel12TextBox
             // 
             this.cntLabel12TextBox.Location = new System.Drawing.Point(508, 187);
+            this.cntLabel12TextBox.MaxLength = 28;
             this.cntLabel12TextBox.Name = "cntLabel12TextBox";
             this.cntLabel12TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel12TextBox.TabIndex = 138;
@@ -337,6 +342,7 @@
             // cntLabel11TextBox
             // 
             this.cntLabel11TextBox.Location = new System.Drawing.Point(508, 161);
+            this.cntLabel11TextBox.MaxLength = 28;
             this.cntLabel11TextBox.Multiline = true;
             this.cntLabel11TextBox.Name = "cntLabel11TextBox";
             this.cntLabel11TextBox.Size = new System.Drawing.Size(166, 20);
@@ -345,6 +351,7 @@
             // cntLabel10TextBox
             // 
             this.cntLabel10TextBox.Location = new System.Drawing.Point(508, 132);
+            this.cntLabel10TextBox.MaxLength = 28;
             this.cntLabel10TextBox.Name = "cntLabel10TextBox";
             this.cntLabel10TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel10TextBox.TabIndex = 134;
@@ -352,6 +359,7 @@
             // cntLabel9TextBox
             // 
             this.cntLabel9TextBox.Location = new System.Drawing.Point(508, 104);
+            this.cntLabel9TextBox.MaxLength = 28;
             this.cntLabel9TextBox.Name = "cntLabel9TextBox";
             this.cntLabel9TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel9TextBox.TabIndex = 132;
@@ -423,6 +431,7 @@
             // cntLabel8TextBox
             // 
             this.cntLabel8TextBox.Location = new System.Drawing.Point(123, 299);
+            this.cntLabel8TextBox.MaxLength = 28;
             this.cntLabel8TextBox.Name = "cntLabel8TextBox";
             this.cntLabel8TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel8TextBox.TabIndex = 111;
@@ -430,6 +439,7 @@
             // cntLabel7TextBox
             // 
             this.cntLabel7TextBox.Location = new System.Drawing.Point(123, 270);
+            this.cntLabel7TextBox.MaxLength = 28;
             this.cntLabel7TextBox.Name = "cntLabel7TextBox";
             this.cntLabel7TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel7TextBox.TabIndex = 102;
@@ -437,6 +447,7 @@
             // cntLabel6TextBox
             // 
             this.cntLabel6TextBox.Location = new System.Drawing.Point(123, 243);
+            this.cntLabel6TextBox.MaxLength = 28;
             this.cntLabel6TextBox.Name = "cntLabel6TextBox";
             this.cntLabel6TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel6TextBox.TabIndex = 100;
@@ -444,6 +455,7 @@
             // cntLabel5TextBox
             // 
             this.cntLabel5TextBox.Location = new System.Drawing.Point(123, 217);
+            this.cntLabel5TextBox.MaxLength = 28;
             this.cntLabel5TextBox.Name = "cntLabel5TextBox";
             this.cntLabel5TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel5TextBox.TabIndex = 98;
@@ -451,6 +463,7 @@
             // cntLabel4TextBox
             // 
             this.cntLabel4TextBox.Location = new System.Drawing.Point(123, 191);
+            this.cntLabel4TextBox.MaxLength = 28;
             this.cntLabel4TextBox.Multiline = true;
             this.cntLabel4TextBox.Name = "cntLabel4TextBox";
             this.cntLabel4TextBox.Size = new System.Drawing.Size(166, 20);
@@ -459,6 +472,7 @@
             // cntLabel3TextBox
             // 
             this.cntLabel3TextBox.Location = new System.Drawing.Point(123, 162);
+            this.cntLabel3TextBox.MaxLength = 28;
             this.cntLabel3TextBox.Name = "cntLabel3TextBox";
             this.cntLabel3TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel3TextBox.TabIndex = 94;
@@ -466,6 +480,7 @@
             // cntLabel2TextBox
             // 
             this.cntLabel2TextBox.Location = new System.Drawing.Point(123, 134);
+            this.cntLabel2TextBox.MaxLength = 28;
             this.cntLabel2TextBox.Name = "cntLabel2TextBox";
             this.cntLabel2TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel2TextBox.TabIndex = 92;
@@ -473,6 +488,7 @@
             // cntLabel1TextBox
             // 
             this.cntLabel1TextBox.Location = new System.Drawing.Point(123, 106);
+            this.cntLabel1TextBox.MaxLength = 28;
             this.cntLabel1TextBox.Name = "cntLabel1TextBox";
             this.cntLabel1TextBox.Size = new System.Drawing.Size(166, 20);
             this.cntLabel1TextBox.TabIndex = 90;
@@ -672,6 +688,7 @@
             // tokenSlipBTextBox
             // 
             this.tokenSlipBTextBox.Location = new System.Drawing.Point(152, 334);
+            this.tokenSlipBTextBox.MaxLength = 28;
             this.tokenSlipBTextBox.Name = "tokenSlipBTextBox";
             this.tokenSlipBTextBox.Size = new System.Drawing.Size(201, 20);
             this.tokenSlipBTextBox.TabIndex = 75;
@@ -698,6 +715,7 @@
             // tokenSlip2TextBox
             // 
             this.tokenSlip2TextBox.Location = new System.Drawing.Point(152, 303);
+            this.tokenSlip2TextBox.MaxLength = 28;
             this.tokenSlip2TextBox.Name = "tokenSlip2TextBox";
             this.tokenSlip2TextBox.Size = new System.Drawing.Size(201, 20);
             this.tokenSlip2TextBox.TabIndex = 72;
@@ -724,6 +742,7 @@
             // tokenSlip1TextBox
             // 
             this.tokenSlip1TextBox.Location = new System.Drawing.Point(152, 275);
+            this.tokenSlip1TextBox.MaxLength = 28;
             this.tokenSlip1TextBox.Name = "tokenSlip1TextBox";
             this.tokenSlip1TextBox.Size = new System.Drawing.Size(201, 20);
             this.tokenSlip1TextBox.TabIndex = 69;
@@ -811,6 +830,7 @@
             // closingTimeTextBox
             // 
             this.closingTimeTextBox.Location = new System.Drawing.Point(152, 245);
+            this.closingTimeTextBox.MaxLength = 28;
             this.closingTimeTextBox.Name = "closingTimeTextBox";
             this.closingTimeTextBox.Size = new System.Drawing.Size(201, 20);
             this.closingTimeTextBox.TabIndex = 60;
@@ -818,6 +838,7 @@
             // copiePrintingTextBox
             // 
             this.copiePrintingTextBox.Location = new System.Drawing.Point(152, 218);
+            this.copiePrintingTextBox.MaxLength = 28;
             this.copiePrintingTextBox.Name = "copiePrintingTextBox";
             this.copiePrintingTextBox.Size = new System.Drawing.Size(201, 20);
             this.copiePrintingTextBox.TabIndex = 58;
@@ -825,6 +846,7 @@
             // totalCounterTextBox
             // 
             this.totalCounterTextBox.Location = new System.Drawing.Point(152, 192);
+            this.totalCounterTextBox.MaxLength = 28;
             this.totalCounterTextBox.Name = "totalCounterTextBox";
             this.totalCounterTextBox.Size = new System.Drawing.Size(201, 20);
             this.totalCounterTextBox.TabIndex = 56;
@@ -832,6 +854,7 @@
             // counteTextBox
             // 
             this.counteTextBox.Location = new System.Drawing.Point(152, 166);
+            this.counteTextBox.MaxLength = 28;
             this.counteTextBox.Multiline = true;
             this.counteTextBox.Name = "counteTextBox";
             this.counteTextBox.Size = new System.Drawing.Size(201, 20);
@@ -840,6 +863,7 @@
             // timeTextBox
             // 
             this.timeTextBox.Location = new System.Drawing.Point(152, 137);
+            this.timeTextBox.MaxLength = 28;
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(201, 20);
             this.timeTextBox.TabIndex = 52;
@@ -847,13 +871,16 @@
             // bankIdTextBox
             // 
             this.bankIdTextBox.Location = new System.Drawing.Point(152, 109);
+            this.bankIdTextBox.MaxLength = 28;
             this.bankIdTextBox.Name = "bankIdTextBox";
             this.bankIdTextBox.Size = new System.Drawing.Size(201, 20);
             this.bankIdTextBox.TabIndex = 50;
+            this.bankIdTextBox.TextChanged += new System.EventHandler(this.bankIdTextBox_TextChanged);
             // 
             // institutionTextBox
             // 
             this.institutionTextBox.Location = new System.Drawing.Point(154, 81);
+            this.institutionTextBox.MaxLength = 28;
             this.institutionTextBox.Name = "institutionTextBox";
             this.institutionTextBox.Size = new System.Drawing.Size(201, 20);
             this.institutionTextBox.TabIndex = 48;
