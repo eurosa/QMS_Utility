@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
@@ -17,12 +18,29 @@ namespace QMS_Utility
     {
         Model model;
         SQLiteConnection m_dbConnection;
+        string select = "New Record";
         public Form1()
         {
             InitializeComponent();
             // form2 = new Form2(this);
             model = new Model();
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
+            createDB();
+
+            newRecordValue();
+            Fillcombobox();
+        }
+
+        public void newRecordValue() {
+
+            if (!qmsComboBox.Items.Contains(select))
+            {
+
+                qmsComboBox.Items.Add(select);
+
+            }
+            qmsComboBox.SelectedIndex = 0;
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -267,6 +285,7 @@ namespace QMS_Utility
                 SetTextCallback d = new SetTextCallback(SetText);              
                 this.Invoke(d, new object[] { text });
             }
+
             else
             {
                 this.rtxtDataArea.AppendText(text ); 
@@ -473,32 +492,11 @@ namespace QMS_Utility
 
         }
 
-        private void createDB()
-        {
-
-            SQLiteConnection.CreateFile("MyDatabase.sqlite");
-
-            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
-
-            m_dbConnection.Open();
-
-            string sql = "create table highscores (name varchar(20), score int)";
-
-            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-
-            command.ExecuteNonQuery();
-
-            sql = "insert into highscores (name, score) values ('Me', 9001)";
-
-            command = new SQLiteCommand(sql, m_dbConnection);
-
-            command.ExecuteNonQuery();
-
-            m_dbConnection.Close();
-        }
+    
 
         private void saveAll_Click(object sender, EventArgs e)
         {
+
             model.instName = institutionTextBox.Text;
             model.bankId = bankIdTextBox.Text;
             model.timeDate = timeTextBox.Text;
@@ -525,45 +523,24 @@ namespace QMS_Utility
             model.cla14 = cntLabel14TextBox.Text;
             model.cla15 = cntLabel15TextBox.Text;
             model.cla16 = cntLabel16TextBox.Text;
-        
-             
 
-
-            if (!File.Exists("MyDatabase.sqlite"))
+            if (qmsComboBox.SelectedIndex > 0)
             {
-                
-                SQLiteConnection.CreateFile("MyDatabase.sqlite");
-
-                m_dbConnection.Open();
-
-                string sql = "create table qmsutility (ID INTEGER PRIMARY KEY   AUTOINCREMENT, instName varchar(20), bankId varchar(20), " +
-                    "timeDate varchar(20), counterName varchar(20),totCounter varchar(20), copiesNo varchar(20),closingTime varchar(20), " +
-                    "tokenSlip9 varchar(20),tokenSlipA varchar(20), tokenSlipB varchar(20)," +
-                    "cla1 varchar(20), cla2 varchar(20),cla3 varchar(20), cla4 varchar(20)," +
-                    "cla5 varchar(20), cla6 varchar(20),cla7 varchar(20), cla8 varchar(20)," +
-                    "cla9 varchar(20), cla10 varchar(20),cla11 varchar(20), cla12 varchar(20)," +
-                    "cla13 varchar(20), cla14 varchar(20),cla15 varchar(20), cla16 varchar(20))";
-
-                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-
-                command.ExecuteNonQuery();
-
-                m_dbConnection.Close();
+                updateDB(model);
+                AutoClosingMessageBox.Show("Data Updated Successfully", "Update", 1000);
+            }
+            else
+            {
+                insertData(model);
+                AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
             }
 
-            Create(model);
-             /*   m_dbConnection.Open();
 
-            string sql1 = "insert into qmsutility (name, score) values ('Ranj', 9001)";
-
-            SQLiteCommand command1 = new SQLiteCommand(sql1, m_dbConnection);
-            command1.ExecuteNonQuery();
-
-            m_dbConnection.Close();*/
+            Fillcombobox();
 
         }
 
-        public void Create(Model modelData)
+        public void insertData(Model modelData)
         {
             m_dbConnection.Open();
             SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO qmsutility (instName, bankId, timeDate, counterName, totCounter," +
@@ -573,9 +550,7 @@ namespace QMS_Utility
                 " @cla5, @cla6, @cla7, @cla8, @cla9, @cla10, @cla11, @cla12, @cla13, @cla14, @cla15, @cla16" +
                 ")", m_dbConnection);
 
-            // insertSQL.Parameters.Add("@instName", SqlDbType.Int).Value = klantId;
-            // insertSQL.Parameters.Add("@bankId", SqlDbType.VarChar, 20).Value = modelData.instName;
-            // insertSQL.Parameters.Add("@bankId", SqlDbType.VarChar, 20).Value = klantVoornaam;
+            
 
             insertSQL.Parameters.AddWithValue("@instName", modelData.instName);
             insertSQL.Parameters.AddWithValue("@bankId", modelData.bankId);
@@ -619,11 +594,209 @@ namespace QMS_Utility
             {
                 insertSQL.ExecuteNonQuery();
                 m_dbConnection.Close();
+                
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        void Fillcombobox()
+        {
+
+            m_dbConnection.Open();
+            SQLiteCommand cmd = new SQLiteCommand("select ID From qmsutility", m_dbConnection);
+            SQLiteDataReader Sdr = cmd.ExecuteReader();
+            while (Sdr.Read())
+            {
+                if (!qmsComboBox.Items.Contains(Sdr["ID"].ToString()))
+                {
+                    qmsComboBox.Items.Add(Sdr["ID"].ToString());
+                }
+            }
+            Sdr.Close();
+            m_dbConnection.Close();
+
+        }
+
+        public void createDB()
+        {
+
+            if (!File.Exists("MyDatabase.sqlite"))
+            {
+
+                SQLiteConnection.CreateFile("MyDatabase.sqlite");
+
+                m_dbConnection.Open();
+
+                string sql = "create table qmsutility (ID INTEGER PRIMARY KEY   AUTOINCREMENT, instName varchar(20), bankId varchar(20), " +
+                    "timeDate varchar(20), counterName varchar(20),totCounter varchar(20), copiesNo varchar(20),closingTime varchar(20), " +
+                    "tokenSlip9 varchar(20),tokenSlipA varchar(20), tokenSlipB varchar(20)," +
+                    "cla1 varchar(20), cla2 varchar(20),cla3 varchar(20), cla4 varchar(20)," +
+                    "cla5 varchar(20), cla6 varchar(20),cla7 varchar(20), cla8 varchar(20)," +
+                    "cla9 varchar(20), cla10 varchar(20),cla11 varchar(20), cla12 varchar(20)," +
+                    "cla13 varchar(20), cla14 varchar(20),cla15 varchar(20), cla16 varchar(20))";
+
+                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+
+                command.ExecuteNonQuery();
+
+                m_dbConnection.Close();
+            }
+
+
+        }
+
+        private void qmsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (qmsComboBox.SelectedIndex > 0)
+            {
+                m_dbConnection.Open();
+                SQLiteCommand cmd = new SQLiteCommand("select * From qmsutility where ID ='" + qmsComboBox.SelectedItem.ToString() + "'", m_dbConnection);
+                SQLiteDataReader Sdr = cmd.ExecuteReader();
+                while (Sdr.Read())
+                {
+                    institutionTextBox.Text = Sdr["instName"].ToString();
+                    bankIdTextBox.Text = Sdr["bankId"].ToString();
+                    timeTextBox.Text = Sdr["timeDate"].ToString();
+                    counteTextBox.Text = Sdr["counterName"].ToString();
+                    totalCounterTextBox.Text = Sdr["totCounter"].ToString();
+                    copiePrintingTextBox.Text = Sdr["copiesNo"].ToString();
+                    closingTimeTextBox.Text = Sdr["closingTime"].ToString();
+                    tokenSlip1TextBox.Text = Sdr["tokenSlip9"].ToString();
+                    tokenSlip2TextBox.Text = Sdr["tokenSlipA"].ToString();
+                    tokenSlipBTextBox.Text = Sdr["tokenSlipB"].ToString();
+
+                    cntLabel1TextBox.Text = Sdr["cla1"].ToString();
+                    cntLabel2TextBox.Text = Sdr["cla2"].ToString();
+                    cntLabel3TextBox.Text = Sdr["cla3"].ToString();
+                    cntLabel4TextBox.Text = Sdr["cla4"].ToString();
+                    cntLabel5TextBox.Text = Sdr["cla5"].ToString();
+                    cntLabel6TextBox.Text = Sdr["cla6"].ToString();
+                    cntLabel7TextBox.Text = Sdr["cla7"].ToString();
+                    cntLabel8TextBox.Text = Sdr["cla8"].ToString();
+                    cntLabel9TextBox.Text = Sdr["cla9"].ToString();
+                    cntLabel10TextBox.Text = Sdr["cla10"].ToString();
+                    cntLabel11TextBox.Text = Sdr["cla11"].ToString();
+                    cntLabel12TextBox.Text = Sdr["cla12"].ToString();
+                    cntLabel13TextBox.Text = Sdr["cla13"].ToString();
+                    cntLabel14TextBox.Text = Sdr["cla14"].ToString();
+                    cntLabel15TextBox.Text = Sdr["cla15"].ToString();
+                    cntLabel16TextBox.Text = Sdr["cla16"].ToString();
+
+                }
+                Sdr.Close();
+                m_dbConnection.Close();
+            }
+            else
+            {
+                institutionTextBox.Text = "";
+                bankIdTextBox.Text = "";
+                timeTextBox.Text = "";
+                counteTextBox.Text = "";
+                totalCounterTextBox.Text = "";
+                copiePrintingTextBox.Text = "";
+                closingTimeTextBox.Text = "";
+                tokenSlip1TextBox.Text = "";
+                tokenSlip2TextBox.Text = "";
+                tokenSlipBTextBox.Text = "";
+
+                cntLabel1TextBox.Text = "";
+                cntLabel2TextBox.Text = "";
+                cntLabel3TextBox.Text = "";
+                cntLabel4TextBox.Text = "";
+                cntLabel5TextBox.Text = "";
+                cntLabel6TextBox.Text = "";
+                cntLabel7TextBox.Text = "";
+                cntLabel8TextBox.Text = "";
+                cntLabel9TextBox.Text = "";
+                cntLabel10TextBox.Text = "";
+                cntLabel11TextBox.Text = "";
+                cntLabel12TextBox.Text = "";
+                cntLabel13TextBox.Text = "";
+                cntLabel14TextBox.Text = "";
+                cntLabel15TextBox.Text = "";
+                cntLabel16TextBox.Text ="";
+
+
+            }
+        }
+
+        public void updateDB(Model modelData) 
+        {
+            m_dbConnection.Open();
+          
+            string sql_update = "UPDATE qmsutility SET instName = @instName, bankId = @bankId," +
+                "timeDate = @timeDate," +
+                "counterName = @counterName," +
+                "totCounter = @totCounter, copiesNo = @copiesNo," +
+                "closingTime = @closingTime, tokenSlip9 = @tokenSlip9," +
+                "tokenSlipA = @tokenSlipA, tokenSlipB = @tokenSlipB," +
+                "cla1 = @cla1, cla2 = @cla2," +
+                "cla3 = @cla3, cla4 = @cla4," +
+                "cla5 = @cla5, cla6 = @cla6," +
+                "cla7 = @cla7, cla8 = @cla8," +
+                "cla9 = @cla9, cla10 = @cla10," +
+                "cla11 = @cla11, cla12 = @cla12," +
+                "cla13 = @cla13, cla14 = @cla14," +
+                "cla15 = @cla15, cla16 = @cla16 Where ID = @ID";
+
+
+            SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
+
+            
+
+            command.Parameters.AddWithValue("@instName", modelData.instName);
+            command.Parameters.AddWithValue("@bankId", modelData.bankId);
+            command.Parameters.AddWithValue("@timeDate", modelData.timeDate);
+
+            command.Parameters.AddWithValue("@counterName", modelData.counterName);
+            command.Parameters.AddWithValue("@totCounter", modelData.totCounter);
+            command.Parameters.AddWithValue("@copiesNo", modelData.copiesNo);
+
+            command.Parameters.AddWithValue("@closingTime", modelData.closingTime);
+            command.Parameters.AddWithValue("@tokenSlip9", modelData.tokenSlip9);
+            command.Parameters.AddWithValue("@tokenSlipA", modelData.tokenSlipA);
+
+            command.Parameters.AddWithValue("@tokenSlipB", modelData.tokenSlipB);
+
+
+            command.Parameters.AddWithValue("@cla1", modelData.cla1);
+            command.Parameters.AddWithValue("@cla2", modelData.cla2);
+
+            command.Parameters.AddWithValue("@cla3", modelData.cla3);
+            command.Parameters.AddWithValue("@cla4", modelData.cla4);
+            command.Parameters.AddWithValue("@cla5", modelData.cla5);
+
+            command.Parameters.AddWithValue("@cla6", modelData.cla6);
+            command.Parameters.AddWithValue("@cla7", modelData.cla7);
+            command.Parameters.AddWithValue("@cla8", modelData.cla8);
+
+            command.Parameters.AddWithValue("@cla9", modelData.cla9);
+            command.Parameters.AddWithValue("@cla10", modelData.cla10);
+            command.Parameters.AddWithValue("@cla11", modelData.cla11);
+
+            command.Parameters.AddWithValue("@cla12", modelData.cla12);
+            command.Parameters.AddWithValue("@cla13", modelData.cla13);
+            command.Parameters.AddWithValue("@cla14", modelData.cla14);
+
+            command.Parameters.AddWithValue("@cla15", modelData.cla15);
+            command.Parameters.AddWithValue("@cla16", modelData.cla16);
+            command.Parameters.AddWithValue("@ID", qmsComboBox.SelectedItem);
+
+            try
+            {
+                command.ExecuteNonQuery();
+
+                m_dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            
         }
     }
 }

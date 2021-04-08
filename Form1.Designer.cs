@@ -118,6 +118,7 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.saveAll = new System.Windows.Forms.Button();
+            this.qmsComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -1049,6 +1050,17 @@
             this.saveAll.UseVisualStyleBackColor = true;
             this.saveAll.Click += new System.EventHandler(this.saveAll_Click);
             // 
+            // qmsComboBox
+            // 
+            this.qmsComboBox.FormattingEnabled = true;
+            this.qmsComboBox.IntegralHeight = false;
+            this.qmsComboBox.Location = new System.Drawing.Point(870, 362);
+            this.qmsComboBox.Name = "qmsComboBox";
+            this.qmsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.qmsComboBox.TabIndex = 48;
+            this.qmsComboBox.Text = "New Record";
+            this.qmsComboBox.SelectedIndexChanged += new System.EventHandler(this.qmsComboBox_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1056,6 +1068,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1097, 556);
+            this.Controls.Add(this.qmsComboBox);
             this.Controls.Add(this.saveAll);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnConnect);
@@ -1170,6 +1183,7 @@
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.TextBox cntLabel16TextBox;
         private System.Windows.Forms.Button saveAll;
+        private System.Windows.Forms.ComboBox qmsComboBox;
     }
 }
 
