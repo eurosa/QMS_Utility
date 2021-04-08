@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
@@ -13,11 +15,14 @@ namespace QMS_Utility
 {
     public partial class Form1 : Form
     {
-       
+        Model model;
+        SQLiteConnection m_dbConnection;
         public Form1()
         {
             InitializeComponent();
-           // form2 = new Form2(this);
+            // form2 = new Form2(this);
+            model = new Model();
+            m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -29,10 +34,6 @@ namespace QMS_Utility
         {
 
         }
-
-       
-
-       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -296,12 +297,15 @@ namespace QMS_Utility
         {
             string institutionText = fixedLengthString(institutionTextBox.Text, 28);
             sendDataToPort("$BnkL"+ institutionText + ";");
+
+            
         }
 
         private void sendBankID_Click(object sender, EventArgs e)
         {
             string bankIdText = fixedLengthString(bankIdTextBox.Text, 28);
             sendDataToPort("$BnkL" + "" + bankIdText + ";");
+            
         }
 
         private void sendTime_Click(object sender, EventArgs e)
@@ -467,6 +471,159 @@ namespace QMS_Utility
         private void bankIdTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void createDB()
+        {
+
+            SQLiteConnection.CreateFile("MyDatabase.sqlite");
+
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
+
+            m_dbConnection.Open();
+
+            string sql = "create table highscores (name varchar(20), score int)";
+
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+
+            command.ExecuteNonQuery();
+
+            sql = "insert into highscores (name, score) values ('Me', 9001)";
+
+            command = new SQLiteCommand(sql, m_dbConnection);
+
+            command.ExecuteNonQuery();
+
+            m_dbConnection.Close();
+        }
+
+        private void saveAll_Click(object sender, EventArgs e)
+        {
+            model.instName = institutionTextBox.Text;
+            model.bankId = bankIdTextBox.Text;
+            model.timeDate = timeTextBox.Text;
+            model.counterName = counteTextBox.Text;
+            model.totCounter = totalCounterTextBox.Text;
+            model.copiesNo = copiePrintingTextBox.Text;
+            model.closingTime = closingTimeTextBox.Text;
+            model.tokenSlip9 = tokenSlip1TextBox.Text;
+            model.tokenSlipA = tokenSlip2TextBox.Text;
+            model.tokenSlipB = tokenSlipBTextBox.Text;
+            model.cla1 = cntLabel1TextBox.Text;
+            model.cla2 = cntLabel2TextBox.Text;
+            model.cla3 = cntLabel3TextBox.Text;
+            model.cla4 = cntLabel4TextBox.Text;
+            model.cla5 = cntLabel5TextBox.Text;
+            model.cla6 = cntLabel6TextBox.Text;
+            model.cla7 = cntLabel7TextBox.Text;
+            model.cla8 = cntLabel8TextBox.Text;
+            model.cla9 = cntLabel9TextBox.Text;
+            model.cla10 = cntLabel10TextBox.Text;
+            model.cla11 = cntLabel11TextBox.Text;
+            model.cla12 = cntLabel12TextBox.Text;
+            model.cla13 = cntLabel13TextBox.Text;
+            model.cla14 = cntLabel14TextBox.Text;
+            model.cla15 = cntLabel15TextBox.Text;
+            model.cla16 = cntLabel16TextBox.Text;
+        
+             
+
+
+            if (!File.Exists("MyDatabase.sqlite"))
+            {
+                
+                SQLiteConnection.CreateFile("MyDatabase.sqlite");
+
+                m_dbConnection.Open();
+
+                string sql = "create table qmsutility (ID INTEGER PRIMARY KEY   AUTOINCREMENT, instName varchar(20), bankId varchar(20), " +
+                    "timeDate varchar(20), counterName varchar(20),totCounter varchar(20), copiesNo varchar(20),closingTime varchar(20), " +
+                    "tokenSlip9 varchar(20),tokenSlipA varchar(20), tokenSlipB varchar(20)," +
+                    "cla1 varchar(20), cla2 varchar(20),cla3 varchar(20), cla4 varchar(20)," +
+                    "cla5 varchar(20), cla6 varchar(20),cla7 varchar(20), cla8 varchar(20)," +
+                    "cla9 varchar(20), cla10 varchar(20),cla11 varchar(20), cla12 varchar(20)," +
+                    "cla13 varchar(20), cla14 varchar(20),cla15 varchar(20), cla16 varchar(20))";
+
+                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+
+                command.ExecuteNonQuery();
+
+                m_dbConnection.Close();
+            }
+
+            Create(model);
+             /*   m_dbConnection.Open();
+
+            string sql1 = "insert into qmsutility (name, score) values ('Ranj', 9001)";
+
+            SQLiteCommand command1 = new SQLiteCommand(sql1, m_dbConnection);
+            command1.ExecuteNonQuery();
+
+            m_dbConnection.Close();*/
+
+        }
+
+        public void Create(Model modelData)
+        {
+            m_dbConnection.Open();
+            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO qmsutility (instName, bankId, timeDate, counterName, totCounter," +
+                "copiesNo, closingTime, tokenSlip9, tokenSlipA, tokenSlipB, cla1, cla2, cla3, cla4, cla5, cla6,cla7,cla8,cla9,cla10," +
+                "cla11, cla12,cla13,cla14,cla15,cla16) VALUES (@instName, @bankId, @timeDate, @counterName, @totCounter,@copiesNo, " +
+                "@closingTime, @tokenSlip9, @tokenSlipA, @tokenSlipB, @cla1, @cla2, @cla3, @cla4," +
+                " @cla5, @cla6, @cla7, @cla8, @cla9, @cla10, @cla11, @cla12, @cla13, @cla14, @cla15, @cla16" +
+                ")", m_dbConnection);
+
+            // insertSQL.Parameters.Add("@instName", SqlDbType.Int).Value = klantId;
+            // insertSQL.Parameters.Add("@bankId", SqlDbType.VarChar, 20).Value = modelData.instName;
+            // insertSQL.Parameters.Add("@bankId", SqlDbType.VarChar, 20).Value = klantVoornaam;
+
+            insertSQL.Parameters.AddWithValue("@instName", modelData.instName);
+            insertSQL.Parameters.AddWithValue("@bankId", modelData.bankId);
+            insertSQL.Parameters.AddWithValue("@timeDate", modelData.timeDate);
+
+            insertSQL.Parameters.AddWithValue("@counterName", modelData.counterName);
+            insertSQL.Parameters.AddWithValue("@totCounter", modelData.totCounter);
+            insertSQL.Parameters.AddWithValue("@copiesNo", modelData.copiesNo);
+
+            insertSQL.Parameters.AddWithValue("@closingTime", modelData.closingTime);
+            insertSQL.Parameters.AddWithValue("@tokenSlip9", modelData.tokenSlip9);
+            insertSQL.Parameters.AddWithValue("@tokenSlipA", modelData.tokenSlipA);
+
+            insertSQL.Parameters.AddWithValue("@tokenSlipB", modelData.tokenSlipB);
+ 
+
+            insertSQL.Parameters.AddWithValue("@cla1", modelData.cla1);
+            insertSQL.Parameters.AddWithValue("@cla2", modelData.cla2);
+
+            insertSQL.Parameters.AddWithValue("@cla3", modelData.cla3);
+            insertSQL.Parameters.AddWithValue("@cla4", modelData.cla4);
+            insertSQL.Parameters.AddWithValue("@cla5", modelData.cla5);
+
+            insertSQL.Parameters.AddWithValue("@cla6", modelData.cla6);
+            insertSQL.Parameters.AddWithValue("@cla7", modelData.cla7);
+            insertSQL.Parameters.AddWithValue("@cla8", modelData.cla8);
+
+            insertSQL.Parameters.AddWithValue("@cla9", modelData.cla9);
+            insertSQL.Parameters.AddWithValue("@cla10", modelData.cla10);
+            insertSQL.Parameters.AddWithValue("@cla11", modelData.cla11);
+
+            insertSQL.Parameters.AddWithValue("@cla12", modelData.cla12);
+            insertSQL.Parameters.AddWithValue("@cla13", modelData.cla13);
+            insertSQL.Parameters.AddWithValue("@cla14", modelData.cla14);
+
+            insertSQL.Parameters.AddWithValue("@cla15", modelData.cla15);
+            insertSQL.Parameters.AddWithValue("@cla16", modelData.cla16);
+            
+
+            try
+            {
+                insertSQL.ExecuteNonQuery();
+                m_dbConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

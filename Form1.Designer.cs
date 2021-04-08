@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -116,6 +117,7 @@
             this.cmbPortName = new System.Windows.Forms.ComboBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
+            this.saveAll = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -124,26 +126,31 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button4.Location = new System.Drawing.Point(866, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 34);
             this.button4.TabIndex = 42;
             this.button4.Text = "Reset All Counter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button3.Location = new System.Drawing.Point(866, 289);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 34);
             this.button3.TabIndex = 41;
             this.button3.Text = "CLOSE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.GreenYellow;
             this.tabPage2.Controls.Add(this.sendCntLabel16);
             this.tabPage2.Controls.Add(this.cntLabel16TextBox);
             this.tabPage2.Controls.Add(this.cntLabel15TextBox);
@@ -198,7 +205,6 @@
             this.tabPage2.Size = new System.Drawing.Size(796, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Counter Label";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // sendCntLabel16
             // 
@@ -637,6 +643,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.GreenYellow;
             this.tabPage1.Controls.Add(this.sendToken3);
             this.tabPage1.Controls.Add(this.tokenSlipBTextBox);
             this.tabPage1.Controls.Add(this.label26);
@@ -673,16 +680,17 @@
             this.tabPage1.Size = new System.Drawing.Size(796, 418);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "General";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // sendToken3
             // 
+            this.sendToken3.BackColor = System.Drawing.Color.Blue;
+            this.sendToken3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken3.Location = new System.Drawing.Point(368, 334);
             this.sendToken3.Name = "sendToken3";
             this.sendToken3.Size = new System.Drawing.Size(75, 23);
             this.sendToken3.TabIndex = 76;
             this.sendToken3.Text = "Send";
-            this.sendToken3.UseVisualStyleBackColor = true;
+            this.sendToken3.UseVisualStyleBackColor = false;
             this.sendToken3.Click += new System.EventHandler(this.sendToken3_Click);
             // 
             // tokenSlipBTextBox
@@ -704,12 +712,14 @@
             // 
             // sendToken2
             // 
+            this.sendToken2.BackColor = System.Drawing.Color.Blue;
+            this.sendToken2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken2.Location = new System.Drawing.Point(368, 303);
             this.sendToken2.Name = "sendToken2";
             this.sendToken2.Size = new System.Drawing.Size(75, 23);
             this.sendToken2.TabIndex = 73;
             this.sendToken2.Text = "Send";
-            this.sendToken2.UseVisualStyleBackColor = true;
+            this.sendToken2.UseVisualStyleBackColor = false;
             this.sendToken2.Click += new System.EventHandler(this.sendToken2_Click);
             // 
             // tokenSlip2TextBox
@@ -731,12 +741,14 @@
             // 
             // sendToken1
             // 
+            this.sendToken1.BackColor = System.Drawing.Color.Blue;
+            this.sendToken1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken1.Location = new System.Drawing.Point(368, 275);
             this.sendToken1.Name = "sendToken1";
             this.sendToken1.Size = new System.Drawing.Size(75, 23);
             this.sendToken1.TabIndex = 70;
             this.sendToken1.Text = "Send";
-            this.sendToken1.UseVisualStyleBackColor = true;
+            this.sendToken1.UseVisualStyleBackColor = false;
             this.sendToken1.Click += new System.EventHandler(this.sendToken1_Click);
             // 
             // tokenSlip1TextBox
@@ -759,72 +771,86 @@
             // 
             // closingTimeSend
             // 
+            this.closingTimeSend.BackColor = System.Drawing.Color.Blue;
+            this.closingTimeSend.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.closingTimeSend.Location = new System.Drawing.Point(368, 245);
             this.closingTimeSend.Name = "closingTimeSend";
             this.closingTimeSend.Size = new System.Drawing.Size(75, 23);
             this.closingTimeSend.TabIndex = 67;
             this.closingTimeSend.Text = "Send";
-            this.closingTimeSend.UseVisualStyleBackColor = true;
+            this.closingTimeSend.UseVisualStyleBackColor = false;
             this.closingTimeSend.Click += new System.EventHandler(this.closingTimeSend_Click);
             // 
             // copiesSend
             // 
+            this.copiesSend.BackColor = System.Drawing.Color.Blue;
+            this.copiesSend.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.copiesSend.Location = new System.Drawing.Point(368, 218);
             this.copiesSend.Name = "copiesSend";
             this.copiesSend.Size = new System.Drawing.Size(75, 23);
             this.copiesSend.TabIndex = 66;
             this.copiesSend.Text = "Send";
-            this.copiesSend.UseVisualStyleBackColor = true;
+            this.copiesSend.UseVisualStyleBackColor = false;
             this.copiesSend.Click += new System.EventHandler(this.copiesSend_Click);
             // 
             // sendCounterNo
             // 
+            this.sendCounterNo.BackColor = System.Drawing.Color.Blue;
+            this.sendCounterNo.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCounterNo.Location = new System.Drawing.Point(368, 192);
             this.sendCounterNo.Name = "sendCounterNo";
             this.sendCounterNo.Size = new System.Drawing.Size(75, 23);
             this.sendCounterNo.TabIndex = 65;
             this.sendCounterNo.Text = "Send";
-            this.sendCounterNo.UseVisualStyleBackColor = true;
+            this.sendCounterNo.UseVisualStyleBackColor = false;
             this.sendCounterNo.Click += new System.EventHandler(this.sendCounterNo_Click);
             // 
             // sendCounter
             // 
+            this.sendCounter.BackColor = System.Drawing.Color.Blue;
+            this.sendCounter.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCounter.Location = new System.Drawing.Point(368, 166);
             this.sendCounter.Name = "sendCounter";
             this.sendCounter.Size = new System.Drawing.Size(75, 23);
             this.sendCounter.TabIndex = 64;
             this.sendCounter.Text = "Send";
-            this.sendCounter.UseVisualStyleBackColor = true;
+            this.sendCounter.UseVisualStyleBackColor = false;
             this.sendCounter.Click += new System.EventHandler(this.sendCounter_Click);
             // 
             // sendTime
             // 
+            this.sendTime.BackColor = System.Drawing.Color.Blue;
+            this.sendTime.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendTime.Location = new System.Drawing.Point(368, 138);
             this.sendTime.Name = "sendTime";
             this.sendTime.Size = new System.Drawing.Size(75, 23);
             this.sendTime.TabIndex = 63;
             this.sendTime.Text = "Send";
-            this.sendTime.UseVisualStyleBackColor = true;
+            this.sendTime.UseVisualStyleBackColor = false;
             this.sendTime.Click += new System.EventHandler(this.sendTime_Click);
             // 
             // sendBankID
             // 
+            this.sendBankID.BackColor = System.Drawing.Color.Blue;
+            this.sendBankID.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendBankID.Location = new System.Drawing.Point(368, 109);
             this.sendBankID.Name = "sendBankID";
             this.sendBankID.Size = new System.Drawing.Size(75, 23);
             this.sendBankID.TabIndex = 62;
             this.sendBankID.Text = "Send";
-            this.sendBankID.UseVisualStyleBackColor = true;
+            this.sendBankID.UseVisualStyleBackColor = false;
             this.sendBankID.Click += new System.EventHandler(this.sendBankID_Click);
             // 
             // sendName
             // 
+            this.sendName.BackColor = System.Drawing.Color.Blue;
+            this.sendName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendName.Location = new System.Drawing.Point(368, 80);
             this.sendName.Name = "sendName";
             this.sendName.Size = new System.Drawing.Size(75, 23);
             this.sendName.TabIndex = 61;
             this.sendName.Text = "Send";
-            this.sendName.UseVisualStyleBackColor = true;
+            this.sendName.UseVisualStyleBackColor = false;
             this.sendName.Click += new System.EventHandler(this.sendName_Click);
             // 
             // closingTimeTextBox
@@ -990,24 +1016,38 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnRefresh.Location = new System.Drawing.Point(888, 173);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 46;
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnConnect
             // 
+            this.btnConnect.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnConnect.Location = new System.Drawing.Point(866, 206);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(128, 33);
             this.btnConnect.TabIndex = 45;
             this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
+            // saveAll
+            // 
+            this.saveAll.Location = new System.Drawing.Point(870, 403);
+            this.saveAll.Name = "saveAll";
+            this.saveAll.Size = new System.Drawing.Size(124, 28);
+            this.saveAll.TabIndex = 47;
+            this.saveAll.Text = "Save All";
+            this.saveAll.UseVisualStyleBackColor = true;
+            this.saveAll.Click += new System.EventHandler(this.saveAll_Click);
             // 
             // Form1
             // 
@@ -1015,13 +1055,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1097, 496);
+            this.ClientSize = new System.Drawing.Size(1097, 556);
+            this.Controls.Add(this.saveAll);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Digiline QMS Utility V1.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -1126,6 +1169,7 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.TextBox cntLabel16TextBox;
+        private System.Windows.Forms.Button saveAll;
     }
 }
 
