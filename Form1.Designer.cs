@@ -119,6 +119,7 @@
             this.btnConnect = new System.Windows.Forms.Button();
             this.saveAll = new System.Windows.Forms.Button();
             this.qmsComboBox = new System.Windows.Forms.ComboBox();
+            this.recordFileName = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -209,12 +210,14 @@
             // 
             // sendCntLabel16
             // 
+            this.sendCntLabel16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel16.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel16.Location = new System.Drawing.Point(687, 298);
             this.sendCntLabel16.Name = "sendCntLabel16";
             this.sendCntLabel16.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel16.TabIndex = 154;
             this.sendCntLabel16.Text = "Send";
-            this.sendCntLabel16.UseVisualStyleBackColor = true;
+            this.sendCntLabel16.UseVisualStyleBackColor = false;
             this.sendCntLabel16.Click += new System.EventHandler(this.sendCntLabel16_Click);
             // 
             // cntLabel16TextBox
@@ -244,12 +247,14 @@
             // 
             // sendCntLabel15
             // 
+            this.sendCntLabel15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel15.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel15.Location = new System.Drawing.Point(687, 270);
             this.sendCntLabel15.Name = "sendCntLabel15";
             this.sendCntLabel15.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel15.TabIndex = 151;
             this.sendCntLabel15.Text = "Send";
-            this.sendCntLabel15.UseVisualStyleBackColor = true;
+            this.sendCntLabel15.UseVisualStyleBackColor = false;
             this.sendCntLabel15.Click += new System.EventHandler(this.sendCntLabel15_Click);
             // 
             // label23
@@ -263,63 +268,75 @@
             // 
             // sendCntLabel14
             // 
+            this.sendCntLabel14.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel14.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel14.Location = new System.Drawing.Point(687, 240);
             this.sendCntLabel14.Name = "sendCntLabel14";
             this.sendCntLabel14.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel14.TabIndex = 148;
             this.sendCntLabel14.Text = "Send";
-            this.sendCntLabel14.UseVisualStyleBackColor = true;
+            this.sendCntLabel14.UseVisualStyleBackColor = false;
             this.sendCntLabel14.Click += new System.EventHandler(this.sendCntLabel14_Click);
             // 
             // sendCntLabel13
             // 
+            this.sendCntLabel13.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel13.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel13.Location = new System.Drawing.Point(687, 213);
             this.sendCntLabel13.Name = "sendCntLabel13";
             this.sendCntLabel13.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel13.TabIndex = 147;
             this.sendCntLabel13.Tag = "13";
             this.sendCntLabel13.Text = "Send";
-            this.sendCntLabel13.UseVisualStyleBackColor = true;
+            this.sendCntLabel13.UseVisualStyleBackColor = false;
             this.sendCntLabel13.Click += new System.EventHandler(this.sendCntLabel13_Click);
             // 
             // sendCntLabel12
             // 
+            this.sendCntLabel12.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel12.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel12.Location = new System.Drawing.Point(687, 187);
             this.sendCntLabel12.Name = "sendCntLabel12";
             this.sendCntLabel12.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel12.TabIndex = 146;
             this.sendCntLabel12.Text = "Send";
-            this.sendCntLabel12.UseVisualStyleBackColor = true;
+            this.sendCntLabel12.UseVisualStyleBackColor = false;
             this.sendCntLabel12.Click += new System.EventHandler(this.sendCntLabel12_Click);
             // 
             // sendCntLabel11
             // 
+            this.sendCntLabel11.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel11.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel11.Location = new System.Drawing.Point(687, 161);
             this.sendCntLabel11.Name = "sendCntLabel11";
             this.sendCntLabel11.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel11.TabIndex = 145;
             this.sendCntLabel11.Text = "Send";
-            this.sendCntLabel11.UseVisualStyleBackColor = true;
+            this.sendCntLabel11.UseVisualStyleBackColor = false;
             this.sendCntLabel11.Click += new System.EventHandler(this.sendCntLabel11_Click);
             // 
             // sendCntLabel10
             // 
+            this.sendCntLabel10.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel10.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel10.Location = new System.Drawing.Point(687, 133);
             this.sendCntLabel10.Name = "sendCntLabel10";
             this.sendCntLabel10.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel10.TabIndex = 144;
             this.sendCntLabel10.Text = "Send";
-            this.sendCntLabel10.UseVisualStyleBackColor = true;
+            this.sendCntLabel10.UseVisualStyleBackColor = false;
             this.sendCntLabel10.Click += new System.EventHandler(this.sendCntLabel10_Click);
             // 
             // sendCntLabel9
             // 
+            this.sendCntLabel9.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel9.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel9.Location = new System.Drawing.Point(687, 104);
             this.sendCntLabel9.Name = "sendCntLabel9";
             this.sendCntLabel9.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel9.TabIndex = 143;
             this.sendCntLabel9.Text = "Send";
-            this.sendCntLabel9.UseVisualStyleBackColor = true;
+            this.sendCntLabel9.UseVisualStyleBackColor = false;
             this.sendCntLabel9.Click += new System.EventHandler(this.sendCntLabel9_Click);
             // 
             // cntLabel14TextBox
@@ -427,12 +444,14 @@
             // 
             // sendCntLabel8
             // 
+            this.sendCntLabel8.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel8.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel8.Location = new System.Drawing.Point(302, 298);
             this.sendCntLabel8.Name = "sendCntLabel8";
             this.sendCntLabel8.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel8.TabIndex = 124;
             this.sendCntLabel8.Text = "Send";
-            this.sendCntLabel8.UseVisualStyleBackColor = true;
+            this.sendCntLabel8.UseVisualStyleBackColor = false;
             this.sendCntLabel8.Click += new System.EventHandler(this.sendCntLabel8_Click);
             // 
             // cntLabel8TextBox
@@ -511,72 +530,86 @@
             // 
             // sendCntLabel7
             // 
+            this.sendCntLabel7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel7.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel7.Location = new System.Drawing.Point(302, 270);
             this.sendCntLabel7.Name = "sendCntLabel7";
             this.sendCntLabel7.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel7.TabIndex = 109;
             this.sendCntLabel7.Text = "Send";
-            this.sendCntLabel7.UseVisualStyleBackColor = true;
+            this.sendCntLabel7.UseVisualStyleBackColor = false;
             this.sendCntLabel7.Click += new System.EventHandler(this.sendCntLabel7_Click);
             // 
             // sendCntLabel6
             // 
+            this.sendCntLabel6.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel6.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel6.Location = new System.Drawing.Point(302, 243);
             this.sendCntLabel6.Name = "sendCntLabel6";
             this.sendCntLabel6.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel6.TabIndex = 108;
             this.sendCntLabel6.Text = "Send";
-            this.sendCntLabel6.UseVisualStyleBackColor = true;
+            this.sendCntLabel6.UseVisualStyleBackColor = false;
             this.sendCntLabel6.Click += new System.EventHandler(this.sendCntLabel6_Click);
             // 
             // sendCntLabel5
             // 
+            this.sendCntLabel5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel5.Location = new System.Drawing.Point(302, 217);
             this.sendCntLabel5.Name = "sendCntLabel5";
             this.sendCntLabel5.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel5.TabIndex = 107;
             this.sendCntLabel5.Text = "Send";
-            this.sendCntLabel5.UseVisualStyleBackColor = true;
+            this.sendCntLabel5.UseVisualStyleBackColor = false;
             this.sendCntLabel5.Click += new System.EventHandler(this.sendCntLabel5_Click);
             // 
             // sendCntLabel4
             // 
+            this.sendCntLabel4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel4.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel4.Location = new System.Drawing.Point(302, 191);
             this.sendCntLabel4.Name = "sendCntLabel4";
             this.sendCntLabel4.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel4.TabIndex = 106;
             this.sendCntLabel4.Text = "Send";
-            this.sendCntLabel4.UseVisualStyleBackColor = true;
+            this.sendCntLabel4.UseVisualStyleBackColor = false;
             this.sendCntLabel4.Click += new System.EventHandler(this.sendCntLabel4_Click);
             // 
             // sendCntLabel3
             // 
+            this.sendCntLabel3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel3.Location = new System.Drawing.Point(302, 163);
             this.sendCntLabel3.Name = "sendCntLabel3";
             this.sendCntLabel3.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel3.TabIndex = 105;
             this.sendCntLabel3.Text = "Send";
-            this.sendCntLabel3.UseVisualStyleBackColor = true;
+            this.sendCntLabel3.UseVisualStyleBackColor = false;
             this.sendCntLabel3.Click += new System.EventHandler(this.sendCntLabel3_Click);
             // 
             // sendCntLabel2
             // 
+            this.sendCntLabel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel2.Location = new System.Drawing.Point(302, 134);
             this.sendCntLabel2.Name = "sendCntLabel2";
             this.sendCntLabel2.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel2.TabIndex = 104;
             this.sendCntLabel2.Text = "Send";
-            this.sendCntLabel2.UseVisualStyleBackColor = true;
+            this.sendCntLabel2.UseVisualStyleBackColor = false;
             this.sendCntLabel2.Click += new System.EventHandler(this.sendCntLabel2_Click);
             // 
             // sendCntLabel1
             // 
+            this.sendCntLabel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.sendCntLabel1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCntLabel1.Location = new System.Drawing.Point(302, 105);
             this.sendCntLabel1.Name = "sendCntLabel1";
             this.sendCntLabel1.Size = new System.Drawing.Size(75, 23);
             this.sendCntLabel1.TabIndex = 103;
             this.sendCntLabel1.Text = "Send";
-            this.sendCntLabel1.UseVisualStyleBackColor = true;
+            this.sendCntLabel1.UseVisualStyleBackColor = false;
             this.sendCntLabel1.Click += new System.EventHandler(this.sendCntLabel1_Click);
             // 
             // label8
@@ -684,7 +717,7 @@
             // 
             // sendToken3
             // 
-            this.sendToken3.BackColor = System.Drawing.Color.Blue;
+            this.sendToken3.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendToken3.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken3.Location = new System.Drawing.Point(368, 334);
             this.sendToken3.Name = "sendToken3";
@@ -713,7 +746,7 @@
             // 
             // sendToken2
             // 
-            this.sendToken2.BackColor = System.Drawing.Color.Blue;
+            this.sendToken2.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendToken2.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken2.Location = new System.Drawing.Point(368, 303);
             this.sendToken2.Name = "sendToken2";
@@ -742,7 +775,7 @@
             // 
             // sendToken1
             // 
-            this.sendToken1.BackColor = System.Drawing.Color.Blue;
+            this.sendToken1.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendToken1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendToken1.Location = new System.Drawing.Point(368, 275);
             this.sendToken1.Name = "sendToken1";
@@ -772,7 +805,7 @@
             // 
             // closingTimeSend
             // 
-            this.closingTimeSend.BackColor = System.Drawing.Color.Blue;
+            this.closingTimeSend.BackColor = System.Drawing.SystemColors.Highlight;
             this.closingTimeSend.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.closingTimeSend.Location = new System.Drawing.Point(368, 245);
             this.closingTimeSend.Name = "closingTimeSend";
@@ -784,7 +817,7 @@
             // 
             // copiesSend
             // 
-            this.copiesSend.BackColor = System.Drawing.Color.Blue;
+            this.copiesSend.BackColor = System.Drawing.SystemColors.Highlight;
             this.copiesSend.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.copiesSend.Location = new System.Drawing.Point(368, 218);
             this.copiesSend.Name = "copiesSend";
@@ -796,7 +829,7 @@
             // 
             // sendCounterNo
             // 
-            this.sendCounterNo.BackColor = System.Drawing.Color.Blue;
+            this.sendCounterNo.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendCounterNo.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCounterNo.Location = new System.Drawing.Point(368, 192);
             this.sendCounterNo.Name = "sendCounterNo";
@@ -808,7 +841,7 @@
             // 
             // sendCounter
             // 
-            this.sendCounter.BackColor = System.Drawing.Color.Blue;
+            this.sendCounter.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendCounter.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendCounter.Location = new System.Drawing.Point(368, 166);
             this.sendCounter.Name = "sendCounter";
@@ -820,7 +853,7 @@
             // 
             // sendTime
             // 
-            this.sendTime.BackColor = System.Drawing.Color.Blue;
+            this.sendTime.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendTime.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendTime.Location = new System.Drawing.Point(368, 138);
             this.sendTime.Name = "sendTime";
@@ -832,7 +865,7 @@
             // 
             // sendBankID
             // 
-            this.sendBankID.BackColor = System.Drawing.Color.Blue;
+            this.sendBankID.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendBankID.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendBankID.Location = new System.Drawing.Point(368, 109);
             this.sendBankID.Name = "sendBankID";
@@ -844,7 +877,7 @@
             // 
             // sendName
             // 
-            this.sendName.BackColor = System.Drawing.Color.Blue;
+            this.sendName.BackColor = System.Drawing.SystemColors.Highlight;
             this.sendName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.sendName.Location = new System.Drawing.Point(368, 80);
             this.sendName.Name = "sendName";
@@ -1008,6 +1041,8 @@
             // 
             // cmbPortName
             // 
+            this.cmbPortName.BackColor = System.Drawing.SystemColors.Highlight;
+            this.cmbPortName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.cmbPortName.FormattingEnabled = true;
             this.cmbPortName.Location = new System.Drawing.Point(75, 25);
             this.cmbPortName.Name = "cmbPortName";
@@ -1017,7 +1052,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnRefresh.Location = new System.Drawing.Point(888, 173);
             this.btnRefresh.Name = "btnRefresh";
@@ -1029,7 +1064,7 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnConnect.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnConnect.Location = new System.Drawing.Point(866, 206);
@@ -1042,24 +1077,37 @@
             // 
             // saveAll
             // 
-            this.saveAll.Location = new System.Drawing.Point(870, 403);
+            this.saveAll.BackColor = System.Drawing.SystemColors.Highlight;
+            this.saveAll.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.saveAll.Location = new System.Drawing.Point(870, 418);
             this.saveAll.Name = "saveAll";
             this.saveAll.Size = new System.Drawing.Size(124, 28);
             this.saveAll.TabIndex = 47;
             this.saveAll.Text = "Save All";
-            this.saveAll.UseVisualStyleBackColor = true;
+            this.saveAll.UseVisualStyleBackColor = false;
             this.saveAll.Click += new System.EventHandler(this.saveAll_Click);
             // 
             // qmsComboBox
             // 
+            this.qmsComboBox.BackColor = System.Drawing.SystemColors.Highlight;
+            this.qmsComboBox.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.qmsComboBox.FormattingEnabled = true;
             this.qmsComboBox.IntegralHeight = false;
-            this.qmsComboBox.Location = new System.Drawing.Point(870, 362);
+            this.qmsComboBox.Location = new System.Drawing.Point(870, 346);
             this.qmsComboBox.Name = "qmsComboBox";
             this.qmsComboBox.Size = new System.Drawing.Size(121, 21);
             this.qmsComboBox.TabIndex = 48;
             this.qmsComboBox.Text = "New Record";
             this.qmsComboBox.SelectedIndexChanged += new System.EventHandler(this.qmsComboBox_SelectedIndexChanged);
+            // 
+            // recordFileName
+            // 
+            this.recordFileName.BackColor = System.Drawing.SystemColors.Highlight;
+            this.recordFileName.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.recordFileName.Location = new System.Drawing.Point(870, 383);
+            this.recordFileName.Name = "recordFileName";
+            this.recordFileName.Size = new System.Drawing.Size(121, 20);
+            this.recordFileName.TabIndex = 49;
             // 
             // Form1
             // 
@@ -1068,6 +1116,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1097, 556);
+            this.Controls.Add(this.recordFileName);
             this.Controls.Add(this.qmsComboBox);
             this.Controls.Add(this.saveAll);
             this.Controls.Add(this.btnRefresh);
@@ -1090,6 +1139,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1184,6 +1234,7 @@
         private System.Windows.Forms.TextBox cntLabel16TextBox;
         private System.Windows.Forms.Button saveAll;
         private System.Windows.Forms.ComboBox qmsComboBox;
+        private System.Windows.Forms.TextBox recordFileName;
     }
 }
 

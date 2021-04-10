@@ -45,8 +45,8 @@ namespace QMS_Utility
         public string cla14 { get; set; }
 
         public string cla15 { get; set; }
-        public string cla16 { get; set; } 
+        public string cla16 { get; set; }
 
-
+        public string recordFileName { get; set; }
     }
 }

@@ -9,6 +9,7 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,16 +20,25 @@ namespace QMS_Utility
         Model model;
         SQLiteConnection m_dbConnection;
         string select = "New Record";
+        Dictionary<int, string> userListDictionary;
         public Form1()
         {
             InitializeComponent();
             // form2 = new Form2(this);
             model = new Model();
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
+
+            userListDictionary = new Dictionary<int, string>();
+
             createDB();
 
             newRecordValue();
             Fillcombobox();
+
+            //SetPlaceholder(recordFileName, "Enter Record Name");
+            //SetPlaceholder(institutionTextBox, "Enter Institute Name");
+            //SetPlaceholder(bankIdTextBox, "Enter Bank Id");
+            //SetPlaceholder(timeTextBox, "Enter Time and Date");
         }
 
         public void newRecordValue() {
@@ -497,6 +507,16 @@ namespace QMS_Utility
         private void saveAll_Click(object sender, EventArgs e)
         {
 
+            if (recordFileName.Text == "")
+
+            {
+
+                MessageBox.Show("Record Name Field cannnot be blank");
+
+                recordFileName.Focus();
+                return;
+            }
+
             model.instName = institutionTextBox.Text;
             model.bankId = bankIdTextBox.Text;
             model.timeDate = timeTextBox.Text;
@@ -523,6 +543,7 @@ namespace QMS_Utility
             model.cla14 = cntLabel14TextBox.Text;
             model.cla15 = cntLabel15TextBox.Text;
             model.cla16 = cntLabel16TextBox.Text;
+            model.recordFileName = recordFileName.Text;
 
             if (qmsComboBox.SelectedIndex > 0)
             {
@@ -532,7 +553,7 @@ namespace QMS_Utility
             else
             {
                 insertData(model);
-                AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+                
             }
 
 
@@ -543,81 +564,99 @@ namespace QMS_Utility
         public void insertData(Model modelData)
         {
             m_dbConnection.Open();
-            SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO qmsutility (instName, bankId, timeDate, counterName, totCounter," +
+
+            SQLiteCommand selectSQL = new SQLiteCommand("SELECT count(*) FROM qmsutility WHERE recordFileName='"+recordFileName.Text+"'", m_dbConnection);
+
+            int count = Convert.ToInt32(selectSQL.ExecuteScalar());
+
+            if (count == 0)
+            {
+                SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO qmsutility (instName, bankId, timeDate, counterName, totCounter," +
                 "copiesNo, closingTime, tokenSlip9, tokenSlipA, tokenSlipB, cla1, cla2, cla3, cla4, cla5, cla6,cla7,cla8,cla9,cla10," +
-                "cla11, cla12,cla13,cla14,cla15,cla16) VALUES (@instName, @bankId, @timeDate, @counterName, @totCounter,@copiesNo, " +
+                "cla11, cla12,cla13,cla14,cla15,cla16,recordFileName) VALUES (@instName, @bankId, @timeDate, @counterName, @totCounter,@copiesNo, " +
                 "@closingTime, @tokenSlip9, @tokenSlipA, @tokenSlipB, @cla1, @cla2, @cla3, @cla4," +
-                " @cla5, @cla6, @cla7, @cla8, @cla9, @cla10, @cla11, @cla12, @cla13, @cla14, @cla15, @cla16" +
+                " @cla5, @cla6, @cla7, @cla8, @cla9, @cla10, @cla11, @cla12, @cla13, @cla14, @cla15, @cla16, @recordFileName" +
                 ")", m_dbConnection);
 
-            
 
-            insertSQL.Parameters.AddWithValue("@instName", modelData.instName);
-            insertSQL.Parameters.AddWithValue("@bankId", modelData.bankId);
-            insertSQL.Parameters.AddWithValue("@timeDate", modelData.timeDate);
 
-            insertSQL.Parameters.AddWithValue("@counterName", modelData.counterName);
-            insertSQL.Parameters.AddWithValue("@totCounter", modelData.totCounter);
-            insertSQL.Parameters.AddWithValue("@copiesNo", modelData.copiesNo);
+                insertSQL.Parameters.AddWithValue("@instName", modelData.instName);
+                insertSQL.Parameters.AddWithValue("@bankId", modelData.bankId);
+                insertSQL.Parameters.AddWithValue("@timeDate", modelData.timeDate);
 
-            insertSQL.Parameters.AddWithValue("@closingTime", modelData.closingTime);
-            insertSQL.Parameters.AddWithValue("@tokenSlip9", modelData.tokenSlip9);
-            insertSQL.Parameters.AddWithValue("@tokenSlipA", modelData.tokenSlipA);
+                insertSQL.Parameters.AddWithValue("@counterName", modelData.counterName);
+                insertSQL.Parameters.AddWithValue("@totCounter", modelData.totCounter);
+                insertSQL.Parameters.AddWithValue("@copiesNo", modelData.copiesNo);
 
-            insertSQL.Parameters.AddWithValue("@tokenSlipB", modelData.tokenSlipB);
- 
+                insertSQL.Parameters.AddWithValue("@closingTime", modelData.closingTime);
+                insertSQL.Parameters.AddWithValue("@tokenSlip9", modelData.tokenSlip9);
+                insertSQL.Parameters.AddWithValue("@tokenSlipA", modelData.tokenSlipA);
 
-            insertSQL.Parameters.AddWithValue("@cla1", modelData.cla1);
-            insertSQL.Parameters.AddWithValue("@cla2", modelData.cla2);
+                insertSQL.Parameters.AddWithValue("@tokenSlipB", modelData.tokenSlipB);
 
-            insertSQL.Parameters.AddWithValue("@cla3", modelData.cla3);
-            insertSQL.Parameters.AddWithValue("@cla4", modelData.cla4);
-            insertSQL.Parameters.AddWithValue("@cla5", modelData.cla5);
 
-            insertSQL.Parameters.AddWithValue("@cla6", modelData.cla6);
-            insertSQL.Parameters.AddWithValue("@cla7", modelData.cla7);
-            insertSQL.Parameters.AddWithValue("@cla8", modelData.cla8);
+                insertSQL.Parameters.AddWithValue("@cla1", modelData.cla1);
+                insertSQL.Parameters.AddWithValue("@cla2", modelData.cla2);
 
-            insertSQL.Parameters.AddWithValue("@cla9", modelData.cla9);
-            insertSQL.Parameters.AddWithValue("@cla10", modelData.cla10);
-            insertSQL.Parameters.AddWithValue("@cla11", modelData.cla11);
+                insertSQL.Parameters.AddWithValue("@cla3", modelData.cla3);
+                insertSQL.Parameters.AddWithValue("@cla4", modelData.cla4);
+                insertSQL.Parameters.AddWithValue("@cla5", modelData.cla5);
 
-            insertSQL.Parameters.AddWithValue("@cla12", modelData.cla12);
-            insertSQL.Parameters.AddWithValue("@cla13", modelData.cla13);
-            insertSQL.Parameters.AddWithValue("@cla14", modelData.cla14);
+                insertSQL.Parameters.AddWithValue("@cla6", modelData.cla6);
+                insertSQL.Parameters.AddWithValue("@cla7", modelData.cla7);
+                insertSQL.Parameters.AddWithValue("@cla8", modelData.cla8);
 
-            insertSQL.Parameters.AddWithValue("@cla15", modelData.cla15);
-            insertSQL.Parameters.AddWithValue("@cla16", modelData.cla16);
-            
+                insertSQL.Parameters.AddWithValue("@cla9", modelData.cla9);
+                insertSQL.Parameters.AddWithValue("@cla10", modelData.cla10);
+                insertSQL.Parameters.AddWithValue("@cla11", modelData.cla11);
 
-            try
-            {
-                insertSQL.ExecuteNonQuery();
-                m_dbConnection.Close();
-                
+                insertSQL.Parameters.AddWithValue("@cla12", modelData.cla12);
+                insertSQL.Parameters.AddWithValue("@cla13", modelData.cla13);
+                insertSQL.Parameters.AddWithValue("@cla14", modelData.cla14);
+
+                insertSQL.Parameters.AddWithValue("@cla15", modelData.cla15);
+                insertSQL.Parameters.AddWithValue("@cla16", modelData.cla16);
+                insertSQL.Parameters.AddWithValue("@recordFileName", modelData.recordFileName);
+
+
+                try
+                {
+                    insertSQL.ExecuteNonQuery();
+
+                    AutoClosingMessageBox.Show("Data Inserted Successfully", "Insert", 1000);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
+            else {
+                AutoClosingMessageBox.Show("Record Name Already Exist", "Duplicate Data", 1000);
             }
+            m_dbConnection.Close();
         }
 
         void Fillcombobox()
-        {
-
-            m_dbConnection.Open();
-            SQLiteCommand cmd = new SQLiteCommand("select ID From qmsutility", m_dbConnection);
-            SQLiteDataReader Sdr = cmd.ExecuteReader();
-            while (Sdr.Read())
             {
-                if (!qmsComboBox.Items.Contains(Sdr["ID"].ToString()))
-                {
-                    qmsComboBox.Items.Add(Sdr["ID"].ToString());
-                }
-            }
-            Sdr.Close();
-            m_dbConnection.Close();
 
+                m_dbConnection.Open();
+                SQLiteCommand cmd = new SQLiteCommand("select ID, recordFileName From qmsutility", m_dbConnection);
+                SQLiteDataReader Sdr = cmd.ExecuteReader();
+                while (Sdr.Read())
+                {
+                    /* userListDictionary.Add(Convert.ToInt32(Sdr["ID"].ToString()), Sdr["recordFileName"].ToString());
+                    qmsComboBox.DataSource = new BindingSource(userListDictionary, null);
+                    qmsComboBox.DisplayMember = "Value";
+                    qmsComboBox.ValueMember = "Key"; */
+
+                    if (!qmsComboBox.Items.Contains(Sdr["ID"].ToString()))
+                    {
+                        qmsComboBox.Items.Add(Sdr["ID"].ToString());
+                    }
+                }
+                Sdr.Close();
+                m_dbConnection.Close();
+            
         }
 
         public void createDB()
@@ -636,7 +675,7 @@ namespace QMS_Utility
                     "cla1 varchar(20), cla2 varchar(20),cla3 varchar(20), cla4 varchar(20)," +
                     "cla5 varchar(20), cla6 varchar(20),cla7 varchar(20), cla8 varchar(20)," +
                     "cla9 varchar(20), cla10 varchar(20),cla11 varchar(20), cla12 varchar(20)," +
-                    "cla13 varchar(20), cla14 varchar(20),cla15 varchar(20), cla16 varchar(20))";
+                    "cla13 varchar(20), cla14 varchar(20),cla15 varchar(20), cla16 varchar(20), recordFileName varchar(60)  NOT NULL UNIQUE)";
 
                 SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
 
@@ -650,6 +689,14 @@ namespace QMS_Utility
 
         private void qmsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            //string value1 =  qmsComboBox.SelectedItem.ToString();
+            //string[] tokens = value1.Split(',');
+            //string[] keyValue = tokens[0].Split('[');
+            //string[] lines = Regex.Split(value1, ",");
+            
+           // MessageBox.Show(lines[0].ToString());
+
             if (qmsComboBox.SelectedIndex > 0)
             {
                 m_dbConnection.Open();
@@ -684,6 +731,7 @@ namespace QMS_Utility
                     cntLabel14TextBox.Text = Sdr["cla14"].ToString();
                     cntLabel15TextBox.Text = Sdr["cla15"].ToString();
                     cntLabel16TextBox.Text = Sdr["cla16"].ToString();
+                    recordFileName.Text = Sdr["recordFileName"].ToString();
 
                 }
                 Sdr.Close();
@@ -718,6 +766,7 @@ namespace QMS_Utility
                 cntLabel14TextBox.Text = "";
                 cntLabel15TextBox.Text = "";
                 cntLabel16TextBox.Text ="";
+                recordFileName.Text = "";
 
 
             }
@@ -740,7 +789,7 @@ namespace QMS_Utility
                 "cla9 = @cla9, cla10 = @cla10," +
                 "cla11 = @cla11, cla12 = @cla12," +
                 "cla13 = @cla13, cla14 = @cla14," +
-                "cla15 = @cla15, cla16 = @cla16 Where ID = @ID";
+                "cla15 = @cla15, cla16 = @cla16, recordFileName=@recordFileName Where ID = @ID";
 
 
             SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
@@ -783,6 +832,7 @@ namespace QMS_Utility
 
             command.Parameters.AddWithValue("@cla15", modelData.cla15);
             command.Parameters.AddWithValue("@cla16", modelData.cla16);
+            command.Parameters.AddWithValue("@recordFileName", modelData.recordFileName);
             command.Parameters.AddWithValue("@ID", qmsComboBox.SelectedItem);
 
             try
@@ -797,6 +847,50 @@ namespace QMS_Utility
             }
 
             
+        }
+
+
+        public static Label SetPlaceholder(Control control, string text)
+        {
+            var placeholder = new Label
+            {
+                Text = text,
+                Font = control.Font,
+                ForeColor = Color.Gray,
+                BackColor = Color.Transparent,
+                Cursor = Cursors.IBeam,
+                Margin = Padding.Empty,
+
+                //get rid of the left margin that all labels have
+                FlatStyle = FlatStyle.System,
+                AutoSize = false,
+
+                //Leave 1px on the left so we can see the blinking cursor
+                Size = new Size(control.Size.Width - 1, control.Size.Height),
+                Location = new Point(control.Location.X + 1, control.Location.Y)
+            };
+
+            //when clicking on the label, pass focus to the control
+            placeholder.Click += (sender, args) => { control.Focus(); };
+
+            //disappear when the user starts typing
+            control.TextChanged += (sender, args) => {
+                placeholder.Visible = string.IsNullOrEmpty(control.Text);
+            };
+
+            //stay the same size/location as the control
+            EventHandler updateSize = (sender, args) => {
+                placeholder.Location = new Point(control.Location.X + 1, control.Location.Y);
+                placeholder.Size = new Size(control.Size.Width - 1, control.Size.Height);
+            };
+
+            control.SizeChanged += updateSize;
+            control.LocationChanged += updateSize;
+
+            control.Parent.Controls.Add(placeholder);
+            placeholder.BringToFront();
+
+            return placeholder;
         }
     }
 }
