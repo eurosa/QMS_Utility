@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
@@ -21,6 +22,10 @@ namespace QMS_Utility
         SQLiteConnection m_dbConnection;
         string select = "New Record";
         Dictionary<int, string> userListDictionary;
+
+        private PrintPreviewControl ppc;
+        private PrintDocument docToPrint = new PrintDocument();
+
         public Form1()
         {
             InitializeComponent();
@@ -35,10 +40,11 @@ namespace QMS_Utility
             newRecordValue();
             Fillcombobox();
 
-            //SetPlaceholder(recordFileName, "Enter Record Name");
-            //SetPlaceholder(institutionTextBox, "Enter Institute Name");
-            //SetPlaceholder(bankIdTextBox, "Enter Bank Id");
-            //SetPlaceholder(timeTextBox, "Enter Time and Date");
+            // SetPlaceholder(recordFileName, " Enter Record Name");
+            // SetPlaceholder(institutionTextBox, "Enter Institute Name");
+            // SetPlaceholder(bankIdTextBox, "Enter Bank Id");
+            // SetPlaceholder(timeTextBox, "Enter Time and Date");
+
         }
 
         public void newRecordValue() {
@@ -355,11 +361,6 @@ namespace QMS_Utility
             sendDataToPort("$CNTR" + "" + totalCounterText + ";");
         }
 
-        private void copiesSend_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void closingTimeSend_Click(object sender, EventArgs e)
         {
             string closingTimeText = fixedLengthString(closingTimeTextBox.Text, 28);
@@ -552,6 +553,7 @@ namespace QMS_Utility
             }
             else
             {
+
                 insertData(model);
                 
             }
@@ -772,7 +774,7 @@ namespace QMS_Utility
             }
         }
 
-        public void updateDB(Model modelData) 
+        public void updateDB(Model modelData)
         {
             m_dbConnection.Open();
           
@@ -891,6 +893,53 @@ namespace QMS_Utility
             placeholder.BringToFront();
 
             return placeholder;
+        }
+
+        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void PrintPage(object sender, PrintPageEventArgs e)
+        {
+            
+           String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
+
+            string text = "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"********************"+"\n" + institutionTextBox.Text +
+                "\n"+"********************"+"\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
+                + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
+                e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
+                Brushes.Black, 150, 150);
+
+            //DateTime.Now.ToString("HH: mm: ss tt") #Example: 5:42:12 PM
+        }
+
+
+        private void printPreview_Click(object sender, EventArgs e)
+        {
+            CreatePrintPreviewControl();
+        }
+
+
+        private void CreatePrintPreviewControl()
+        {
+           // ppc = new PrintPreviewControl();
+           // ppc.Name = "PrintPreviewControl1";
+           // ppc.Dock = DockStyle.Fill;
+           // ppc.Location = new Point(88, 80);
+
+            printPreviewControl1.Document = docToPrint;
+           // ppc.Zoom = .15;
+            //ppc.Document.DocumentName = "c:\\";
+         //   ppc.UseAntiAlias = true;
+
+            // Add PrintPreviewControl to Form
+           // Controls.Add(this.ppc);
+
+            // Add PrintDocument PrintPage event handler
+            this.docToPrint.PrintPage +=
+                new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
         }
     }
 }
