@@ -29,6 +29,9 @@ namespace QMS_Utility
         public Form1()
         {
             InitializeComponent();
+            groupBox2.Paint += PaintBorderlessGroupBox;
+            groupBox3.Paint += PaintBorderlessGroupBox;
+
             // form2 = new Form2(this);
             model = new Model();
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
@@ -57,6 +60,13 @@ namespace QMS_Utility
             }
             qmsComboBox.SelectedIndex = 0;
 
+        }
+
+        private void PaintBorderlessGroupBox(object sender, PaintEventArgs p)
+        {
+            GroupBox box = (GroupBox)sender;
+            p.Graphics.Clear(SystemColors.Control);
+            p.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
