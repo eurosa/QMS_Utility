@@ -29,9 +29,12 @@ namespace QMS_Utility
         public Form1()
         {
             InitializeComponent();
-            groupBox2.Paint += PaintBorderlessGroupBox;
-            groupBox3.Paint += PaintBorderlessGroupBox;
-
+            groupBox1.Paint += comSerialPort_Paint;
+            groupBox2.Paint += groupBox1_Paint;
+            groupBox3.Paint += groupBox1_Paint;
+            groupBox4.Paint += cntLabel_Paint;
+            cmbPortName.Height = 120;
+             
             // form2 = new Form2(this);
             model = new Model();
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
@@ -60,6 +63,71 @@ namespace QMS_Utility
             }
             qmsComboBox.SelectedIndex = 0;
 
+        }
+
+        private void comSerialPort_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = (GroupBox)sender;
+            Graphics gfx = e.Graphics;
+
+            Pen p = new Pen(Color.Orange, 3);
+
+            e.Graphics.Clear(SystemColors.Control);
+            e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
+
+            gfx.DrawLine(p, 0, 5, 0, e.ClipRectangle.Height - 2);//Left Y and up x
+            gfx.DrawLine(p, 0, 5, 10, 5);//LEFT y
+
+            gfx.DrawLine(p, 140, 5, e.ClipRectangle.Width - 2, 5);//Right y and up x
+
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, 5, e.ClipRectangle.Width - 2, e.ClipRectangle.Height);// Right Y
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2, 0, e.ClipRectangle.Height - 2);//Bottom X
+
+
+        }
+
+
+        private void cntLabel_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = (GroupBox)sender;
+            Graphics gfx = e.Graphics;
+
+            Pen p = new Pen(Color.Orange, 3);
+
+            e.Graphics.Clear(SystemColors.Control);
+            e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
+
+            gfx.DrawLine(p, 0, 5, 0, e.ClipRectangle.Height - 2);//Left Y and up x
+            gfx.DrawLine(p, 0, 5, 10, 5);//LEFT y
+
+            gfx.DrawLine(p, 132, 5, e.ClipRectangle.Width - 2, 5);//Right y and up x
+
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, 5, e.ClipRectangle.Width - 2, e.ClipRectangle.Height);// Right Y
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2, 0, e.ClipRectangle.Height - 2);//Bottom X
+
+
+        }
+
+
+        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        {
+            GroupBox box = (GroupBox)sender;
+            Graphics gfx = e.Graphics;
+            
+            Pen p = new Pen(Color.Orange, 3);
+
+            e.Graphics.Clear(SystemColors.Control);
+            e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
+
+            gfx.DrawLine(p, 0, 5, 0, e.ClipRectangle.Height - 2);//Left Y and up x
+            gfx.DrawLine(p, 0, 5, 10, 5);//LEFT y
+
+            gfx.DrawLine(p, 110, 5, e.ClipRectangle.Width - 2, 5);//Right y and up x
+
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, 5, e.ClipRectangle.Width - 2, e.ClipRectangle.Height  );// Right Y
+            gfx.DrawLine(p, e.ClipRectangle.Width - 2, e.ClipRectangle.Height - 2, 0, e.ClipRectangle.Height - 2);//Bottom X
+           
+            
         }
 
         private void PaintBorderlessGroupBox(object sender, PaintEventArgs p)
@@ -518,7 +586,7 @@ namespace QMS_Utility
         private void saveAll_Click(object sender, EventArgs e)
         {
 
-            if (recordFileName.Text == "")
+            if (recordFileName.Text.Trim() == "")
 
             {
 
@@ -554,7 +622,7 @@ namespace QMS_Utility
             model.cla14 = cntLabel14TextBox.Text;
             model.cla15 = cntLabel15TextBox.Text;
             model.cla16 = cntLabel16TextBox.Text;
-            model.recordFileName = recordFileName.Text;
+            model.recordFileName = recordFileName.Text.Trim();
 
             if (qmsComboBox.SelectedIndex > 0)
             {
@@ -577,7 +645,7 @@ namespace QMS_Utility
         {
             m_dbConnection.Open();
 
-            SQLiteCommand selectSQL = new SQLiteCommand("SELECT count(*) FROM qmsutility WHERE recordFileName='"+recordFileName.Text+"'", m_dbConnection);
+            SQLiteCommand selectSQL = new SQLiteCommand("SELECT count(*) FROM qmsutility WHERE recordFileName='"+recordFileName.Text.Trim()+"'", m_dbConnection);
 
             int count = Convert.ToInt32(selectSQL.ExecuteScalar());
 
@@ -661,9 +729,9 @@ namespace QMS_Utility
                     qmsComboBox.DisplayMember = "Value";
                     qmsComboBox.ValueMember = "Key"; */
 
-                    if (!qmsComboBox.Items.Contains(Sdr["ID"].ToString()))
+                    if (!qmsComboBox.Items.Contains(Sdr["recordFileName"].ToString()))
                     {
-                        qmsComboBox.Items.Add(Sdr["ID"].ToString());
+                        qmsComboBox.Items.Add(Sdr["recordFileName"].ToString());
                     }
                 }
                 Sdr.Close();
@@ -712,7 +780,7 @@ namespace QMS_Utility
             if (qmsComboBox.SelectedIndex > 0)
             {
                 m_dbConnection.Open();
-                SQLiteCommand cmd = new SQLiteCommand("select * From qmsutility where ID ='" + qmsComboBox.SelectedItem.ToString() + "'", m_dbConnection);
+                SQLiteCommand cmd = new SQLiteCommand("select * From qmsutility where recordFileName ='" + qmsComboBox.SelectedItem.ToString() + "'", m_dbConnection);
                 SQLiteDataReader Sdr = cmd.ExecuteReader();
                 while (Sdr.Read())
                 {
@@ -778,7 +846,8 @@ namespace QMS_Utility
                 cntLabel14TextBox.Text = "";
                 cntLabel15TextBox.Text = "";
                 cntLabel16TextBox.Text ="";
-                recordFileName.Text = "";
+                recordFileName.Text= "";
+                
 
 
             }
@@ -801,7 +870,7 @@ namespace QMS_Utility
                 "cla9 = @cla9, cla10 = @cla10," +
                 "cla11 = @cla11, cla12 = @cla12," +
                 "cla13 = @cla13, cla14 = @cla14," +
-                "cla15 = @cla15, cla16 = @cla16, recordFileName=@recordFileName Where ID = @ID";
+                "cla15 = @cla15, cla16 = @cla16, recordFileName=@recordFileName Where recordFileName = @ID";
 
 
             SQLiteCommand command = new SQLiteCommand(sql_update, m_dbConnection);
@@ -916,11 +985,32 @@ namespace QMS_Utility
             
            String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
 
-            string text = "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"********************"+"\n" + institutionTextBox.Text +
-                "\n"+"********************"+"\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
+            string text = "TOKEN No 07"+"\n" + "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"************************"+"\n" + institutionTextBox.Text +
+                "\n"+ "************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
                 + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
-                e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
-                Brushes.Black, 150, 150);
+            /* e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
+             Brushes.Black, 150, 150);*/
+
+            StringFormat sf = new StringFormat();
+            sf.LineAlignment = StringAlignment.Center;//center-align vertically
+            sf.Alignment = StringAlignment.Center; //center-align horizontally
+
+            Font drawFont = new Font("Arial Black", 35);
+            e.Graphics.DrawString(text, drawFont, Brushes.Maroon, 500, 340, sf);
+
+            // Set up string. 
+   
+            Font stringFont = new Font("Arial", 16);
+
+            // Measure string.
+            SizeF stringSize = new SizeF();
+            stringSize = e.Graphics.MeasureString(text, stringFont);
+
+            // Draw rectangle representing size of string.
+           // e.Graphics.DrawRectangle(new Pen(Color.Red, 1), 100, 0.0F, stringSize.Width, stringSize.Height);
+
+            // Draw string to screen.
+         //   e.Graphics.DrawString(text, stringFont, Brushes.Black, new PointF(100, 0));
 
             //DateTime.Now.ToString("HH: mm: ss tt") #Example: 5:42:12 PM
         }
@@ -940,15 +1030,17 @@ namespace QMS_Utility
            // ppc.Location = new Point(88, 80);
 
             printPreviewControl1.Document = docToPrint;
-           // ppc.Zoom = .15;
+            // ppc.Zoom = .15;
             //ppc.Document.DocumentName = "c:\\";
-         //   ppc.UseAntiAlias = true;
+            //   ppc.UseAntiAlias = true;
 
             // Add PrintPreviewControl to Form
-           // Controls.Add(this.ppc);
+            // Controls.Add(this.ppc);
 
             // Add PrintDocument PrintPage event handler
-            this.docToPrint.PrintPage +=
+           // docToPrint.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 1000, 800);
+            docToPrint.DefaultPageSettings.Landscape = true;
+            docToPrint.PrintPage +=
                 new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
         }
     }
