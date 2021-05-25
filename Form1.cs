@@ -34,7 +34,14 @@ namespace QMS_Utility
             groupBox3.Paint += groupBox1_Paint;
             groupBox4.Paint += cntLabel_Paint;
             cmbPortName.Height = 120;
-             
+
+            // Tab Color control
+            tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+            //  tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.DrawItem += TcRemontas_DrawItem;
+            // Tab Color control
+            //  tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem_1);
+
             // form2 = new Form2(this);
             model = new Model();
             m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
@@ -51,6 +58,45 @@ namespace QMS_Utility
             // SetPlaceholder(bankIdTextBox, "Enter Bank Id");
             // SetPlaceholder(timeTextBox, "Enter Time and Date");
 
+        }
+
+
+        private void TcRemontas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabControl tabControl = sender as TabControl;
+
+            if (e.Index == tabControl.SelectedIndex)
+            {
+                e.Graphics.DrawString(tabControl.TabPages[e.Index].Text,
+                    new Font(tabControl.Font, FontStyle.Bold),
+                    Brushes.Blue,
+                    new PointF(e.Bounds.X + 3, e.Bounds.Y + 3));
+            }
+            else
+            {
+                e.Graphics.DrawString(tabControl.TabPages[e.Index].Text,
+                    tabControl.Font,
+                    Brushes.Blue,
+                    new PointF(e.Bounds.X + 3, e.Bounds.Y + 3));
+            }
+        }
+
+        private void tabControl1_DrawItem_1(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index == tabControl1.SelectedIndex)
+            {
+                e.Graphics.DrawString(tabControl1.TabPages[e.Index].Text,
+                    new Font(tabControl1.Font, FontStyle.Bold),
+                    Brushes.Blue,
+                    new PointF(e.Bounds.X + 3, e.Bounds.Y + 3));
+            }
+            else
+            {
+                e.Graphics.DrawString(tabControl1.TabPages[e.Index].Text,
+                    tabControl1.Font,
+                    Brushes.Blue,
+                    new PointF(e.Bounds.X + 3, e.Bounds.Y + 3));
+            }
         }
 
         public void newRecordValue() {
@@ -70,7 +116,7 @@ namespace QMS_Utility
             GroupBox box = (GroupBox)sender;
             Graphics gfx = e.Graphics;
 
-            Pen p = new Pen(Color.Orange, 3);
+            Pen p = new Pen(Color.WhiteSmoke, 3);
 
             e.Graphics.Clear(SystemColors.Control);
             e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
@@ -92,7 +138,7 @@ namespace QMS_Utility
             GroupBox box = (GroupBox)sender;
             Graphics gfx = e.Graphics;
 
-            Pen p = new Pen(Color.Orange, 3);
+            Pen p = new Pen(Color.WhiteSmoke, 3);
 
             e.Graphics.Clear(SystemColors.Control);
             e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
@@ -114,7 +160,7 @@ namespace QMS_Utility
             GroupBox box = (GroupBox)sender;
             Graphics gfx = e.Graphics;
             
-            Pen p = new Pen(Color.Orange, 3);
+            Pen p = new Pen(Color.WhiteSmoke, 3);
 
             e.Graphics.Clear(SystemColors.Control);
             e.Graphics.DrawString(box.Text, box.Font, Brushes.Red, 10, 0);//Group box Text x,y position
@@ -985,21 +1031,28 @@ namespace QMS_Utility
             
            String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
 
-            string text = "TOKEN No 07"+"\n" + "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"************************"+"\n" + institutionTextBox.Text +
-                "\n"+ "************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
+        
+
+            string text = "\n" + "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"****************************"+"\n" + institutionTextBox.Text +
+                "\n"+ "****************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
                 + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
             /* e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
              Brushes.Black, 150, 150);*/
+            string textTitle = "TOKEN No 07";
 
             StringFormat sf = new StringFormat();
             sf.LineAlignment = StringAlignment.Center;//center-align vertically
             sf.Alignment = StringAlignment.Center; //center-align horizontally
 
             Font drawFont = new Font("Arial Black", 35);
-            e.Graphics.DrawString(text, drawFont, Brushes.Maroon, 500, 340, sf);
+            Font drawTitleFont = new Font("Arial Black", 70);
+            e.Graphics.Clear(Color.White);
+            e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, 570, 90, sf);
+            e.Graphics.DrawString(text, drawFont, Brushes.Black, 570, 420, sf);
+            // e.Graphics.DrawString(text, drawFont, Brushes.Maroon, 570, 360, sf);
 
             // Set up string. 
-   
+
             Font stringFont = new Font("Arial", 16);
 
             // Measure string.
@@ -1013,6 +1066,27 @@ namespace QMS_Utility
          //   e.Graphics.DrawString(text, stringFont, Brushes.Black, new PointF(100, 0));
 
             //DateTime.Now.ToString("HH: mm: ss tt") #Example: 5:42:12 PM
+        }
+
+
+
+        private Font GetCorrectFont(Graphics graphic, String text, Size maxStringSize, Font labelFont)
+        {
+            //based on the Label string,we need to vary font size 
+            //current width the text string
+            SizeF sizeStr = graphic.MeasureString(text, labelFont);
+            Font fontStr = new Font(labelFont.Name, labelFont.Size);
+            while (sizeStr.Width > maxStringSize.Width)
+            {
+                //adjust the font size based on width ratio
+                float wRatio = (maxStringSize.Width) / sizeStr.Width;
+                //reduce the font size
+                float newSize = (int)(fontStr.Size * wRatio);
+                //this creates a new font with given fontfamily name
+                fontStr = new Font(labelFont.Name, newSize);
+                sizeStr = graphic.MeasureString(text, fontStr);
+            }
+            return fontStr;
         }
 
 
@@ -1042,6 +1116,16 @@ namespace QMS_Utility
             docToPrint.DefaultPageSettings.Landscape = true;
             docToPrint.PrintPage +=
                 new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
+        }
+
+        private void sendCntLabel16_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
