@@ -57,6 +57,8 @@ namespace QMS_Utility
             // SetPlaceholder(institutionTextBox, "Enter Institute Name");
             // SetPlaceholder(bankIdTextBox, "Enter Bank Id");
             // SetPlaceholder(timeTextBox, "Enter Time and Date");
+ 
+
 
         }
 
