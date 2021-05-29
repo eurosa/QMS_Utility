@@ -268,13 +268,13 @@ namespace QMS_Utility
             if (ComPort.IsOpen)
                 {
                 btnConnect.Text = "Disconnect";
-               // btnSend.Enabled = true;
-               /* if (!rdText.Checked & !rdHex.Checked)  //if no data mode is selected, then select text mode by default
-                    {
-                    rdText.Checked = true;
-                    }    */            
-                groupBox1.Enabled = false;
-                
+                // btnSend.Enabled = true;
+                /* if (!rdText.Checked & !rdHex.Checked)  //if no data mode is selected, then select text mode by default
+                     {
+                     rdText.Checked = true;
+                     }    */
+                // groupBox1.Enabled = false;
+                cmbPortName.Enabled = false;
 
                 }
              }
@@ -284,9 +284,10 @@ namespace QMS_Utility
             ComPort.Close();
             btnConnect.Text = "Connect";
             //btnSend.Enabled = false;
-            groupBox1.Enabled = true;
-            
-            }
+            // groupBox1.Enabled = true;
+            cmbPortName.Enabled = true;
+
+        }
               //whenever the connect button is clicked, it will check if the port is already open, call the disconnect function.
               // if the port is closed, call the connect function.
         private void btnConnect_Click(object sender, EventArgs e)
@@ -454,7 +455,7 @@ namespace QMS_Utility
            
         }
 
-        private void sendName_Click(object sender, EventArgs e)
+        private void sendName_Click_1(object sender, EventArgs e)
         {
             string institutionText = fixedLengthString(institutionTextBox.Text, 28);
             sendDataToPort("$BnkL"+ institutionText + ";");
@@ -462,50 +463,50 @@ namespace QMS_Utility
             
         }
 
-        private void sendBankID_Click(object sender, EventArgs e)
+        private void sendBankID_Click_1(object sender, EventArgs e)
         {
             string bankIdText = fixedLengthString(bankIdTextBox.Text, 28);
             sendDataToPort("$BnkL" + "" + bankIdText + ";");
             
         }
 
-        private void sendTime_Click(object sender, EventArgs e)
+        private void sendTime_Click_1(object sender, EventArgs e)
         {
             string timeTex = fixedLengthString(timeTextBox.Text, 28);
             sendDataToPort("$TIME" + "" + timeTex + ";");
         }
 
-        private void sendCounter_Click(object sender, EventArgs e)
+        private void sendCounter_Click_1(object sender, EventArgs e)
         {
             string counteText = fixedLengthString(counteTextBox.Text, 28);
             sendDataToPort("$CTID" + "" + counteText + ";");
         }
 
-        private void sendCounterNo_Click(object sender, EventArgs e)
+        private void sendCounterNo_Click_1(object sender, EventArgs e)
         {
             string totalCounterText = fixedLengthString(totalCounterTextBox.Text, 28);
             sendDataToPort("$CNTR" + "" + totalCounterText + ";");
         }
 
-        private void closingTimeSend_Click(object sender, EventArgs e)
+        private void closingTimeSend_Click_1(object sender, EventArgs e)
         {
             string closingTimeText = fixedLengthString(closingTimeTextBox.Text, 28);
             sendDataToPort("$CLTM" + "" + closingTimeText + ";");
         }
 
-        private void sendToken1_Click(object sender, EventArgs e)
+        private void sendToken1_Click_1(object sender, EventArgs e)
         {
             string tokenSlip1Text = fixedLengthString(tokenSlip1TextBox.Text, 28);
             sendDataToPort("$TSL9" + "" + tokenSlip1Text + ";");
         }
 
-        private void sendToken2_Click(object sender, EventArgs e)
+        private void sendToken2_Click_1(object sender, EventArgs e)
         {
             string tokenSlip2Text = fixedLengthString(tokenSlip2TextBox.Text, 28);
             sendDataToPort("$TSLA" + "" + tokenSlip2Text + ";");
         }
 
-        private void sendToken3_Click(object sender, EventArgs e)
+        private void sendToken3_Click_1(object sender, EventArgs e)
         {
             string tokenSlipBText = fixedLengthString(tokenSlipBTextBox.Text, 28);
             sendDataToPort("$TSLB" + "" + tokenSlipBText + ";");
@@ -516,98 +517,98 @@ namespace QMS_Utility
 
         }
 
-        private void sendCntLabel1_Click(object sender, EventArgs e)
+        private void sendCntLabel1_Click_1(object sender, EventArgs e)
         {
             string cntLabel1Text = fixedLengthString(cntLabel1TextBox.Text, 28);
             sendDataToPort("$LaC1" + "" + cntLabel1Text + ";");
         }
 
-        private void sendCntLabel2_Click(object sender, EventArgs e)
+        private void sendCntLabel2_Click_1(object sender, EventArgs e)
         {
             string cntLabel2Text = fixedLengthString(cntLabel2TextBox.Text, 28);
             sendDataToPort("$LaC2" + "" + cntLabel2Text + ";");
         }
 
-        private void sendCntLabel3_Click(object sender, EventArgs e)
+        private void sendCntLabel3_Click_1(object sender, EventArgs e)
         {
             string cntLabel3Text = fixedLengthString(cntLabel3TextBox.Text, 28);
             sendDataToPort("$LaC3" + "" + cntLabel3Text + ";");
         }
 
-        private void sendCntLabel4_Click(object sender, EventArgs e)
+        private void sendCntLabel4_Click_1(object sender, EventArgs e)
         {
             string cntLabel4Text = fixedLengthString(cntLabel4TextBox.Text, 28);
             sendDataToPort("$LaC4" + "" + cntLabel4Text + ";");
         }
 
-        private void sendCntLabel5_Click(object sender, EventArgs e)
+        private void sendCntLabel5_Click_1(object sender, EventArgs e)
         {
             string cntLabel5Text = fixedLengthString(cntLabel5TextBox.Text, 28);
             sendDataToPort("$LaC5" + "" + cntLabel5Text + ";");
         }
 
-        private void sendCntLabel6_Click(object sender, EventArgs e)
+        private void sendCntLabel6_Click_1(object sender, EventArgs e)
         {
             string cntLabel6Text = fixedLengthString(cntLabel6TextBox.Text, 28);
             sendDataToPort("$LaC6" + "" + cntLabel6Text + ";");
 
         }
 
-        private void sendCntLabel7_Click(object sender, EventArgs e)
+        private void sendCntLabel7_Click_1(object sender, EventArgs e)
         {
             string cntLabel7Text = fixedLengthString(cntLabel7TextBox.Text, 28);
             sendDataToPort("$LaC7" + "" + cntLabel7Text + ";");
         }
 
-        private void sendCntLabel8_Click(object sender, EventArgs e)
+        private void sendCntLabel8_Click_1(object sender, EventArgs e)
         {
             string cntLabel8Text = fixedLengthString(cntLabel8TextBox.Text, 28);
             sendDataToPort("$LaC8" + "" + cntLabel8Text + ";");
         }
 
-        private void sendCntLabel9_Click(object sender, EventArgs e)
+        private void sendCntLabel9_Click_1(object sender, EventArgs e)
         {
             string cntLabel9Text = fixedLengthString(cntLabel9TextBox.Text, 28);
             sendDataToPort("$LaC9" + "" + cntLabel9Text + ";");
         }
 
-        private void sendCntLabel10_Click(object sender, EventArgs e)
+        private void sendCntLabel10_Click_1(object sender, EventArgs e)
         {
             string cntLabel10Text = fixedLengthString(cntLabel10TextBox.Text, 28);
             sendDataToPort("$LaCA" + "" + cntLabel10Text + ";");
         }
 
-        private void sendCntLabel11_Click(object sender, EventArgs e)
+        private void sendCntLabel11_Click_1(object sender, EventArgs e)
         {
             string cntLabel11Text = fixedLengthString(cntLabel11TextBox.Text, 28);
             sendDataToPort("$LaCB" + "" + cntLabel11Text + ";");
         }
 
-        private void sendCntLabel12_Click(object sender, EventArgs e)
+        private void sendCntLabel12_Click_1(object sender, EventArgs e)
         {
             string cntLabel12Text = fixedLengthString(cntLabel12TextBox.Text, 28);
             sendDataToPort("$LaCC" + "" + cntLabel12Text + ";");
         }
 
-        private void sendCntLabel13_Click(object sender, EventArgs e)
+        private void sendCntLabel13_Click_1(object sender, EventArgs e)
         {
             string cntLabel13Text = fixedLengthString(cntLabel13TextBox.Text, 28);
             sendDataToPort("$LaCD" + "" + cntLabel13Text + ";");
         }
 
-        private void sendCntLabel14_Click(object sender, EventArgs e)
+        private void sendCntLabel14_Click_1(object sender, EventArgs e)
         {
             string cntLabel14Text = fixedLengthString(cntLabel14TextBox.Text, 28);
             sendDataToPort("$LaCE" + "" + cntLabel14Text + ";");
         }
 
-        private void sendCntLabel15_Click(object sender, EventArgs e)
+        private void sendCntLabel15_Click_1(object sender, EventArgs e)
         {
             string cntLabel15Text = fixedLengthString(cntLabel15TextBox.Text, 28);
             sendDataToPort("$LaCF" + "" + cntLabel15Text + ";");
         }
 
-        private void sendCntLabel16_Click(object sender, EventArgs e)
+        private void sendCntLabel16_Click_1(object sender, EventArgs e)
         {
             string cntLabel16Text = fixedLengthString(cntLabel16TextBox.Text, 28);
             sendDataToPort("$LaCG" + "" + cntLabel16Text + ";");
@@ -1120,14 +1121,18 @@ namespace QMS_Utility
                 new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
         }
 
-        private void sendCntLabel16_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
         }
+
+        private void copiesSend_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
