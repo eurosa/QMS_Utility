@@ -34,6 +34,8 @@ namespace QMS_Utility
             groupBox3.Paint += groupBox1_Paint;
             groupBox4.Paint += cntLabel_Paint;
             cmbPortName.Height = 120;
+            // this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Auto;
+
 
             // Tab Color control
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
@@ -1029,48 +1031,105 @@ namespace QMS_Utility
         }
 
 
+        public void PrintPage1(object sender, PrintPageEventArgs e)
+        {
+            String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
+            string drawString = "\n" + "Counter No.: " + cntLabel1TextBox.Text + "\n" + "****************************" + "\n" + institutionTextBox.Text +
+               "\n" + "****************************" + "\n" + "TIME" + "               " + "DATE" + "\n" + DateTime.Now.ToString("HH:mm:ss") + "        " + dateString + "\n" + tokenSlip1TextBox.Text + "\n"
+               + tokenSlip2TextBox.Text + "\n" + tokenSlipBTextBox.Text;
+            // Create string to draw.
+            string textTitle = "   TOKEN No 07";
+
+            StringFormat drawFormat = new StringFormat();
+            drawFormat.LineAlignment = StringAlignment.Center;//center-align vertically
+            drawFormat.Alignment = StringAlignment.Center; //center-align horizontally
+            drawFormat.FormatFlags = StringFormatFlags.FitBlackBox;
+            
+
+           
+            Font drawTitleFont = new Font("Arial Black", 60, FontStyle.Regular);
+
+            // Create font and brush.
+            Font drawFont = new Font("Arial Black", 40, FontStyle.Regular);
+            SolidBrush drawBrush = new SolidBrush(Color.Black);
+
+            // Create rectangle for drawing.
+            float x = 0.0F;
+            float y = 0.0F;
+            float width = 1170.0F;
+            float height = 850.0F;
+            RectangleF drawRect = new RectangleF(x, y, width, height);
+            RectangleF drawRectq = new RectangleF(x, y, width, height);
+            // Draw rectangle to screen.
+            Pen blackPen = new Pen(Color.Black);
+
+            e.Graphics.Clear(Color.White);
+            e.Graphics.DrawRectangle(blackPen, x, y, width, height);
+
+            e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, drawRectq);
+            // Draw string to screen.
+            // e.Graphics.DrawString(textTitle, drawTitleFont, drawBrush, drawRect, drawFormat);
+            // Draw string to screen.
+            e.Graphics.DrawString(drawString, drawFont, drawBrush, drawRect, drawFormat);
+        }
+
         private void PrintPage(object sender, PrintPageEventArgs e)
         {
-            
-           String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
+            int charactersOnPage = 0;
+            int linesPerPage = 0;
+
+
+            String dateString = DateTime.Now.ToString("dd/MM/yy").Replace('-', '/');
 
         
 
-            string text = "\n" + "Counter No.: "+ cntLabel1TextBox.Text+ "\n"+"****************************"+"\n" + institutionTextBox.Text +
+            string text =   cntLabel1TextBox.Text+"\n"+"Counter No.: "+counteTextBox.Text + "\n"+"****************************"+"\n" + institutionTextBox.Text +
                 "\n"+ "****************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
                 + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
             /* e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
              Brushes.Black, 150, 150);*/
-            string textTitle = "TOKEN No 07";
+            string textTitle = "TOKEN 07";
 
             StringFormat sf = new StringFormat();
             sf.LineAlignment = StringAlignment.Center;//center-align vertically
             sf.Alignment = StringAlignment.Center; //center-align horizontally
+            sf.FormatFlags = StringFormatFlags.FitBlackBox;
 
-            Font drawFont = new Font("Arial Black", 35);
+            Font drawFont = new Font("Arial Black", 30F);
             Font drawTitleFont = new Font("Arial Black", 70);
+            
             e.Graphics.Clear(Color.White);
-            e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, 570, 90, sf);
-            e.Graphics.DrawString(text, drawFont, Brushes.Black, 570, 420, sf);
+              
+            // Sets the value of charactersOnPage to the number of characters 
+            // of stringToPrint that will fit within the bounds of the page.
+            e.Graphics.MeasureString(text, drawFont,
+                e.MarginBounds.Size, sf,
+                out charactersOnPage, out linesPerPage);
+
+
+           e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, 550, 65, sf);
+           // e.Graphics.DrawString(text, drawFont, Brushes.Black, 570, 420, sf);
             // e.Graphics.DrawString(text, drawFont, Brushes.Maroon, 570, 360, sf);
 
             // Set up string. 
 
-            Font stringFont = new Font("Arial", 16);
+           // Font stringFont = new Font("Arial", 16);
 
             // Measure string.
-            SizeF stringSize = new SizeF();
-            stringSize = e.Graphics.MeasureString(text, stringFont);
+          //  SizeF stringSize = new SizeF();
+          //  stringSize = e.Graphics.MeasureString(text, drawFont);
 
             // Draw rectangle representing size of string.
-           // e.Graphics.DrawRectangle(new Pen(Color.Red, 1), 100, 0.0F, stringSize.Width, stringSize.Height);
+            // e.Graphics.DrawRectangle(new Pen(Color.Red, 1), 570, 0, stringSize.Width, stringSize.Height);
 
             // Draw string to screen.
-         //   e.Graphics.DrawString(text, stringFont, Brushes.Black, new PointF(100, 0));
+            e.Graphics.DrawString(text, drawFont, Brushes.Black, e.MarginBounds, sf);
+           // e.Graphics.DrawString(text, drawFont, Brushes.Black, 570, 360, sf);
 
             //DateTime.Now.ToString("HH: mm: ss tt") #Example: 5:42:12 PM
         }
 
+       
 
 
         private Font GetCorrectFont(Graphics graphic, String text, Size maxStringSize, Font labelFont)
@@ -1107,18 +1166,31 @@ namespace QMS_Utility
            // ppc.Location = new Point(88, 80);
 
             printPreviewControl1.Document = docToPrint;
-            // ppc.Zoom = .15;
-            //ppc.Document.DocumentName = "c:\\";
-            //   ppc.UseAntiAlias = true;
+           // printPreviewControl1.AutoZoom = false;
+
+           // PrintDialog printdlg = new PrintDialog();
+           // PrintPreviewDialog printPrvDlg = new PrintPreviewDialog();
+           // ppc.Zoom = .15;
+           //ppc.Document.DocumentName = "c:\\";
+           //   ppc.UseAntiAlias = true;
 
             // Add PrintPreviewControl to Form
             // Controls.Add(this.ppc);
 
             // Add PrintDocument PrintPage event handler
-           // docToPrint.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 1000, 800);
+            // docToPrint.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 0, 0);
             docToPrint.DefaultPageSettings.Landscape = true;
+            docToPrint.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 900, 1100);
+
             docToPrint.PrintPage +=
                 new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
+
+          //  printPrvDlg.Document = docToPrint;
+           // printPrvDlg.ShowDialog(); // this shows the preview and then show the Printer Dlg below
+
+         //   printdlg.Document = docToPrint;
+
+          //  printdlg.ShowDialog();// Printing directly
         }
 
         
@@ -1132,7 +1204,5 @@ namespace QMS_Utility
         {
 
         }
-
-       
     }
 }
