@@ -1083,7 +1083,7 @@ namespace QMS_Utility
 
         
 
-            string text =   cntLabel1TextBox.Text+"\n"+"Counter No.: "+counteTextBox.Text + "\n"+"****************************"+"\n" + institutionTextBox.Text +
+            string text =   cntLabel1TextBox.Text+"\n"+ counteTextBox.Text + " No.: " +"\n"+"****************************"+"\n" + institutionTextBox.Text +
                 "\n"+ "****************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
                 + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
             /* e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
