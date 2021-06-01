@@ -165,7 +165,7 @@
             // 
             // cmbPortName
             // 
-            this.cmbPortName.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cmbPortName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cmbPortName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPortName.ForeColor = System.Drawing.Color.MidnightBlue;
             this.cmbPortName.FormattingEnabled = true;
@@ -178,7 +178,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnRefresh.Location = new System.Drawing.Point(28, 120);
@@ -192,7 +192,7 @@
             // btnConnect
             // 
             this.btnConnect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConnect.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnConnect.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnConnect.Location = new System.Drawing.Point(28, 171);
@@ -205,7 +205,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button3.Location = new System.Drawing.Point(1049, 491);
@@ -232,7 +232,7 @@
             // 
             // saveAll
             // 
-            this.saveAll.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.saveAll.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.saveAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveAll.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveAll.Location = new System.Drawing.Point(1049, 396);
@@ -245,7 +245,7 @@
             // 
             // qmsComboBox
             // 
-            this.qmsComboBox.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.qmsComboBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.qmsComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qmsComboBox.ForeColor = System.Drawing.Color.MidnightBlue;
             this.qmsComboBox.FormattingEnabled = true;
@@ -259,7 +259,7 @@
             // 
             // recordFileName
             // 
-            this.recordFileName.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.recordFileName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.recordFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recordFileName.ForeColor = System.Drawing.Color.MidnightBlue;
             this.recordFileName.Location = new System.Drawing.Point(1052, 359);
@@ -336,9 +336,9 @@
             this.sendToken3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendToken3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendToken3.ForeColor = System.Drawing.Color.Black;
-            this.sendToken3.Location = new System.Drawing.Point(327, 151);
+            this.sendToken3.Location = new System.Drawing.Point(332, 152);
             this.sendToken3.Name = "sendToken3";
-            this.sendToken3.Size = new System.Drawing.Size(69, 30);
+            this.sendToken3.Size = new System.Drawing.Size(70, 30);
             this.sendToken3.TabIndex = 122;
             this.sendToken3.Text = "Send";
             this.sendToken3.UseVisualStyleBackColor = false;
@@ -349,9 +349,9 @@
             this.sendToken2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendToken2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendToken2.ForeColor = System.Drawing.Color.Black;
-            this.sendToken2.Location = new System.Drawing.Point(327, 99);
+            this.sendToken2.Location = new System.Drawing.Point(332, 100);
             this.sendToken2.Name = "sendToken2";
-            this.sendToken2.Size = new System.Drawing.Size(69, 30);
+            this.sendToken2.Size = new System.Drawing.Size(70, 30);
             this.sendToken2.TabIndex = 121;
             this.sendToken2.Text = "Send";
             this.sendToken2.UseVisualStyleBackColor = false;
@@ -362,9 +362,9 @@
             this.sendToken1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendToken1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendToken1.ForeColor = System.Drawing.Color.Black;
-            this.sendToken1.Location = new System.Drawing.Point(327, 46);
+            this.sendToken1.Location = new System.Drawing.Point(333, 48);
             this.sendToken1.Name = "sendToken1";
-            this.sendToken1.Size = new System.Drawing.Size(69, 30);
+            this.sendToken1.Size = new System.Drawing.Size(70, 30);
             this.sendToken1.TabIndex = 120;
             this.sendToken1.Text = "Send";
             this.sendToken1.UseVisualStyleBackColor = false;
@@ -376,7 +376,7 @@
             this.tokenSlipBTextBox.MaxLength = 28;
             this.tokenSlipBTextBox.Multiline = true;
             this.tokenSlipBTextBox.Name = "tokenSlipBTextBox";
-            this.tokenSlipBTextBox.Size = new System.Drawing.Size(162, 27);
+            this.tokenSlipBTextBox.Size = new System.Drawing.Size(168, 30);
             this.tokenSlipBTextBox.TabIndex = 119;
             // 
             // tokenSlip2TextBox
@@ -385,7 +385,7 @@
             this.tokenSlip2TextBox.MaxLength = 28;
             this.tokenSlip2TextBox.Multiline = true;
             this.tokenSlip2TextBox.Name = "tokenSlip2TextBox";
-            this.tokenSlip2TextBox.Size = new System.Drawing.Size(161, 27);
+            this.tokenSlip2TextBox.Size = new System.Drawing.Size(168, 30);
             this.tokenSlip2TextBox.TabIndex = 118;
             // 
             // tokenSlip1TextBox
@@ -394,7 +394,7 @@
             this.tokenSlip1TextBox.MaxLength = 28;
             this.tokenSlip1TextBox.Multiline = true;
             this.tokenSlip1TextBox.Name = "tokenSlip1TextBox";
-            this.tokenSlip1TextBox.Size = new System.Drawing.Size(161, 26);
+            this.tokenSlip1TextBox.Size = new System.Drawing.Size(168, 30);
             this.tokenSlip1TextBox.TabIndex = 117;
             // 
             // label32
@@ -473,7 +473,7 @@
             this.closingTimeSend.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.closingTimeSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closingTimeSend.ForeColor = System.Drawing.Color.Black;
-            this.closingTimeSend.Location = new System.Drawing.Point(866, 120);
+            this.closingTimeSend.Location = new System.Drawing.Point(873, 120);
             this.closingTimeSend.Name = "closingTimeSend";
             this.closingTimeSend.Size = new System.Drawing.Size(70, 30);
             this.closingTimeSend.TabIndex = 146;
@@ -488,7 +488,7 @@
             this.closingTimeTextBox.MaxLength = 28;
             this.closingTimeTextBox.Multiline = true;
             this.closingTimeTextBox.Name = "closingTimeTextBox";
-            this.closingTimeTextBox.Size = new System.Drawing.Size(164, 26);
+            this.closingTimeTextBox.Size = new System.Drawing.Size(168, 30);
             this.closingTimeTextBox.TabIndex = 145;
             // 
             // copiePrintingTextBox
@@ -498,7 +498,7 @@
             this.copiePrintingTextBox.MaxLength = 28;
             this.copiePrintingTextBox.Multiline = true;
             this.copiePrintingTextBox.Name = "copiePrintingTextBox";
-            this.copiePrintingTextBox.Size = new System.Drawing.Size(163, 26);
+            this.copiePrintingTextBox.Size = new System.Drawing.Size(168, 30);
             this.copiePrintingTextBox.TabIndex = 143;
             // 
             // timeTextBox
@@ -508,7 +508,7 @@
             this.timeTextBox.MaxLength = 28;
             this.timeTextBox.Multiline = true;
             this.timeTextBox.Name = "timeTextBox";
-            this.timeTextBox.Size = new System.Drawing.Size(163, 27);
+            this.timeTextBox.Size = new System.Drawing.Size(168, 30);
             this.timeTextBox.TabIndex = 141;
             // 
             // copiesSend
@@ -517,7 +517,7 @@
             this.copiesSend.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.copiesSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copiesSend.ForeColor = System.Drawing.Color.Black;
-            this.copiesSend.Location = new System.Drawing.Point(865, 73);
+            this.copiesSend.Location = new System.Drawing.Point(872, 73);
             this.copiesSend.Name = "copiesSend";
             this.copiesSend.Size = new System.Drawing.Size(70, 30);
             this.copiesSend.TabIndex = 144;
@@ -531,7 +531,7 @@
             this.sendTime.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendTime.ForeColor = System.Drawing.Color.Black;
-            this.sendTime.Location = new System.Drawing.Point(866, 25);
+            this.sendTime.Location = new System.Drawing.Point(873, 25);
             this.sendTime.Name = "sendTime";
             this.sendTime.Size = new System.Drawing.Size(70, 30);
             this.sendTime.TabIndex = 142;
@@ -544,7 +544,7 @@
             this.sendCounterNo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCounterNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendCounterNo.ForeColor = System.Drawing.Color.Black;
-            this.sendCounterNo.Location = new System.Drawing.Point(325, 169);
+            this.sendCounterNo.Location = new System.Drawing.Point(332, 169);
             this.sendCounterNo.Name = "sendCounterNo";
             this.sendCounterNo.Size = new System.Drawing.Size(70, 30);
             this.sendCounterNo.TabIndex = 140;
@@ -558,7 +558,7 @@
             this.totalCounterTextBox.MaxLength = 28;
             this.totalCounterTextBox.Multiline = true;
             this.totalCounterTextBox.Name = "totalCounterTextBox";
-            this.totalCounterTextBox.Size = new System.Drawing.Size(163, 26);
+            this.totalCounterTextBox.Size = new System.Drawing.Size(168, 30);
             this.totalCounterTextBox.TabIndex = 139;
             // 
             // sendCounter
@@ -566,7 +566,7 @@
             this.sendCounter.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendCounter.ForeColor = System.Drawing.Color.Black;
-            this.sendCounter.Location = new System.Drawing.Point(325, 120);
+            this.sendCounter.Location = new System.Drawing.Point(332, 120);
             this.sendCounter.Name = "sendCounter";
             this.sendCounter.Size = new System.Drawing.Size(70, 30);
             this.sendCounter.TabIndex = 138;
@@ -579,7 +579,7 @@
             this.sendBankID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendBankID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendBankID.ForeColor = System.Drawing.Color.Black;
-            this.sendBankID.Location = new System.Drawing.Point(325, 73);
+            this.sendBankID.Location = new System.Drawing.Point(332, 73);
             this.sendBankID.Name = "sendBankID";
             this.sendBankID.Size = new System.Drawing.Size(70, 30);
             this.sendBankID.TabIndex = 137;
@@ -592,7 +592,7 @@
             this.sendName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendName.ForeColor = System.Drawing.Color.Black;
-            this.sendName.Location = new System.Drawing.Point(325, 25);
+            this.sendName.Location = new System.Drawing.Point(332, 25);
             this.sendName.Name = "sendName";
             this.sendName.Size = new System.Drawing.Size(70, 30);
             this.sendName.TabIndex = 136;
@@ -606,7 +606,7 @@
             this.counteTextBox.MaxLength = 28;
             this.counteTextBox.Multiline = true;
             this.counteTextBox.Name = "counteTextBox";
-            this.counteTextBox.Size = new System.Drawing.Size(163, 25);
+            this.counteTextBox.Size = new System.Drawing.Size(168, 30);
             this.counteTextBox.TabIndex = 135;
             // 
             // bankIdTextBox
@@ -615,7 +615,7 @@
             this.bankIdTextBox.MaxLength = 28;
             this.bankIdTextBox.Multiline = true;
             this.bankIdTextBox.Name = "bankIdTextBox";
-            this.bankIdTextBox.Size = new System.Drawing.Size(164, 26);
+            this.bankIdTextBox.Size = new System.Drawing.Size(168, 30);
             this.bankIdTextBox.TabIndex = 134;
             // 
             // institutionTextBox
@@ -626,7 +626,7 @@
             this.institutionTextBox.MinimumSize = new System.Drawing.Size(160, 24);
             this.institutionTextBox.Multiline = true;
             this.institutionTextBox.Name = "institutionTextBox";
-            this.institutionTextBox.Size = new System.Drawing.Size(163, 27);
+            this.institutionTextBox.Size = new System.Drawing.Size(168, 30);
             this.institutionTextBox.TabIndex = 133;
             // 
             // label29
@@ -748,7 +748,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 20);
-            this.tabControl1.Location = new System.Drawing.Point(15, 12);
+            this.tabControl1.Location = new System.Drawing.Point(15, 15);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(991, 650);
@@ -841,9 +841,9 @@
             // 
             this.sendCntLabel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel1.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel1.Location = new System.Drawing.Point(309, 39);
+            this.sendCntLabel1.Location = new System.Drawing.Point(309, 45);
             this.sendCntLabel1.Name = "sendCntLabel1";
-            this.sendCntLabel1.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel1.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel1.TabIndex = 205;
             this.sendCntLabel1.Text = "Send";
             this.sendCntLabel1.UseVisualStyleBackColor = false;
@@ -868,7 +868,7 @@
             this.sendCntLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel16.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel16.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel16.Location = new System.Drawing.Point(860, 396);
+            this.sendCntLabel16.Location = new System.Drawing.Point(860, 400);
             this.sendCntLabel16.Name = "sendCntLabel16";
             this.sendCntLabel16.Size = new System.Drawing.Size(70, 35);
             this.sendCntLabel16.TabIndex = 202;
@@ -883,7 +883,7 @@
             this.cntLabel16TextBox.MaxLength = 28;
             this.cntLabel16TextBox.Multiline = true;
             this.cntLabel16TextBox.Name = "cntLabel16TextBox";
-            this.cntLabel16TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel16TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel16TextBox.TabIndex = 201;
             // 
             // cntLabel15TextBox
@@ -893,7 +893,7 @@
             this.cntLabel15TextBox.MaxLength = 28;
             this.cntLabel15TextBox.Multiline = true;
             this.cntLabel15TextBox.Name = "cntLabel15TextBox";
-            this.cntLabel15TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel15TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel15TextBox.TabIndex = 198;
             // 
             // cntLabel14TextBox
@@ -903,7 +903,7 @@
             this.cntLabel14TextBox.MaxLength = 28;
             this.cntLabel14TextBox.Multiline = true;
             this.cntLabel14TextBox.Name = "cntLabel14TextBox";
-            this.cntLabel14TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel14TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel14TextBox.TabIndex = 190;
             // 
             // cntLabel13TextBox
@@ -913,7 +913,7 @@
             this.cntLabel13TextBox.MaxLength = 28;
             this.cntLabel13TextBox.Multiline = true;
             this.cntLabel13TextBox.Name = "cntLabel13TextBox";
-            this.cntLabel13TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel13TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel13TextBox.TabIndex = 188;
             // 
             // cntLabel12TextBox
@@ -923,7 +923,7 @@
             this.cntLabel12TextBox.MaxLength = 28;
             this.cntLabel12TextBox.Multiline = true;
             this.cntLabel12TextBox.Name = "cntLabel12TextBox";
-            this.cntLabel12TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel12TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel12TextBox.TabIndex = 186;
             // 
             // cntLabel11TextBox
@@ -933,7 +933,7 @@
             this.cntLabel11TextBox.MaxLength = 28;
             this.cntLabel11TextBox.Multiline = true;
             this.cntLabel11TextBox.Name = "cntLabel11TextBox";
-            this.cntLabel11TextBox.Size = new System.Drawing.Size(166, 28);
+            this.cntLabel11TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel11TextBox.TabIndex = 184;
             // 
             // cntLabel10TextBox
@@ -943,7 +943,7 @@
             this.cntLabel10TextBox.MaxLength = 28;
             this.cntLabel10TextBox.Multiline = true;
             this.cntLabel10TextBox.Name = "cntLabel10TextBox";
-            this.cntLabel10TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel10TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel10TextBox.TabIndex = 182;
             // 
             // cntLabel9TextBox
@@ -953,7 +953,7 @@
             this.cntLabel9TextBox.MaxLength = 28;
             this.cntLabel9TextBox.Multiline = true;
             this.cntLabel9TextBox.Name = "cntLabel9TextBox";
-            this.cntLabel9TextBox.Size = new System.Drawing.Size(166, 30);
+            this.cntLabel9TextBox.Size = new System.Drawing.Size(168, 30);
             this.cntLabel9TextBox.TabIndex = 180;
             // 
             // cntLabel8TextBox
@@ -1037,9 +1037,9 @@
             this.sendCntLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel15.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel15.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel15.Location = new System.Drawing.Point(860, 345);
+            this.sendCntLabel15.Location = new System.Drawing.Point(860, 349);
             this.sendCntLabel15.Name = "sendCntLabel15";
-            this.sendCntLabel15.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel15.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel15.TabIndex = 199;
             this.sendCntLabel15.Text = "Send";
             this.sendCntLabel15.UseVisualStyleBackColor = false;
@@ -1063,9 +1063,9 @@
             this.sendCntLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel14.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel14.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel14.Location = new System.Drawing.Point(860, 294);
+            this.sendCntLabel14.Location = new System.Drawing.Point(860, 300);
             this.sendCntLabel14.Name = "sendCntLabel14";
-            this.sendCntLabel14.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel14.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel14.TabIndex = 196;
             this.sendCntLabel14.Text = "Send";
             this.sendCntLabel14.UseVisualStyleBackColor = false;
@@ -1076,9 +1076,9 @@
             this.sendCntLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel13.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel13.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel13.Location = new System.Drawing.Point(860, 243);
+            this.sendCntLabel13.Location = new System.Drawing.Point(860, 247);
             this.sendCntLabel13.Name = "sendCntLabel13";
-            this.sendCntLabel13.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel13.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel13.TabIndex = 195;
             this.sendCntLabel13.Tag = "13";
             this.sendCntLabel13.Text = "Send";
@@ -1090,9 +1090,9 @@
             this.sendCntLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel12.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel12.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel12.Location = new System.Drawing.Point(860, 192);
+            this.sendCntLabel12.Location = new System.Drawing.Point(860, 196);
             this.sendCntLabel12.Name = "sendCntLabel12";
-            this.sendCntLabel12.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel12.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel12.TabIndex = 194;
             this.sendCntLabel12.Text = "Send";
             this.sendCntLabel12.UseVisualStyleBackColor = false;
@@ -1103,9 +1103,9 @@
             this.sendCntLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel11.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel11.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel11.Location = new System.Drawing.Point(860, 141);
+            this.sendCntLabel11.Location = new System.Drawing.Point(860, 145);
             this.sendCntLabel11.Name = "sendCntLabel11";
-            this.sendCntLabel11.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel11.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel11.TabIndex = 193;
             this.sendCntLabel11.Text = "Send";
             this.sendCntLabel11.UseVisualStyleBackColor = false;
@@ -1116,9 +1116,9 @@
             this.sendCntLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel10.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel10.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel10.Location = new System.Drawing.Point(860, 90);
+            this.sendCntLabel10.Location = new System.Drawing.Point(860, 94);
             this.sendCntLabel10.Name = "sendCntLabel10";
-            this.sendCntLabel10.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel10.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel10.TabIndex = 192;
             this.sendCntLabel10.Text = "Send";
             this.sendCntLabel10.UseVisualStyleBackColor = false;
@@ -1129,9 +1129,9 @@
             this.sendCntLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sendCntLabel9.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel9.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel9.Location = new System.Drawing.Point(860, 39);
+            this.sendCntLabel9.Location = new System.Drawing.Point(860, 43);
             this.sendCntLabel9.Name = "sendCntLabel9";
-            this.sendCntLabel9.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel9.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel9.TabIndex = 191;
             this.sendCntLabel9.Text = "Send";
             this.sendCntLabel9.UseVisualStyleBackColor = false;
@@ -1219,9 +1219,9 @@
             // 
             this.sendCntLabel8.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel8.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel8.Location = new System.Drawing.Point(309, 396);
+            this.sendCntLabel8.Location = new System.Drawing.Point(309, 401);
             this.sendCntLabel8.Name = "sendCntLabel8";
-            this.sendCntLabel8.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel8.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel8.TabIndex = 178;
             this.sendCntLabel8.Text = "Send";
             this.sendCntLabel8.UseVisualStyleBackColor = false;
@@ -1243,9 +1243,9 @@
             // 
             this.sendCntLabel7.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel7.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel7.Location = new System.Drawing.Point(309, 345);
+            this.sendCntLabel7.Location = new System.Drawing.Point(309, 350);
             this.sendCntLabel7.Name = "sendCntLabel7";
-            this.sendCntLabel7.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel7.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel7.TabIndex = 175;
             this.sendCntLabel7.Text = "Send";
             this.sendCntLabel7.UseVisualStyleBackColor = false;
@@ -1255,9 +1255,9 @@
             // 
             this.sendCntLabel6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel6.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel6.Location = new System.Drawing.Point(309, 294);
+            this.sendCntLabel6.Location = new System.Drawing.Point(309, 299);
             this.sendCntLabel6.Name = "sendCntLabel6";
-            this.sendCntLabel6.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel6.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel6.TabIndex = 174;
             this.sendCntLabel6.Text = "Send";
             this.sendCntLabel6.UseVisualStyleBackColor = false;
@@ -1267,9 +1267,9 @@
             // 
             this.sendCntLabel5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel5.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel5.Location = new System.Drawing.Point(309, 243);
+            this.sendCntLabel5.Location = new System.Drawing.Point(309, 248);
             this.sendCntLabel5.Name = "sendCntLabel5";
-            this.sendCntLabel5.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel5.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel5.TabIndex = 173;
             this.sendCntLabel5.Text = "Send";
             this.sendCntLabel5.UseVisualStyleBackColor = false;
@@ -1279,9 +1279,9 @@
             // 
             this.sendCntLabel4.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel4.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel4.Location = new System.Drawing.Point(309, 192);
+            this.sendCntLabel4.Location = new System.Drawing.Point(309, 197);
             this.sendCntLabel4.Name = "sendCntLabel4";
-            this.sendCntLabel4.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel4.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel4.TabIndex = 172;
             this.sendCntLabel4.Text = "Send";
             this.sendCntLabel4.UseVisualStyleBackColor = false;
@@ -1291,9 +1291,9 @@
             // 
             this.sendCntLabel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel3.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel3.Location = new System.Drawing.Point(309, 141);
+            this.sendCntLabel3.Location = new System.Drawing.Point(309, 146);
             this.sendCntLabel3.Name = "sendCntLabel3";
-            this.sendCntLabel3.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel3.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel3.TabIndex = 171;
             this.sendCntLabel3.Text = "Send";
             this.sendCntLabel3.UseVisualStyleBackColor = false;
@@ -1303,9 +1303,9 @@
             // 
             this.sendCntLabel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.sendCntLabel2.ForeColor = System.Drawing.Color.Black;
-            this.sendCntLabel2.Location = new System.Drawing.Point(309, 90);
+            this.sendCntLabel2.Location = new System.Drawing.Point(309, 95);
             this.sendCntLabel2.Name = "sendCntLabel2";
-            this.sendCntLabel2.Size = new System.Drawing.Size(70, 35);
+            this.sendCntLabel2.Size = new System.Drawing.Size(70, 32);
             this.sendCntLabel2.TabIndex = 170;
             this.sendCntLabel2.Text = "Send";
             this.sendCntLabel2.UseVisualStyleBackColor = false;
