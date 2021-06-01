@@ -35,8 +35,10 @@ namespace QMS_Utility
             groupBox4.Paint += cntLabel_Paint;
             cmbPortName.Height = 120;
             // this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Auto;
-
-
+            sendBankID.Enabled = false;
+            copiesSend.Enabled = false;
+            closingTimeSend.Enabled = false;
+            sendCounterNo.Enabled = false;
             // Tab Color control
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
             //  tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -467,8 +469,8 @@ namespace QMS_Utility
 
         private void sendBankID_Click_1(object sender, EventArgs e)
         {
-            string bankIdText = fixedLengthString(bankIdTextBox.Text, 28);
-            sendDataToPort("$BnkL" + "" + bankIdText + ";");
+            string bankIdText = fixedLengthString(bankIdTextBox.Text, 2);
+            sendDataToPort("$BANK" + "" + bankIdText + ";");
             
         }
 
@@ -480,19 +482,19 @@ namespace QMS_Utility
 
         private void sendCounter_Click_1(object sender, EventArgs e)
         {
-            string counteText = fixedLengthString(counteTextBox.Text, 28);
+            string counteText = fixedLengthString(counteTextBox.Text, 7);
             sendDataToPort("$CTID" + "" + counteText + ";");
         }
 
         private void sendCounterNo_Click_1(object sender, EventArgs e)
         {
-            string totalCounterText = fixedLengthString(totalCounterTextBox.Text, 28);
-            sendDataToPort("$CNTR" + "" + totalCounterText + ";");
+            string totalCounterText = fixedLengthString(totalCounterTextBox.Text, 4);
+            sendDataToPort("$CONTR" + "" + totalCounterText + ";");
         }
 
         private void closingTimeSend_Click_1(object sender, EventArgs e)
         {
-            string closingTimeText = fixedLengthString(closingTimeTextBox.Text, 28);
+            string closingTimeText = fixedLengthString(closingTimeTextBox.Text, 4);
             sendDataToPort("$CLTM" + "" + closingTimeText + ";");
         }
 
@@ -627,11 +629,7 @@ namespace QMS_Utility
             return stringData;
         }
 
-        private void bankIdTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
     
 
         private void saveAll_Click(object sender, EventArgs e)
@@ -1202,7 +1200,81 @@ namespace QMS_Utility
 
         private void copiesSend_Click(object sender, EventArgs e)
         {
+            string copiePrintingText = fixedLengthString(copiePrintingTextBox.Text, 2);
+            sendDataToPort("$COPY" + "" + copiePrintingText + ";");
+        }
+      
 
+        private void bankIdTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+           
+            if (bankIdTextBox.Text.ToString().Length != 0)
+            {
+                if (bankIdTextBox.Text.Length == 2)
+                {
+                    //   MessageBox.Show("The maximum amount in text box cant be more than 2");
+                    sendBankID.Enabled = true;
+              
+                }
+                else
+                {
+                    sendBankID.Enabled = false;
+                }
+            }
+           
+
+        }
+
+        private void copiePrintingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (copiePrintingTextBox.Text.ToString().Length != 0)
+            {
+                if (copiePrintingTextBox.Text.Length == 2)
+                {
+                    //   MessageBox.Show("The maximum amount in text box cant be more than 2");
+                    copiesSend.Enabled = true;
+
+                }
+                else
+                {
+                    copiesSend.Enabled = false;
+                }
+            }
+
+        }
+
+        private void closingTimeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (closingTimeTextBox.Text.ToString().Length != 0)
+            {
+                if (closingTimeTextBox.Text.Length == 4)
+                {
+                    //   MessageBox.Show("The maximum amount in text box cant be more than 2");
+                    closingTimeSend.Enabled = true;
+
+                }
+                else
+                {
+                    closingTimeSend.Enabled = false;
+                }
+            }
+        }
+
+        private void totalCounterTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (totalCounterTextBox.Text.ToString().Length != 0)
+            {
+                if (totalCounterTextBox.Text.Length == 4)
+                {
+                    //   MessageBox.Show("The maximum amount in text box cant be more than 2");
+                    sendCounterNo.Enabled = true;
+
+                }
+                else
+                {
+                    sendCounterNo.Enabled = false;
+                }
+            }
         }
     }
 }

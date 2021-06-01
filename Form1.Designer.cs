@@ -149,7 +149,7 @@
             this.groupBox1.Size = new System.Drawing.Size(184, 228);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "COM Serial Port Settings";
+            this.groupBox1.Text = "Comport Options";
             // 
             // label33
             // 
@@ -485,21 +485,23 @@
             // 
             this.closingTimeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closingTimeTextBox.Location = new System.Drawing.Point(696, 122);
-            this.closingTimeTextBox.MaxLength = 28;
+            this.closingTimeTextBox.MaxLength = 4;
             this.closingTimeTextBox.Multiline = true;
             this.closingTimeTextBox.Name = "closingTimeTextBox";
             this.closingTimeTextBox.Size = new System.Drawing.Size(168, 30);
             this.closingTimeTextBox.TabIndex = 145;
+            this.closingTimeTextBox.TextChanged += new System.EventHandler(this.closingTimeTextBox_TextChanged);
             // 
             // copiePrintingTextBox
             // 
             this.copiePrintingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.copiePrintingTextBox.Location = new System.Drawing.Point(696, 75);
-            this.copiePrintingTextBox.MaxLength = 28;
+            this.copiePrintingTextBox.MaxLength = 2;
             this.copiePrintingTextBox.Multiline = true;
             this.copiePrintingTextBox.Name = "copiePrintingTextBox";
             this.copiePrintingTextBox.Size = new System.Drawing.Size(168, 30);
             this.copiePrintingTextBox.TabIndex = 143;
+            this.copiePrintingTextBox.TextChanged += new System.EventHandler(this.copiePrintingTextBox_TextChanged);
             // 
             // timeTextBox
             // 
@@ -555,11 +557,12 @@
             // totalCounterTextBox
             // 
             this.totalCounterTextBox.Location = new System.Drawing.Point(156, 170);
-            this.totalCounterTextBox.MaxLength = 28;
+            this.totalCounterTextBox.MaxLength = 4;
             this.totalCounterTextBox.Multiline = true;
             this.totalCounterTextBox.Name = "totalCounterTextBox";
             this.totalCounterTextBox.Size = new System.Drawing.Size(168, 30);
             this.totalCounterTextBox.TabIndex = 139;
+            this.totalCounterTextBox.TextChanged += new System.EventHandler(this.totalCounterTextBox_TextChanged);
             // 
             // sendCounter
             // 
@@ -603,7 +606,7 @@
             // counteTextBox
             // 
             this.counteTextBox.Location = new System.Drawing.Point(156, 121);
-            this.counteTextBox.MaxLength = 28;
+            this.counteTextBox.MaxLength = 7;
             this.counteTextBox.Multiline = true;
             this.counteTextBox.Name = "counteTextBox";
             this.counteTextBox.Size = new System.Drawing.Size(168, 30);
@@ -612,11 +615,12 @@
             // bankIdTextBox
             // 
             this.bankIdTextBox.Location = new System.Drawing.Point(155, 74);
-            this.bankIdTextBox.MaxLength = 28;
+            this.bankIdTextBox.MaxLength = 2;
             this.bankIdTextBox.Multiline = true;
             this.bankIdTextBox.Name = "bankIdTextBox";
             this.bankIdTextBox.Size = new System.Drawing.Size(168, 30);
             this.bankIdTextBox.TabIndex = 134;
+            this.bankIdTextBox.TextChanged += new System.EventHandler(this.bankIdTextBox_TextChanged_1);
             // 
             // institutionTextBox
             // 
