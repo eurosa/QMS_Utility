@@ -212,7 +212,7 @@
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.button3.Location = new System.Drawing.Point(1049, 457);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 40);
+            this.button3.Size = new System.Drawing.Size(144, 40);
             this.button3.TabIndex = 41;
             this.button3.Text = "EXIT";
             this.button3.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@
             this.saveAll.ForeColor = System.Drawing.Color.MidnightBlue;
             this.saveAll.Location = new System.Drawing.Point(1049, 396);
             this.saveAll.Name = "saveAll";
-            this.saveAll.Size = new System.Drawing.Size(130, 40);
+            this.saveAll.Size = new System.Drawing.Size(144, 40);
             this.saveAll.TabIndex = 47;
             this.saveAll.Text = "Save Record";
             this.saveAll.UseVisualStyleBackColor = false;
@@ -254,7 +254,7 @@
             this.qmsComboBox.IntegralHeight = false;
             this.qmsComboBox.Location = new System.Drawing.Point(1052, 317);
             this.qmsComboBox.Name = "qmsComboBox";
-            this.qmsComboBox.Size = new System.Drawing.Size(125, 28);
+            this.qmsComboBox.Size = new System.Drawing.Size(141, 28);
             this.qmsComboBox.TabIndex = 48;
             this.qmsComboBox.Text = "New Record";
             this.qmsComboBox.SelectedIndexChanged += new System.EventHandler(this.qmsComboBox_SelectedIndexChanged);
@@ -266,7 +266,7 @@
             this.recordFileName.ForeColor = System.Drawing.Color.MidnightBlue;
             this.recordFileName.Location = new System.Drawing.Point(1052, 359);
             this.recordFileName.Name = "recordFileName";
-            this.recordFileName.Size = new System.Drawing.Size(125, 26);
+            this.recordFileName.Size = new System.Drawing.Size(141, 26);
             this.recordFileName.TabIndex = 49;
             // 
             // printPreview
@@ -1394,7 +1394,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1049, 537);
+            this.pictureBox1.Location = new System.Drawing.Point(1056, 537);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -9,6 +9,7 @@ using System.Drawing.Printing;
 using System.IO;
 using System.IO.Ports;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -20,15 +21,22 @@ namespace QMS_Utility
     {
         Model model;
         SQLiteConnection m_dbConnection;
-        string select = "New Record";
+        string select = "Select a record";
         Dictionary<int, string> userListDictionary;
 
         private PrintPreviewControl ppc;
         private PrintDocument docToPrint = new PrintDocument();
 
+        private const int EM_SETCUEBANNER = 0x1501;
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+
         public Form1()
         {
             InitializeComponent();
+
+            SendMessage(recordFileName.Handle, EM_SETCUEBANNER, 0, "Record name here");
+
             groupBox1.Paint += comSerialPort_Paint;
             groupBox2.Paint += groupBox1_Paint;
             groupBox3.Paint += groupBox1_Paint;
