@@ -371,6 +371,7 @@ namespace QMS_Utility
                 if (ComPort.IsOpen)
                 {
                     ComPort.Write(textData);
+                    AutoClosingMessageBox.Show(textData+" data sent successfully", "Data", 1000);
                 }
                 else
                 {
