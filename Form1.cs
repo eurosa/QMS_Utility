@@ -626,7 +626,10 @@ namespace QMS_Utility
 
         private string fixedLengthString(string textData , int lenght)
         {
-            string stringData = textData.PadRight(lenght, ' ').Substring(0, lenght);
+            
+            Console.WriteLine(string.Format("|{0}|", centeredString(textData, lenght)));
+
+            string stringData = centeredString(textData, lenght).PadRight(lenght, ' ').Substring(0, lenght);
             return stringData;
         }
 
@@ -1276,6 +1279,19 @@ namespace QMS_Utility
                     sendCounterNo.Enabled = false;
                 }
             }
+        }
+
+        static string centeredString(string s, int width)
+        {
+            if (s.Length >= width)
+            {
+                return s;
+            }
+
+            int leftPadding = (width - s.Length) / 2;
+            int rightPadding = width - s.Length - leftPadding;
+
+            return new string(' ', leftPadding) + s + new string(' ', rightPadding);
         }
     }
 }

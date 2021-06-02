@@ -128,6 +128,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -135,6 +136,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -208,7 +210,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Location = new System.Drawing.Point(1049, 491);
+            this.button3.Location = new System.Drawing.Point(1049, 457);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 40);
             this.button3.TabIndex = 41;
@@ -1387,6 +1389,18 @@
             this.label13.TabIndex = 158;
             this.label13.Text = "Counter Label 2:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(1049, 537);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 98);
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1395,6 +1409,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1211, 661);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.recordFileName);
             this.Controls.Add(this.qmsComboBox);
             this.Controls.Add(this.saveAll);
@@ -1421,6 +1436,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1526,6 +1542,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
