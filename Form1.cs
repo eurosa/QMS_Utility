@@ -23,7 +23,7 @@ namespace QMS_Utility
         SQLiteConnection m_dbConnection;
         string select = "Select record";
         Dictionary<int, string> userListDictionary;
-
+        bool center_align_check = true;
         private PrintPreviewControl ppc;
         private PrintDocument docToPrint = new PrintDocument();
 
@@ -34,6 +34,8 @@ namespace QMS_Utility
         public Form1()
         {
             InitializeComponent();
+
+            
 
             SendMessage(recordFileName.Handle, EM_SETCUEBANNER, 0, "Record name here");
 
@@ -47,6 +49,7 @@ namespace QMS_Utility
             copiesSend.Enabled = false;
             closingTimeSend.Enabled = false;
             sendCounterNo.Enabled = false;
+            sendTime.Enabled = false;
             // Tab Color control
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
             //  tabControl1.Appearance = TabAppearance.FlatButtons;
@@ -485,8 +488,11 @@ namespace QMS_Utility
 
         private void sendTime_Click_1(object sender, EventArgs e)
         {
-            string timeTex = fixedLengthString(timeTextBox.Text, 28);
+            /// ---------------------------
+            center_align_check = false;
+            string timeTex = fixedLengthString(timeTextBox.Text, 12);
             sendDataToPort("$TIME" + "" + timeTex + ";");
+            center_align_check = true;
         }
 
         private void sendCounter_Click_1(object sender, EventArgs e)
@@ -650,10 +656,16 @@ namespace QMS_Utility
 
         private string fixedLengthString(string textData , int lenght)
         {
-            
+            string stringData = null;
             Console.WriteLine(string.Format("|{0}|", centeredString(textData, lenght)));
-
-            string stringData = centeredString(textData, lenght).PadRight(lenght, ' ').Substring(0, lenght);
+            if (center_align_check)
+            {
+                stringData = centeredString(textData, lenght).PadRight(lenght, ' ').Substring(0, lenght);
+            }
+            else {
+                stringData = textData.PadRight(lenght, ' ').Substring(0, lenght);
+            }
+          
             return stringData;
         }
 
@@ -1228,7 +1240,7 @@ namespace QMS_Utility
 
         private void copiesSend_Click(object sender, EventArgs e)
         {
-            string copiePrintingText = fixedLengthString(copiePrintingTextBox.Text, 2);
+            string copiePrintingText = fixedLengthString(copiePrintingTextBox.Text, 1);
             sendDataToPort("$COPY" + "" + copiePrintingText + ";");
         }
       
@@ -1249,15 +1261,21 @@ namespace QMS_Utility
                     sendBankID.Enabled = false;
                 }
             }
-           
+            else
+            {
+                sendBankID.Enabled = false;
+            }
+
 
         }
 
         private void copiePrintingTextBox_TextChanged(object sender, EventArgs e)
         {
+            Console.WriteLine("Copies Length: "+ copiePrintingTextBox.Text.ToString().Length);
+
             if (copiePrintingTextBox.Text.ToString().Length != 0)
             {
-                if (copiePrintingTextBox.Text.Length == 2)
+                if (copiePrintingTextBox.Text.Length == 1)
                 {
                     //   MessageBox.Show("The maximum amount in text box cant be more than 2");
                     copiesSend.Enabled = true;
@@ -1267,6 +1285,10 @@ namespace QMS_Utility
                 {
                     copiesSend.Enabled = false;
                 }
+            }
+            else
+            {
+                copiesSend.Enabled = false;
             }
 
         }
@@ -1286,6 +1308,10 @@ namespace QMS_Utility
                     closingTimeSend.Enabled = false;
                 }
             }
+            else
+            {
+                closingTimeSend.Enabled = false;
+            }
         }
 
         private void totalCounterTextBox_TextChanged(object sender, EventArgs e)
@@ -1303,6 +1329,10 @@ namespace QMS_Utility
                     sendCounterNo.Enabled = false;
                 }
             }
+            else
+            {
+                sendCounterNo.Enabled = false;
+            }
         }
 
         static string centeredString(string s, int width)
@@ -1316,6 +1346,27 @@ namespace QMS_Utility
             int rightPadding = width - s.Length - leftPadding;
 
             return new string(' ', leftPadding) + s + new string(' ', rightPadding);
+        }
+
+        private void timeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (timeTextBox.Text.ToString().Length != 0)
+            {
+                if (timeTextBox.Text.Length == 12)
+                {
+                    //   MessageBox.Show("The maximum amount in text box cant be more than 2");
+                    sendTime.Enabled = true;
+
+                }
+                else
+                {
+                    sendTime.Enabled = false;
+                }
+            }
+            else
+            {
+                sendTime.Enabled = false;
+            }
         }
     }
 }

@@ -146,12 +146,13 @@
             this.groupBox1.Controls.Add(this.cmbPortName);
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnConnect);
-            this.groupBox1.Location = new System.Drawing.Point(1021, 34);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(1021, 15);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(184, 228);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Comport Options";
+            this.groupBox1.Text = "  Comport Options";
             // 
             // label33
             // 
@@ -498,7 +499,7 @@
             // 
             this.copiePrintingTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.copiePrintingTextBox.Location = new System.Drawing.Point(696, 75);
-            this.copiePrintingTextBox.MaxLength = 2;
+            this.copiePrintingTextBox.MaxLength = 1;
             this.copiePrintingTextBox.Multiline = true;
             this.copiePrintingTextBox.Name = "copiePrintingTextBox";
             this.copiePrintingTextBox.Size = new System.Drawing.Size(168, 30);
@@ -509,11 +510,12 @@
             // 
             this.timeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.timeTextBox.Location = new System.Drawing.Point(696, 27);
-            this.timeTextBox.MaxLength = 28;
+            this.timeTextBox.MaxLength = 12;
             this.timeTextBox.Multiline = true;
             this.timeTextBox.Name = "timeTextBox";
             this.timeTextBox.Size = new System.Drawing.Size(168, 30);
             this.timeTextBox.TabIndex = 141;
+            this.timeTextBox.TextChanged += new System.EventHandler(this.timeTextBox_TextChanged);
             // 
             // copiesSend
             // 
