@@ -184,7 +184,7 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(16, 119);
+            this.btnRefresh.Location = new System.Drawing.Point(16, 118);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(156, 28);
             this.btnRefresh.TabIndex = 46;
