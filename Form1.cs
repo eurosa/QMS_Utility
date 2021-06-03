@@ -21,7 +21,7 @@ namespace QMS_Utility
     {
         Model model;
         SQLiteConnection m_dbConnection;
-        string select = "Select a record";
+        string select = "Select record";
         Dictionary<int, string> userListDictionary;
 
         private PrintPreviewControl ppc;
@@ -379,7 +379,7 @@ namespace QMS_Utility
                 if (ComPort.IsOpen)
                 {
                     ComPort.Write(textData);
-                    AutoClosingMessageBox.Show(textData+" data sent successfully", "Data", 1000);
+                    // AutoClosingMessageBox.Show(textData+" data sent successfully", "Data", 1000);
                 }
                 else
                 {
@@ -629,7 +629,23 @@ namespace QMS_Utility
 
         private void button4_Click(object sender, EventArgs e)
         {
-            sendDataToPort("$RESET" +""+ ";");
+
+            string message = "Do you want to reset?";
+            string title = "Reset Warning!";
+         
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                sendDataToPort("$RESET" + "" + ";");
+            }
+            else
+            {
+                // Do something  
+            }
+
+            
         }
 
         private string fixedLengthString(string textData , int lenght)
