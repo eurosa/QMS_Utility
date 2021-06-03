@@ -184,9 +184,9 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(28, 120);
+            this.btnRefresh.Location = new System.Drawing.Point(16, 119);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(130, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(156, 28);
             this.btnRefresh.TabIndex = 46;
             this.btnRefresh.Text = "REFRESH";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -198,9 +198,9 @@
             this.btnConnect.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnConnect.Location = new System.Drawing.Point(28, 171);
+            this.btnConnect.Location = new System.Drawing.Point(16, 171);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(130, 40);
+            this.btnConnect.Size = new System.Drawing.Size(156, 28);
             this.btnConnect.TabIndex = 45;
             this.btnConnect.Text = "CONNECT";
             this.btnConnect.UseVisualStyleBackColor = false;
@@ -211,9 +211,9 @@
             this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Location = new System.Drawing.Point(1049, 457);
+            this.button3.Location = new System.Drawing.Point(1037, 455);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 40);
+            this.button3.Size = new System.Drawing.Size(156, 28);
             this.button3.TabIndex = 41;
             this.button3.Text = "EXIT";
             this.button3.UseVisualStyleBackColor = false;
@@ -238,9 +238,9 @@
             this.saveAll.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.saveAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveAll.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.saveAll.Location = new System.Drawing.Point(1049, 396);
+            this.saveAll.Location = new System.Drawing.Point(1037, 402);
             this.saveAll.Name = "saveAll";
-            this.saveAll.Size = new System.Drawing.Size(144, 40);
+            this.saveAll.Size = new System.Drawing.Size(156, 28);
             this.saveAll.TabIndex = 47;
             this.saveAll.Text = "Save Record";
             this.saveAll.UseVisualStyleBackColor = false;
@@ -253,9 +253,9 @@
             this.qmsComboBox.ForeColor = System.Drawing.Color.MidnightBlue;
             this.qmsComboBox.FormattingEnabled = true;
             this.qmsComboBox.IntegralHeight = false;
-            this.qmsComboBox.Location = new System.Drawing.Point(1052, 317);
+            this.qmsComboBox.Location = new System.Drawing.Point(1037, 297);
             this.qmsComboBox.Name = "qmsComboBox";
-            this.qmsComboBox.Size = new System.Drawing.Size(141, 28);
+            this.qmsComboBox.Size = new System.Drawing.Size(156, 28);
             this.qmsComboBox.TabIndex = 48;
             this.qmsComboBox.Text = "New Record";
             this.qmsComboBox.SelectedIndexChanged += new System.EventHandler(this.qmsComboBox_SelectedIndexChanged);
@@ -265,9 +265,9 @@
             this.recordFileName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.recordFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recordFileName.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.recordFileName.Location = new System.Drawing.Point(1052, 359);
+            this.recordFileName.Location = new System.Drawing.Point(1037, 353);
             this.recordFileName.Name = "recordFileName";
-            this.recordFileName.Size = new System.Drawing.Size(141, 26);
+            this.recordFileName.Size = new System.Drawing.Size(156, 26);
             this.recordFileName.TabIndex = 49;
             // 
             // printPreview
@@ -1396,9 +1396,9 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1056, 537);
+            this.pictureBox1.Location = new System.Drawing.Point(1037, 522);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 50;
             this.pictureBox1.TabStop = false;
@@ -1411,7 +1411,7 @@
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1211, 661);
+            this.ClientSize = new System.Drawing.Size(1262, 661);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.recordFileName);
             this.Controls.Add(this.qmsComboBox);
