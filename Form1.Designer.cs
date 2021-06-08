@@ -277,9 +277,9 @@
             this.printPreview.CausesValidation = false;
             this.printPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printPreview.ForeColor = System.Drawing.Color.Black;
-            this.printPreview.Location = new System.Drawing.Point(566, 244);
+            this.printPreview.Location = new System.Drawing.Point(568, 235);
             this.printPreview.Name = "printPreview";
-            this.printPreview.Size = new System.Drawing.Size(338, 30);
+            this.printPreview.Size = new System.Drawing.Size(393, 39);
             this.printPreview.TabIndex = 121;
             this.printPreview.Text = "Click To Preview Slip";
             this.printPreview.UseVisualStyleBackColor = false;
@@ -290,9 +290,9 @@
             this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.printPreviewControl1.AutoZoom = false;
             this.printPreviewControl1.BackColor = System.Drawing.Color.LightGray;
-            this.printPreviewControl1.Location = new System.Drawing.Point(566, 280);
+            this.printPreviewControl1.Location = new System.Drawing.Point(567, 277);
             this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(338, 301);
+            this.printPreviewControl1.Size = new System.Drawing.Size(393, 337);
             this.printPreviewControl1.TabIndex = 122;
             // 
             // tabPage1
@@ -327,7 +327,7 @@
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Red;
-            this.groupBox3.Location = new System.Drawing.Point(17, 258);
+            this.groupBox3.Location = new System.Drawing.Point(17, 237);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(424, 237);
             this.groupBox3.TabIndex = 119;

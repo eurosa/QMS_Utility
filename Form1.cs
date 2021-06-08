@@ -504,7 +504,7 @@ namespace QMS_Utility
         private void sendCounterNo_Click_1(object sender, EventArgs e)
         {
             string totalCounterText = fixedLengthString(totalCounterTextBox.Text, 4);
-            sendDataToPort("$CONTR" + "" + totalCounterText + ";");
+            sendDataToPort("$CNTR" + "" + totalCounterText + ";");
         }
 
         private void closingTimeSend_Click_1(object sender, EventArgs e)
@@ -1121,8 +1121,8 @@ namespace QMS_Utility
 
         
 
-            string text =   cntLabel1TextBox.Text+"\n"+ counteTextBox.Text + " No.: " +"\n"+"****************************"+"\n" + institutionTextBox.Text +
-                "\n"+ "****************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "        "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
+            string text =   cntLabel1TextBox.Text+"\n"+ counteTextBox.Text + " No.: " +"\n"+ "************************************************" + "\n" + institutionTextBox.Text +
+                "\n"+ "************************************************" + "\n"+"TIME"+"               "+"DATE"+"\n"+ DateTime.Now.ToString("HH:mm:ss") + "           "+dateString+"\n"+ tokenSlip1TextBox.Text+"\n"
                 + tokenSlip2TextBox.Text+"\n"+ tokenSlipBTextBox.Text;
             /* e.Graphics.DrawString(text, new Font("Georgia", 30, FontStyle.Bold),
              Brushes.Black, 150, 150);*/
@@ -1133,7 +1133,7 @@ namespace QMS_Utility
             sf.Alignment = StringAlignment.Center; //center-align horizontally
             sf.FormatFlags = StringFormatFlags.FitBlackBox;
 
-            Font drawFont = new Font("Arial Black", 30F);
+            Font drawFont = new Font("Arial Black", 28F);
             Font drawTitleFont = new Font("Arial Black", 70);
             
             e.Graphics.Clear(Color.White);
@@ -1145,7 +1145,7 @@ namespace QMS_Utility
                 out charactersOnPage, out linesPerPage);
 
 
-           e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, 550, 65, sf);
+           e.Graphics.DrawString(textTitle, drawTitleFont, Brushes.Black, 650, 124, sf);
            // e.Graphics.DrawString(text, drawFont, Brushes.Black, 570, 420, sf);
             // e.Graphics.DrawString(text, drawFont, Brushes.Maroon, 570, 360, sf);
 
@@ -1218,7 +1218,7 @@ namespace QMS_Utility
             // Add PrintDocument PrintPage event handler
             // docToPrint.PrinterSettings.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 0, 0);
             docToPrint.DefaultPageSettings.Landscape = true;
-            docToPrint.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 900, 1100);
+            docToPrint.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", 1100, 1300);
 
             docToPrint.PrintPage +=
                 new System.Drawing.Printing.PrintPageEventHandler(PrintPage);
